@@ -31,21 +31,16 @@
 
 #include "Adafruit_GFX.h"
 #include "Adafruit_SSD1351.h"
+#include "glcdfont.h"
 
 #define APPLICATION_VERSION     "1.4.0"
 
 #define SPI_IF_BIT_RATE  100000
 #define TR_BUFF_SIZE     100
 
-#define MASTER_MSG       "This is CC3200 SPI Master Application\n\r"
-
 //*****************************************************************************
 //                 GLOBAL VARIABLES -- Start
 //*****************************************************************************
-static unsigned char g_ucTxBuff[TR_BUFF_SIZE];
-static unsigned char g_ucRxBuff[TR_BUFF_SIZE];
-static unsigned char ucTxBuffNdx;
-static unsigned char ucRxBuffNdx;
 
 #if defined(ccs)
 extern void (* const g_pfnVectors[])(void);
@@ -352,43 +347,9 @@ void main()
     MAP_PRCMPeripheralClkEnable(PRCM_GSPI,PRCM_RUN_MODE_CLK);
 
     //
-    // Initialising the Terminal.
-    //
-    InitTerm();
-
-    //
-    // Clearing the Terminal.
-    //
-    ClearTerm();
-
-    //
-    // Display the Banner
-    //
-    Message("\n\n\n\r");
-    Message("\t\t   ********************************************\n\r");
-    Message("\t\t        CC3200 SPI Demo Application  \n\r");
-    Message("\t\t   ********************************************\n\r");
-    Message("\n\n\n\r");
-
-    //
     // Reset the peripheral
     //
     MAP_PRCMPeripheralReset(PRCM_GSPI);
-
-    // Begin MasterMode
-    unsigned long ulUserData;
-    unsigned long ulDummy;
-
-    //
-    // Initialize the message
-    //
-    memcpy(g_ucTxBuff,MASTER_MSG,sizeof(MASTER_MSG));
-
-    //
-    // Set Tx buffer index
-    //
-    ucTxBuffNdx = 0;
-    ucRxBuffNdx = 0;
 
     //
     // Reset SPI
@@ -403,7 +364,7 @@ void main()
                      (SPI_SW_CTRL_CS |
                      SPI_4PIN_MODE |
                      SPI_TURBO_OFF |
-                     SPI_CS_ACTIVEHIGH |
+                     SPI_CS_ACTIVELOW |
                      SPI_WL_8));
 
     //
@@ -412,86 +373,23 @@ void main()
     MAP_SPIEnable(GSPI_BASE);
 
     //
-    // Print mode on uart
-    //
-    Message("Enabled SPI Interface in Master Mode\n\r");
-
-    //
-    // User input
-    //
-    Report("Press any key to transmit data....");
-
-    //
-    // Read a character from UART terminal
-    //
-    ulUserData = MAP_UARTCharGet(UARTA0_BASE);
-
-
-    //
-    // Send the string to slave. Chip Select(CS) needs to be
-    // asserted at start of transfer and deasserted at the end.
-    //
-    MAP_SPITransfer(GSPI_BASE,g_ucTxBuff,g_ucRxBuff,50,
-            SPI_CS_ENABLE|SPI_CS_DISABLE);
-
-    //
-    // Report to the user
-    //
-    Report("\n\rSend      %s",g_ucTxBuff);
-    Report("Received  %s",g_ucRxBuff);
-
-    //
-    // Print a message
-    //
-    Report("\n\rType here (Press enter to exit) :");
-
-    //
-    // Initialize variable
-    //
-    ulUserData = 0;
-
-    //
     // Enable Chip select
     //
     MAP_SPICSEnable(GSPI_BASE);
 
     //
-    // Loop until user "Enter Key" is
-    // pressed
+    // Begin Test Functions
     //
-    while(ulUserData != '\r')
+    unsigned int i;
+
+    for(i = 0; i < sizeof(font); i++)
     {
-        //
-        // Read a character from UART terminal
-        //
-        ulUserData = MAP_UARTCharGet(UARTA0_BASE);
-
-        //
-        // Echo it back
-        //
-        MAP_UARTCharPut(UARTA0_BASE,ulUserData);
-
-        //
-        // Push the character over SPI
-        //
-        MAP_SPIDataPut(GSPI_BASE,ulUserData);
-
-        //
-        // Clean up the receive register into a dummy
-        // variable
-        //
-        MAP_SPIDataGet(GSPI_BASE,&ulDummy);
+        writeData(font[i]);
     }
+    MAP_UtilsDelay(8000000);
 
     //
     // Disable chip select
     //
     MAP_SPICSDisable(GSPI_BASE);
-
-    //End MasterMode
-    while(1)
-    {
-
-    }
-
 }
