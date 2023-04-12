@@ -18,7 +18,7 @@
 
 // Common interface includes
 #include "uart_if.h"
-#include "pin_mux_config.h"
+#include "pinmux.h"
 
 #include "Adafruit_SSD1351.h"
 
@@ -31,6 +31,29 @@ void writeCommand(unsigned char c) {
 *  SPI.
 */
 
+    unsigned long uldummy = 0;
+    unsigned long *puldummy;
+    puldummy = &uldummy;
+
+
+    // Enable SPI Port
+    SPICSEnable(GSPI_BASE);
+    // Write to DC Command (Low)
+    GPIOPinWrite(GPIOA1_BASE, 0x2, 0x0);
+    // Assert CS Low to begin operation (Active Low)
+    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
+    // Put Data onto SPI Port
+    SPIDataPut(GSPI_BASE, (unsigned long)c);
+    // Collect Dummy Data onto uldummy pointer
+    SPIDataGet(GSPI_BASE, puldummy);
+    // Assert CS High to end operation (Active Low)
+    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x0);
+    // Disable SPI CS
+    SPICSDisable(GSPI_BASE);
+
+
+
+
 }
 //*****************************************************************************
 
@@ -40,6 +63,26 @@ void writeData(unsigned char c) {
 /* Write a function to send a data byte c to the OLED via
 *  SPI.
 */
+
+    unsigned long uldummy = 0;
+    unsigned long *puldummy;
+    puldummy = &uldummy;
+
+
+    // Enable SPI Port
+    SPICSEnable(GSPI_BASE);
+    // Write to DC Data (High)
+    GPIOPinWrite(GPIOA1_BASE, 0x2, 0x2);
+    // Assert CS Low to begin operation (Active Low)
+    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
+    // Put Data onto SPI Port
+    SPIDataPut(GSPI_BASE, (unsigned long)c);
+    // Collect Dummy Data onto uldummy pointer
+    SPIDataGet(GSPI_BASE, puldummy);
+    // Assert CS High to end operation (Active Low)
+    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x0);
+    // Disable SPI CS
+    SPICSDisable(GSPI_BASE);
 }
 
 //*****************************************************************************
