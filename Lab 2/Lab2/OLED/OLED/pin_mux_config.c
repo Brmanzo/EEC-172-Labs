@@ -36,12 +36,12 @@
 //
 //*****************************************************************************
 
-// This file was automatically generated on 4/11/2023 at 2:49:16 PM
+// This file was automatically generated on 4/12/2023 at 4:52:29 PM
 // by TI PinMux version 
 //
 //*****************************************************************************
 
-#include "pinmux.h"
+#include "pin_mux_config.h" 
 #include "hw_types.h"
 #include "hw_memmap.h"
 #include "hw_gpio.h"
@@ -64,7 +64,6 @@ void PinMuxConfig(void)
     PinModeSet(PIN_06, PIN_MODE_0);
     PinModeSet(PIN_15, PIN_MODE_0);
     PinModeSet(PIN_21, PIN_MODE_0);
-    PinModeSet(PIN_45, PIN_MODE_0);
     PinModeSet(PIN_50, PIN_MODE_0);
     PinModeSet(PIN_52, PIN_MODE_0);
     PinModeSet(PIN_53, PIN_MODE_0);
@@ -76,32 +75,32 @@ void PinMuxConfig(void)
     PinModeSet(PIN_61, PIN_MODE_0);
     PinModeSet(PIN_62, PIN_MODE_0);
     PinModeSet(PIN_63, PIN_MODE_0);
+    PinModeSet(PIN_64, PIN_MODE_0);
     
     //
     // Enable Peripheral Clocks 
     //
-    PRCMPeripheralClkEnable(PRCM_GPIOA1, PRCM_RUN_MODE_CLK);
     PRCMPeripheralClkEnable(PRCM_GPIOA2, PRCM_RUN_MODE_CLK);
     PRCMPeripheralClkEnable(PRCM_GPIOA3, PRCM_RUN_MODE_CLK);
     PRCMPeripheralClkEnable(PRCM_GSPI, PRCM_RUN_MODE_CLK);
 
     //
-    // Configure PIN_64 for GPIO DC
-    //
-    PinTypeGPIO(PIN_64, PIN_MODE_0, false);
-    GPIODirModeSet(GPIOA1_BASE, 0x2, GPIO_DIR_MODE_OUT);
-
-    //
-    // Configure PIN_08 for GPIO OLED CS
+    // Configure PIN_08 for GPIO Output OC OLEDCS
     //
     PinTypeGPIO(PIN_08, PIN_MODE_0, false);
     GPIODirModeSet(GPIOA2_BASE, 0x2, GPIO_DIR_MODE_OUT);
 
     //
-    // Configure PIN_18 for GPIO RESET
+    // Configure PIN_18 for GPIO Output Reset
     //
     PinTypeGPIO(PIN_18, PIN_MODE_0, false);
     GPIODirModeSet(GPIOA3_BASE, 0x10, GPIO_DIR_MODE_OUT);
+
+    //
+    // Configure PIN_45 for GPIO Input DC
+    //
+    PinTypeGPIO(PIN_45, PIN_MODE_0, false);
+    GPIODirModeSet(GPIOA3_BASE, 0x80, GPIO_DIR_MODE_OUT);
 
     //
     // Configure PIN_05 for SPI0 GSPI_CLK

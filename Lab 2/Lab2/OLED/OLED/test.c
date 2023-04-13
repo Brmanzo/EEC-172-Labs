@@ -10,7 +10,9 @@
 // an OLED test program. See SPI example program.
 
 // Standard includes
+#include <pin_mux_config.h>
 #include <string.h>
+#include <stdio.h>
 
 // Driverlib includes
 #include "hw_types.h"
@@ -27,8 +29,6 @@
 
 // Common interface includes
 #include "uart_if.h"
-#include "pinmux.h"
-
 #include "Adafruit_GFX.h"
 #include "Adafruit_SSD1351.h"
 #include "glcdfont.h"
@@ -296,8 +296,7 @@ void lcdTestPattern2(void)
 //! \return None
 //
 //*****************************************************************************
-static void
-BoardInit(void)
+static void BoardInit(void)
 {
 /* In case of TI-RTOS vector table is initialize by OS itself */
 #ifndef USE_TIRTOS
@@ -334,12 +333,20 @@ void main()
     //
     // Initialize Board configurations
     //
+    fprintf(stdout, "begin\n");
+
     BoardInit();
 
+    fprintf(stdout, "board init\n");
     //
     // Muxing UART and SPI lines.
     //
     PinMuxConfig();
+
+    fprintf(stdout, "pinmux configured\n");
+    //
+    // Initialize OLED configurations
+    //
 
     //
     // Enable the SPI module clock
@@ -375,18 +382,30 @@ void main()
     //
     // Enable Chip select
     //
-    MAP_SPICSEnable(GSPI_BASE);
+    //MAP_SPICSEnable(GSPI_BASE);
+
+    //
+    // Initialize OLED configurations
+    //
+    Adafruit_Init();
+
+
+    fprintf(stdout, "Adafruit Configured\n");
 
     //
     // Begin Test Functions
     //
-    unsigned int i;
+    //unsigned int i;
+    char* Hello = "Hello World";
 
-    for(i = 0; i < sizeof(font); i++)
-    {
-        writeData(font[i]);
-    }
-    MAP_UtilsDelay(8000000);
+    // Print
+//    for(i = 0; i < sizeof(font); i++)
+//    {
+//        writeData(font[i]);
+//        MAP_UtilsDelay(1000);
+//    }
+//    MAP_UtilsDelay(10000000);
+    Outstr(Hello);
 
     //
     // Disable chip select

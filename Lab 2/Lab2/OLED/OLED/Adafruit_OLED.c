@@ -1,6 +1,8 @@
 
 // Standard includes
+#include <pin_mux_config.h>
 #include <string.h>
+#include <stdio.h>
 
 // Driverlib includes
 #include "hw_types.h"
@@ -18,8 +20,6 @@
 
 // Common interface includes
 #include "uart_if.h"
-#include "pinmux.h"
-
 #include "Adafruit_SSD1351.h"
 
 //*****************************************************************************
@@ -31,25 +31,40 @@ void writeCommand(unsigned char c) {
 *  SPI.
 */
 
-    unsigned long uldummy = 0;
-    unsigned long *puldummy;
-    puldummy = &uldummy;
+    //fprintf(stdout, "to write command\n");
+    unsigned char ucDin = 0;
+    unsigned char *pucDin;
+    pucDin = &ucDin;
+
+    unsigned char *pucDout;
+    pucDout = &c;
 
 
     // Enable SPI Port
     SPICSEnable(GSPI_BASE);
+    fprintf(stdout, "1\n");
+
     // Write to DC Command (Low)
-    GPIOPinWrite(GPIOA1_BASE, 0x2, 0x0);
+    GPIOPinWrite(GPIOA3_BASE, 0x80, 0x0);
+    fprintf(stdout, "2\n");
     // Assert CS Low to begin operation (Active Low)
     GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
+    fprintf(stdout, "3\n");
     // Put Data onto SPI Port
     SPIDataPut(GSPI_BASE, (unsigned long)c);
+    fprintf(stdout, "4\n");
     // Collect Dummy Data onto uldummy pointer
-    SPIDataGet(GSPI_BASE, puldummy);
-    // Assert CS High to end operation (Active Low)
+    SPIDataGet(GSPI_BASE, (unsigned long*)pucDin);
+    fprintf(stdout, "5\n");
+//    if(SPITransfer(GSPI_BASE, pucDout, pucDin, 1, 0) == 0)
+//        fprintf(stdout, "Command Written\n");
+//    else
+//        fprintf(stdout, "Command Not Written\n");
     GPIOPinWrite(GPIOA2_BASE, 0x2, 0x0);
+    fprintf(stdout, "6\n");
     // Disable SPI CS
     SPICSDisable(GSPI_BASE);
+    fprintf(stdout, "7\n");
 
 
 
@@ -64,21 +79,30 @@ void writeData(unsigned char c) {
 *  SPI.
 */
 
-    unsigned long uldummy = 0;
-    unsigned long *puldummy;
-    puldummy = &uldummy;
+    //fprintf(stdout, "to write data\n");
+    unsigned char ucDin = 0;
+    unsigned char *pucDin;
+    pucDin = &ucDin;
+
+//    unsigned char *pucDout;
+//    pucDout = &c;
 
 
     // Enable SPI Port
     SPICSEnable(GSPI_BASE);
     // Write to DC Data (High)
-    GPIOPinWrite(GPIOA1_BASE, 0x2, 0x2);
+    GPIOPinWrite(GPIOA3_BASE, 0x80, 0x80);
     // Assert CS Low to begin operation (Active Low)
     GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
     // Put Data onto SPI Port
     SPIDataPut(GSPI_BASE, (unsigned long)c);
     // Collect Dummy Data onto uldummy pointer
-    SPIDataGet(GSPI_BASE, puldummy);
+    SPIDataGet(GSPI_BASE, (unsigned long*)pucDin);
+//    if(SPITransfer(GSPI_BASE, pucDout, pucDin, 1, 0) == 0)
+//        fprintf(stdout, "Data Written\n");
+//    else
+//        fprintf(stdout, "Data Not Written\n");
+
     // Assert CS High to end operation (Active Low)
     GPIOPinWrite(GPIOA2_BASE, 0x2, 0x0);
     // Disable SPI CS
