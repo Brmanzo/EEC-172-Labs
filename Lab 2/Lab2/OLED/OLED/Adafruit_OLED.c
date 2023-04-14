@@ -1,8 +1,7 @@
 
 // Standard includes
-#include <pin_mux_config.h>
+#include <pinmux.h>
 #include <string.h>
-#include <stdio.h>
 
 // Driverlib includes
 #include "hw_types.h"
@@ -31,44 +30,22 @@ void writeCommand(unsigned char c) {
 *  SPI.
 */
 
-    //fprintf(stdout, "to write command\n");
-    unsigned char ucDin = 0;
-    unsigned char *pucDin;
-    pucDin = &ucDin;
-
-    unsigned char *pucDout;
-    pucDout = &c;
-
-
-    // Enable SPI Port
-    SPICSEnable(GSPI_BASE);
-    fprintf(stdout, "1\n");
+    unsigned long uldummy;
 
     // Write to DC Command (Low)
-    GPIOPinWrite(GPIOA3_BASE, 0x80, 0x0);
-    fprintf(stdout, "2\n");
+    GPIOPinWrite(GPIOA1_BASE, 0x2, 0x0);
+    // Enable SPI Port
+    SPICSEnable(GSPI_BASE);
     // Assert CS Low to begin operation (Active Low)
-    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
-    fprintf(stdout, "3\n");
-    // Put Data onto SPI Port
-    SPIDataPut(GSPI_BASE, (unsigned long)c);
-    fprintf(stdout, "4\n");
-    // Collect Dummy Data onto uldummy pointer
-    SPIDataGet(GSPI_BASE, (unsigned long*)pucDin);
-    fprintf(stdout, "5\n");
-//    if(SPITransfer(GSPI_BASE, pucDout, pucDin, 1, 0) == 0)
-//        fprintf(stdout, "Command Written\n");
-//    else
-//        fprintf(stdout, "Command Not Written\n");
     GPIOPinWrite(GPIOA2_BASE, 0x2, 0x0);
-    fprintf(stdout, "6\n");
+    // Put Data onto SPI Port
+    SPIDataPut(GSPI_BASE, c);
+    // Collect Dummy Data onto uldummy pointer
+    SPIDataGet(GSPI_BASE, &uldummy);
+    // Assert CS High to end operation (Active Low)
+    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
     // Disable SPI CS
     SPICSDisable(GSPI_BASE);
-    fprintf(stdout, "7\n");
-
-
-
-
 }
 //*****************************************************************************
 
@@ -79,32 +56,20 @@ void writeData(unsigned char c) {
 *  SPI.
 */
 
-    //fprintf(stdout, "to write data\n");
-    unsigned char ucDin = 0;
-    unsigned char *pucDin;
-    pucDin = &ucDin;
+    unsigned long uldummy;
 
-//    unsigned char *pucDout;
-//    pucDout = &c;
-
-
+    // Write to DC Data (High)
+    GPIOPinWrite(GPIOA1_BASE, 0x2, 0x2);
     // Enable SPI Port
     SPICSEnable(GSPI_BASE);
-    // Write to DC Data (High)
-    GPIOPinWrite(GPIOA3_BASE, 0x80, 0x80);
     // Assert CS Low to begin operation (Active Low)
-    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
-    // Put Data onto SPI Port
-    SPIDataPut(GSPI_BASE, (unsigned long)c);
-    // Collect Dummy Data onto uldummy pointer
-    SPIDataGet(GSPI_BASE, (unsigned long*)pucDin);
-//    if(SPITransfer(GSPI_BASE, pucDout, pucDin, 1, 0) == 0)
-//        fprintf(stdout, "Data Written\n");
-//    else
-//        fprintf(stdout, "Data Not Written\n");
-
-    // Assert CS High to end operation (Active Low)
     GPIOPinWrite(GPIOA2_BASE, 0x2, 0x0);
+    // Put Data onto SPI Port
+    SPIDataPut(GSPI_BASE, c);
+    // Collect Dummy Data onto uldummy pointer
+    SPIDataGet(GSPI_BASE, &uldummy);
+    // Assert CS High to end operation (Active Low)
+    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
     // Disable SPI CS
     SPICSDisable(GSPI_BASE);
 }
@@ -122,22 +87,22 @@ void Adafruit_Init(void){
 
   volatile unsigned long delay;
 
-  GPIOPinWrite(GPIOA3_BASE, 0x10, 0);	// RESET = RESET_LOW
+  GPIOPinWrite(GPIOA3_BASE, 0x10, 0);   // RESET = RESET_LOW
 
   for(delay=0; delay<100; delay=delay+1);// delay minimum 100 ns
 
-  GPIOPinWrite(GPIOA3_BASE, 0x10, 0x10);	// RESET = RESET_HIGH
+  GPIOPinWrite(GPIOA3_BASE, 0x10, 0x10);    // RESET = RESET_HIGH
 
-	// Initialization Sequence
+    // Initialization Sequence
   writeCommand(SSD1351_CMD_COMMANDLOCK);  // set command lock
   writeData(0x12);
   writeCommand(SSD1351_CMD_COMMANDLOCK);  // set command lock
   writeData(0xB1);
 
-  writeCommand(SSD1351_CMD_DISPLAYOFF);  		// 0xAE
+  writeCommand(SSD1351_CMD_DISPLAYOFF);         // 0xAE
 
-  writeCommand(SSD1351_CMD_CLOCKDIV);  		// 0xB3
-  writeCommand(0xF1);  						// 7:4 = Oscillator Frequency, 3:0 = CLK Div Ratio (A[3:0]+1 = 1..16)
+  writeCommand(SSD1351_CMD_CLOCKDIV);       // 0xB3
+  writeCommand(0xF1);                       // 7:4 = Oscillator Frequency, 3:0 = CLK Div Ratio (A[3:0]+1 = 1..16)
 
   writeCommand(SSD1351_CMD_MUXRATIO);
   writeData(127);
@@ -152,7 +117,7 @@ void Adafruit_Init(void){
   writeData(0x00);
   writeData(0x7F);
 
-  writeCommand(SSD1351_CMD_STARTLINE); 		// 0xA1
+  writeCommand(SSD1351_CMD_STARTLINE);      // 0xA1
   if (SSD1351HEIGHT == 96) {
     writeData(96);
   } else {
@@ -160,7 +125,7 @@ void Adafruit_Init(void){
   }
 
 
-  writeCommand(SSD1351_CMD_DISPLAYOFFSET); 	// 0xA2
+  writeCommand(SSD1351_CMD_DISPLAYOFFSET);  // 0xA2
   writeData(0x0);
 
   writeCommand(SSD1351_CMD_SETGPIO);
@@ -173,13 +138,13 @@ void Adafruit_Init(void){
 //    writeCommand(SSSD1351_CMD_SETPHASELENGTH);
 //    writeData(0x32);
 
-  writeCommand(SSD1351_CMD_PRECHARGE);  		// 0xB1
+  writeCommand(SSD1351_CMD_PRECHARGE);          // 0xB1
   writeCommand(0x32);
 
-  writeCommand(SSD1351_CMD_VCOMH);  			// 0xBE
+  writeCommand(SSD1351_CMD_VCOMH);              // 0xBE
   writeCommand(0x05);
 
-  writeCommand(SSD1351_CMD_NORMALDISPLAY);  	// 0xA6
+  writeCommand(SSD1351_CMD_NORMALDISPLAY);      // 0xA6
 
   writeCommand(SSD1351_CMD_CONTRASTABC);
   writeData(0xC8);
@@ -197,7 +162,7 @@ void Adafruit_Init(void){
   writeCommand(SSD1351_CMD_PRECHARGE2);
   writeData(0x01);
 
-  writeCommand(SSD1351_CMD_DISPLAYON);		//--turn on oled panel
+  writeCommand(SSD1351_CMD_DISPLAYON);      //--turn on oled panel
 }
 
 /***********************************/
@@ -243,7 +208,7 @@ void fillRect(unsigned int x, unsigned int y, unsigned int w, unsigned int h, un
 
   // Bounds check
   if ((x >= SSD1351WIDTH) || (y >= SSD1351HEIGHT))
-	return;
+    return;
 
   // Y bounds check
   if (y+h > SSD1351HEIGHT)
@@ -278,7 +243,7 @@ void drawFastVLine(int x, int y, int h, unsigned int color) {
   unsigned int i;
   // Bounds check
   if ((x >= SSD1351WIDTH) || (y >= SSD1351HEIGHT))
-	return;
+    return;
 
   // X bounds check
   if (y+h > SSD1351HEIGHT)
@@ -311,7 +276,7 @@ void drawFastHLine(int x, int y, int w, unsigned int color) {
   unsigned int i;
   // Bounds check
   if ((x >= SSD1351WIDTH) || (y >= SSD1351HEIGHT))
-	return;
+    return;
 
   // X bounds check
   if (x+w > SSD1351WIDTH)
@@ -356,7 +321,7 @@ void  invert(char v) {
    if (v) {
      writeCommand(SSD1351_CMD_INVERTDISPLAY);
    } else {
-     	writeCommand(SSD1351_CMD_NORMALDISPLAY);
+        writeCommand(SSD1351_CMD_NORMALDISPLAY);
    }
  }
 
