@@ -76,9 +76,9 @@ void PinMuxConfig(void)
     PinModeSet(PIN_61, PIN_MODE_0);
     PinModeSet(PIN_62, PIN_MODE_0);
     PinModeSet(PIN_63, PIN_MODE_0);
-    
+
     //
-    // Enable Peripheral Clocks 
+    // Enable Peripheral Clocks
     //
     PRCMPeripheralClkEnable(PRCM_GPIOA1, PRCM_RUN_MODE_CLK);
     PRCMPeripheralClkEnable(PRCM_GPIOA2, PRCM_RUN_MODE_CLK);

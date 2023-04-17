@@ -13,7 +13,7 @@ C_SRCS += \
 ../Adafruit_OLED.c \
 ../main.c \
 ../pinmux.c \
-C:/TI/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c \
+C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c \
 ../test.c \
 ../uart_if.c 
 
@@ -58,7 +58,7 @@ C_SRCS__QUOTED += \
 "../Adafruit_OLED.c" \
 "../main.c" \
 "../pinmux.c" \
-"C:/TI/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c" \
+"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c" \
 "../test.c" \
 "../uart_if.c" 
 

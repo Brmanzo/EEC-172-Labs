@@ -55,11 +55,11 @@ extern int cursor_y;
 float p = 3.1415926;
 
 // Color definitions
-#define	BLACK           0x0000
-#define	BLUE            0x001F
-#define	GREEN           0x07E0
+#define BLACK           0x0000
+#define BLUE            0x001F
+#define GREEN           0x07E0
 #define CYAN            0x07FF
-#define	RED             0xF800
+#define RED             0xF800
 #define MAGENTA         0xF81F
 #define YELLOW          0xFFE0
 #define WHITE           0xFFFF
@@ -70,40 +70,40 @@ float p = 3.1415926;
 
 //  function delays 3*ulCount cycles
 void delay(unsigned long ulCount){
-	int i;
+    int i;
 
   do{
     ulCount--;
-		for (i=0; i< 65535; i++) ;
-	}while(ulCount);
+        for (i=0; i< 65535; i++) ;
+    }while(ulCount);
 }
 
 
 //*****************************************************************************
 void testfastlines(unsigned int color1, unsigned int color2) {
-	unsigned int x;
-	unsigned int y;
+    unsigned int x;
+    unsigned int y;
 
    fillScreen(BLACK);
    for (y=0; y < height()-1; y+=8) {
      drawFastHLine(0, y, width()-1, color1);
    }
-	 delay(100);
+     delay(100);
    for (x=0; x < width()-1; x+=8) {
      drawFastVLine(x, 0, height()-1, color2);
    }
-	 delay(100);
+     delay(100);
 }
 
 //*****************************************************************************
 
 void testdrawrects(unsigned int color) {
-	unsigned int x;
+    unsigned int x;
 
  fillScreen(BLACK);
  for (x=0; x < height()-1; x+=6) {
    drawRect((width()-1)/2 -x/2, (height()-1)/2 -x/2 , x, x, color);
-	 delay(10);
+     delay(10);
  }
 }
 
@@ -111,26 +111,26 @@ void testdrawrects(unsigned int color) {
 
 void testfillrects(unsigned int color1, unsigned int color2) {
 
-	unsigned char x;
+    unsigned char x;
 
  fillScreen(BLACK);
  for (x=height()-1; x > 6; x-=6) {
    fillRect((width()-1)/2 -x/2, (height()-1)/2 -x/2 , x, x, color1);
    drawRect((width()-1)/2 -x/2, (height()-1)/2 -x/2 , x, x, color2);
-	 delay(10);
+     delay(10);
  }
 }
 
 //*****************************************************************************
 
 void testfillcircles(unsigned char radius, unsigned int color) {
-	unsigned char x;
-	unsigned char y;
+    unsigned char x;
+    unsigned char y;
 
   for (x=radius; x < width()-1; x+=radius*2) {
     for (y=radius; y < height()-1; y+=radius*2) {
       fillCircle(x, y, radius, color);
-			delay(10);
+            delay(10);
     }
   }
 }
@@ -138,13 +138,13 @@ void testfillcircles(unsigned char radius, unsigned int color) {
 //*****************************************************************************
 
 void testdrawcircles(unsigned char radius, unsigned int color) {
-	unsigned char x;
-	unsigned char y;
+    unsigned char x;
+    unsigned char y;
 
   for (x=0; x < width()-1+radius; x+=radius*2) {
     for (y=0; y < height()-1+radius; y+=radius*2) {
       drawCircle(x, y, radius, color);
-			delay(10);
+            delay(10);
     }
   }
 }
@@ -166,7 +166,7 @@ void testtriangles() {
     y+=4;
     z-=4;
     color+=100;
-		delay(10);
+        delay(10);
   }
 }
 
@@ -175,7 +175,7 @@ void testtriangles() {
 void testroundrects() {
   int color = 100;
 
-	int i;
+    int i;
   int x = 0;
   int y = 0;
   int w = width();
@@ -195,48 +195,48 @@ void testroundrects() {
 
 //*****************************************************************************
 void testlines(unsigned int color) {
-	unsigned int x;
-	unsigned int y;
+    unsigned int x;
+    unsigned int y;
 
    fillScreen(BLACK);
    for (x=0; x < width()-1; x+=6) {
      drawLine(0, 0, x, height()-1, color);
    }
-	 delay(10);
+     delay(10);
    for (y=0; y < height()-1; y+=6) {
      drawLine(0, 0, width()-1, y, color);
    }
-	 delay(100);
+     delay(100);
 
    fillScreen(BLACK);
    for (x=0; x < width()-1; x+=6) {
      drawLine(width()-1, 0, x, height()-1, color);
    }
-	 delay(100);
+     delay(100);
    for (y=0; y < height()-1; y+=6) {
      drawLine(width()-1, 0, 0, y, color);
    }
-	 delay(100);
+     delay(100);
 
    fillScreen(BLACK);
    for (x=0; x < width()-1; x+=6) {
      drawLine(0, height()-1, x, 0, color);
    }
-	 delay(100);
+     delay(100);
    for (y=0; y < height()-1; y+=6) {
      drawLine(0, height()-1, width()-1, y, color);
    }
-	 delay(100);
+     delay(100);
 
    fillScreen(BLACK);
    for (x=0; x < width()-1; x+=6) {
      drawLine(width()-1, height()-1, x, 0, color);
    }
-	 delay(100);
+     delay(100);
    for (y=0; y < height()-1; y+=6) {
      drawLine(width()-1, height()-1, 0, y, color);
    }
-	 delay(100);
+     delay(100);
 
 }
 

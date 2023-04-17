@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/TI/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
+CG_TOOL_ROOT := C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -19,7 +19,7 @@ ORDERED_OBJS += \
 "./uart_if.obj" \
 "../cc3200v1p32.cmd" \
 $(GEN_CMDS__FLAG) \
--l"C:/TI/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" \
+-l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" \
 -llibc.a \
 
 -include ../makefile.init
@@ -132,6 +132,12 @@ OLED.out \
 EXE_OUTPUTS__QUOTED += \
 "OLED.out" \
 
+BIN_OUTPUTS += \
+OLED.bin \
+
+BIN_OUTPUTS__QUOTED += \
+"OLED.bin" \
+
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
@@ -141,21 +147,29 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 OLED.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/TI/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"OLED.map" --heap_size=0x800 --stack_size=0x800 -i"C:/TI/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/TI/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="OLED_linkInfo.xml" --rom_model -o "OLED.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"OLED.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="OLED_linkInfo.xml" --rom_model -o "OLED.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
+	@echo ' '
+	@$(MAKE) --no-print-directory post-build
+
+OLED.bin: $(EXE_OUTPUTS)
+	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
+	@echo 'Invoking: ARM Hex Utility'
+	"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex"  -o "OLED.bin" $(EXE_OUTPUTS__QUOTED)
+	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(EXE_OUTPUTS__QUOTED)
+	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
 	-$(RM) "Adafruit_GFX.obj" "Adafruit_OLED.obj" "main.obj" "pinmux.obj" "startup_ccs.obj" "test.obj" "uart_if.obj" 
 	-$(RM) "Adafruit_GFX.d" "Adafruit_OLED.d" "main.d" "pinmux.d" "startup_ccs.d" "test.d" "uart_if.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
 post-build:
-	-C:/TI/ccs1220/ccs/utils/tiobj2bin/tiobj2bin OLED.out OLED.bin C:/TI/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/TI/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/TI/ccs1220/ccs/utils/tiobj2bin/mkhex4bin
+	-C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin OLED.out OLED.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
 	-@echo ' '
 
 .PHONY: all clean dependents

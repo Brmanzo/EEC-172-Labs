@@ -1,5 +1,6 @@
 
 // Standard includes
+#include <pinmux.h>
 #include <string.h>
 
 // Driverlib includes
@@ -18,8 +19,6 @@
 
 // Common interface includes
 #include "uart_if.h"
-#include "pinmux.h"
-
 #include "Adafruit_SSD1351.h"
 
 //*****************************************************************************
@@ -88,22 +87,22 @@ void Adafruit_Init(void){
 
   volatile unsigned long delay;
 
-  GPIOPinWrite(GPIOA3_BASE, 0x10, 0);	// RESET = RESET_LOW
+  GPIOPinWrite(GPIOA3_BASE, 0x10, 0);   // RESET = RESET_LOW
 
   for(delay=0; delay<100; delay=delay+1);// delay minimum 100 ns
 
-  GPIOPinWrite(GPIOA3_BASE, 0x10, 0x10);	// RESET = RESET_HIGH
+  GPIOPinWrite(GPIOA3_BASE, 0x10, 0x10);    // RESET = RESET_HIGH
 
-	// Initialization Sequence
+    // Initialization Sequence
   writeCommand(SSD1351_CMD_COMMANDLOCK);  // set command lock
   writeData(0x12);
   writeCommand(SSD1351_CMD_COMMANDLOCK);  // set command lock
   writeData(0xB1);
 
-  writeCommand(SSD1351_CMD_DISPLAYOFF);  		// 0xAE
+  writeCommand(SSD1351_CMD_DISPLAYOFF);         // 0xAE
 
-  writeCommand(SSD1351_CMD_CLOCKDIV);  		// 0xB3
-  writeCommand(0xF1);  						// 7:4 = Oscillator Frequency, 3:0 = CLK Div Ratio (A[3:0]+1 = 1..16)
+  writeCommand(SSD1351_CMD_CLOCKDIV);       // 0xB3
+  writeCommand(0xF1);                       // 7:4 = Oscillator Frequency, 3:0 = CLK Div Ratio (A[3:0]+1 = 1..16)
 
   writeCommand(SSD1351_CMD_MUXRATIO);
   writeData(127);
@@ -118,7 +117,7 @@ void Adafruit_Init(void){
   writeData(0x00);
   writeData(0x7F);
 
-  writeCommand(SSD1351_CMD_STARTLINE); 		// 0xA1
+  writeCommand(SSD1351_CMD_STARTLINE);      // 0xA1
   if (SSD1351HEIGHT == 96) {
     writeData(96);
   } else {
@@ -126,7 +125,7 @@ void Adafruit_Init(void){
   }
 
 
-  writeCommand(SSD1351_CMD_DISPLAYOFFSET); 	// 0xA2
+  writeCommand(SSD1351_CMD_DISPLAYOFFSET);  // 0xA2
   writeData(0x0);
 
   writeCommand(SSD1351_CMD_SETGPIO);
@@ -139,13 +138,13 @@ void Adafruit_Init(void){
 //    writeCommand(SSSD1351_CMD_SETPHASELENGTH);
 //    writeData(0x32);
 
-  writeCommand(SSD1351_CMD_PRECHARGE);  		// 0xB1
+  writeCommand(SSD1351_CMD_PRECHARGE);          // 0xB1
   writeCommand(0x32);
 
-  writeCommand(SSD1351_CMD_VCOMH);  			// 0xBE
+  writeCommand(SSD1351_CMD_VCOMH);              // 0xBE
   writeCommand(0x05);
 
-  writeCommand(SSD1351_CMD_NORMALDISPLAY);  	// 0xA6
+  writeCommand(SSD1351_CMD_NORMALDISPLAY);      // 0xA6
 
   writeCommand(SSD1351_CMD_CONTRASTABC);
   writeData(0xC8);
@@ -163,7 +162,7 @@ void Adafruit_Init(void){
   writeCommand(SSD1351_CMD_PRECHARGE2);
   writeData(0x01);
 
-  writeCommand(SSD1351_CMD_DISPLAYON);		//--turn on oled panel
+  writeCommand(SSD1351_CMD_DISPLAYON);      //--turn on oled panel
 }
 
 /***********************************/
@@ -209,7 +208,7 @@ void fillRect(unsigned int x, unsigned int y, unsigned int w, unsigned int h, un
 
   // Bounds check
   if ((x >= SSD1351WIDTH) || (y >= SSD1351HEIGHT))
-	return;
+    return;
 
   // Y bounds check
   if (y+h > SSD1351HEIGHT)
@@ -244,7 +243,7 @@ void drawFastVLine(int x, int y, int h, unsigned int color) {
   unsigned int i;
   // Bounds check
   if ((x >= SSD1351WIDTH) || (y >= SSD1351HEIGHT))
-	return;
+    return;
 
   // X bounds check
   if (y+h > SSD1351HEIGHT)
@@ -277,7 +276,7 @@ void drawFastHLine(int x, int y, int w, unsigned int color) {
   unsigned int i;
   // Bounds check
   if ((x >= SSD1351WIDTH) || (y >= SSD1351HEIGHT))
-	return;
+    return;
 
   // X bounds check
   if (x+w > SSD1351WIDTH)
@@ -322,7 +321,7 @@ void  invert(char v) {
    if (v) {
      writeCommand(SSD1351_CMD_INVERTDISPLAY);
    } else {
-     	writeCommand(SSD1351_CMD_NORMALDISPLAY);
+        writeCommand(SSD1351_CMD_NORMALDISPLAY);
    }
  }
 
