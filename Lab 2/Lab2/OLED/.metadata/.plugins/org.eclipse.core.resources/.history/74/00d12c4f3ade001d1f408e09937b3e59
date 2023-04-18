@@ -206,21 +206,21 @@ void main()
         setTextSize(1);
         setTextColor(0xFFFF, 0x0000);
 
-        // Print Fontset
-        for(i = 0; i < sizeof(font)/5; i++)
-        {
-            drawChar(x, y, i, 0xFFFF, 0x0000, 1);
-            if(x < 120)
-                x += 6;
-            else
-            {
-                x = 0;
-                if(y < 128)
-                    y = y += 8;
-                else
-                    y = 0;
-            }
-        }
+//        // Print Fontset
+//        for(i = 0; i < sizeof(font); i++)
+//        {
+//            drawChar(x, y, i, 0xFFFF, 0x0000, 1);
+//            if(x < 120)
+//                x += 6;
+//            else
+//            {
+//                x = 0;
+//                if(y < 128)
+//                    y = y += 8;
+//                else
+//                    y = 0;
+//            }
+//        }
         // Print Hello world
         fillScreen(0x0000);
         char* Hello = "Hello world ";

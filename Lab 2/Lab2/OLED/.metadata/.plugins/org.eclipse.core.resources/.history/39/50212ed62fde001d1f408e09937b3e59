@@ -207,7 +207,7 @@ void main()
         setTextColor(0xFFFF, 0x0000);
 
         // Print Fontset
-        for(i = 0; i < sizeof(font)/5; i++)
+        for(i = 0; i < sizeof(font); i++)
         {
             drawChar(x, y, i, 0xFFFF, 0x0000, 1);
             if(x < 120)

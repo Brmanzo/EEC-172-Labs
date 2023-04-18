@@ -198,7 +198,6 @@ void main()
     while(1)
     {
         int i;
-        int j;
         // Position in pixels
         int x = 0;
         int y = 0;
@@ -207,7 +206,7 @@ void main()
         setTextColor(0xFFFF, 0x0000);
 
         // Print Fontset
-        for(i = 0; i < sizeof(font)/5; i++)
+        for(i = 0; i < sizeof(font); i++)
         {
             drawChar(x, y, i, 0xFFFF, 0x0000, 1);
             if(x < 120)
@@ -231,31 +230,23 @@ void main()
         unsigned int colors[8] = {0x0000, 0x001F, 0x07E0, 0x07FF, 0xF800, 0xF81F, 0xFFE0, 0xFFFF};
         // Print eight horizontal lines
         y = 0;
-        x = 0;
 
         for(i = 0; i < 8; i++)
         {
-            for(j = 0; j < 16; j++)
-            {
-                drawLine(0, y, 128, y, colors[i]);
-                y ++;
-            }
+            drawLine(0, y, 120, y, colors[i]);
+            y += 15;
         }
 
         MAP_UtilsDelay(10000000);
         fillScreen(0x0000);
 
         // Print eight vertical lines
-        y = 0;
         x = 0;
 
         for(i = 0; i < 8; i++)
         {
-            for (j = 0; j < 16; j++)
-            {
-                drawLine(x, 0, x, 128, colors[i]);
-                x ++;
-            }
+            drawLine(x, 0, x, 120, colors[i]);
+            x += 15;
         }
         fillScreen(0x0000);
 
