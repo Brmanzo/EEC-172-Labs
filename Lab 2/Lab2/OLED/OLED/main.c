@@ -92,6 +92,15 @@
 #define MASTER_MSG       "This is CC3200 SPI Master Application\n\r"
 #define SLAVE_MSG        "This is CC3200 SPI Slave Application\n\r"
 
+#define BLACK           0x0000
+#define BLUE            0x001F
+#define GREEN           0x07E0
+#define CYAN            0x07FF
+#define RED             0xF800
+#define MAGENTA         0xF81F
+#define YELLOW          0xFFE0
+#define WHITE           0xFFFF
+
 //*****************************************************************************
 //                 GLOBAL VARIABLES -- Start
 //*****************************************************************************
@@ -228,7 +237,7 @@ void main()
         MAP_UtilsDelay(10000000);
         fillScreen(0x0000);
 
-        unsigned int colors[8] = {0x0000, 0x001F, 0x07E0, 0x07FF, 0xF800, 0xF81F, 0xFFE0, 0xFFFF};
+        unsigned int colors[8] = {BLACK, BLUE, GREEN, CYAN, RED, MAGENTA, YELLOW, WHITE};
         // Print eight horizontal lines
         y = 0;
         x = 0;
@@ -245,7 +254,7 @@ void main()
         MAP_UtilsDelay(10000000);
         fillScreen(0x0000);
 
-        // Print eight vertical lines
+        // Print eight vertical bands
         y = 0;
         x = 0;
 

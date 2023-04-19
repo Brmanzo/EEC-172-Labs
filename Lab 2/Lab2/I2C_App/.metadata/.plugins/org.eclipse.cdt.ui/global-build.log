@@ -1,0 +1,1307 @@
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/i2c_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="i2c_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/i2c_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/i2c_if.c"
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../pinmux.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pinmux.d_raw"  "../pinmux.c"
+Finished building: "../pinmux.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../pinmux.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pinmux.d_raw"  "../pinmux.c"
+Finished building: "../pinmux.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../pinmux.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pinmux.d_raw"  "../pinmux.c"
+Finished building: "../pinmux.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 629: warning #169-D: argument of type "unsigned char" is incompatible with parameter of type "unsigned char *"
+"../main.c", line 582: warning #179-D: variable "acCmdStore" was declared but never referenced
+"../main.c", line 610: warning #179-D: variable "stringx" was declared but never referenced
+"../main.c", line 611: warning #179-D: variable "stringy" was declared but never referenced
+"../main.c", line 614: warning #179-D: variable "y_vel" was declared but never referenced
+"../main.c", line 617: warning #179-D: variable "RegOffsety" was declared but never referenced
+"../main.c", line 619: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 620: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 622: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'i2c_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 582: warning #179-D: variable "acCmdStore" was declared but never referenced
+"../main.c", line 610: warning #179-D: variable "stringx" was declared but never referenced
+"../main.c", line 611: warning #179-D: variable "stringy" was declared but never referenced
+"../main.c", line 614: warning #179-D: variable "y_vel" was declared but never referenced
+"../main.c", line 617: warning #179-D: variable "RegOffsety" was declared but never referenced
+"../main.c", line 619: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 620: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 622: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 581: warning #179-D: variable "iRetVal" was declared but never referenced
+"../main.c", line 582: warning #179-D: variable "acCmdStore" was declared but never referenced
+"../main.c", line 610: warning #179-D: variable "stringx" was declared but never referenced
+"../main.c", line 611: warning #179-D: variable "stringy" was declared but never referenced
+"../main.c", line 614: warning #179-D: variable "y_vel" was declared but never referenced
+"../main.c", line 617: warning #179-D: variable "RegOffsety" was declared but never referenced
+"../main.c", line 619: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 620: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 622: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 581: warning #179-D: variable "iRetVal" was declared but never referenced
+"../main.c", line 582: warning #179-D: variable "acCmdStore" was declared but never referenced
+"../main.c", line 610: warning #179-D: variable "stringx" was declared but never referenced
+"../main.c", line 611: warning #179-D: variable "stringy" was declared but never referenced
+"../main.c", line 614: warning #179-D: variable "y_vel" was declared but never referenced
+"../main.c", line 617: warning #179-D: variable "RegOffsety" was declared but never referenced
+"../main.c", line 619: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 620: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 622: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 626: warning #169-D: argument of type "int" is incompatible with parameter of type "unsigned char *"
+"../main.c", line 626: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 629: warning #169-D: argument of type "int" is incompatible with parameter of type "unsigned char *"
+"../main.c", line 629: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 581: warning #179-D: variable "iRetVal" was declared but never referenced
+"../main.c", line 582: warning #179-D: variable "acCmdStore" was declared but never referenced
+"../main.c", line 610: warning #179-D: variable "stringx" was declared but never referenced
+"../main.c", line 611: warning #179-D: variable "stringy" was declared but never referenced
+"../main.c", line 616: warning #179-D: variable "RegOffsetx" was declared but never referenced
+"../main.c", line 617: warning #179-D: variable "RegOffsety" was declared but never referenced
+"../main.c", line 619: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 620: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 622: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 581: warning #179-D: variable "iRetVal" was declared but never referenced
+"../main.c", line 582: warning #179-D: variable "acCmdStore" was declared but never referenced
+"../main.c", line 610: warning #179-D: variable "stringx" was declared but never referenced
+"../main.c", line 611: warning #179-D: variable "stringy" was declared but never referenced
+"../main.c", line 619: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 620: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 622: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 610: warning #225-D: function "SPIReset" declared implicitly
+"../main.c", line 615: warning #225-D: function "SPIConfigSetExpClk" declared implicitly
+"../main.c", line 616: error #20: identifier "SPI_IF_BIT_RATE" is undefined
+"../main.c", line 616: error #20: identifier "SPI_MODE_MASTER" is undefined
+"../main.c", line 616: error #20: identifier "SPI_SUB_MODE_0" is undefined
+"../main.c", line 617: error #20: identifier "SPI_SW_CTRL_CS" is undefined
+"../main.c", line 618: error #20: identifier "SPI_4PIN_MODE" is undefined
+"../main.c", line 619: error #20: identifier "SPI_TURBO_OFF" is undefined
+"../main.c", line 620: error #20: identifier "SPI_CS_ACTIVELOW" is undefined
+"../main.c", line 621: error #20: identifier "SPI_WL_8" is undefined
+"../main.c", line 626: warning #225-D: function "SPIEnable" declared implicitly
+"../main.c", line 628: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 630: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 630: error #20: identifier "BLACK" is undefined
+"../main.c", line 631: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 631: error #20: identifier "RED" is undefined
+"../main.c", line 638: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 639: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 641: warning #179-D: variable "retval" was declared but never referenced
+"../main.c", line 203: warning #179-D: function "DisplayBanner" was declared but never referenced
+10 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../Adafruit_GFX.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Adafruit_GFX.d_raw"  "../Adafruit_GFX.c"
+Finished building: "../Adafruit_GFX.c"
+ 
+Building file: "../Adafruit_OLED.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Adafruit_OLED.d_raw"  "../Adafruit_OLED.c"
+Finished building: "../Adafruit_OLED.c"
+ 
+Building file: "../test.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="test.d_raw"  "../test.c"
+Finished building: "../test.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 617: error #20: identifier "SPI_IF_BIT_RATE" is undefined
+"../main.c", line 629: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 631: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 631: error #20: identifier "BLACK" is undefined
+"../main.c", line 632: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 632: error #20: identifier "RED" is undefined
+"../main.c", line 639: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 640: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 642: warning #179-D: variable "retval" was declared but never referenced
+"../main.c", line 204: warning #179-D: function "DisplayBanner" was declared but never referenced
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 625: error #20: identifier "SPI_IF_BIT_RATE" is undefined
+"../main.c", line 637: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 639: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 640: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 647: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 648: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 650: warning #179-D: variable "retval" was declared but never referenced
+"../main.c", line 212: warning #179-D: function "DisplayBanner" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 640: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 642: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 643: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 650: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 651: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 653: warning #179-D: variable "retval" was declared but never referenced
+"../main.c", line 215: warning #179-D: function "DisplayBanner" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 122: warning #225-D: function "BoardInit" declared implicitly
+"../main.c", line 165: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 167: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 168: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 175: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 176: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 178: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ BoardInit ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "i2c_demo.out" not built
+ 
+>> Compilation failure
+makefile:149: recipe for target 'i2c_demo.out' failed
+gmake[1]: *** [i2c_demo.out] Error 1
+makefile:145: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 217: warning #179-D: variable "x_pos" was declared but never referenced
+"../main.c", line 218: warning #179-D: variable "y_pos" was declared but never referenced
+"../main.c", line 220: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 238: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 245: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 220: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 220: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 238: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 245: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 220: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 238: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 245: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 220: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 238: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 245: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 220: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 220: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'i2c_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 237: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 242: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'i2c_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 236: error #138: expression must be a modifiable lvalue
+"../main.c", line 238: error #138: expression must be a modifiable lvalue
+"../main.c", line 240: error #138: expression must be a modifiable lvalue
+"../main.c", line 241: error #138: expression must be a modifiable lvalue
+"../main.c", line 243: error #138: expression must be a modifiable lvalue
+"../main.c", line 245: error #138: expression must be a modifiable lvalue
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+6 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'i2c_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+"../main.c", line 211: warning #552-D: variable "x_1" was set but never used
+"../main.c", line 212: warning #552-D: variable "y_1" was set but never used
+"../main.c", line 223: warning #179-D: variable "retval" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project i2c_demo ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab2/I2C_App/i2c_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 207: warning #225-D: function "Adafruit_Init" declared implicitly
+"../main.c", line 209: warning #225-D: function "fillScreen" declared implicitly
+"../main.c", line 210: warning #225-D: function "fillCircle" declared implicitly
+Finished building: "../main.c"
+ 
+Building target: "i2c_demo.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_demo_linkInfo.xml" --rom_model -o "i2c_demo.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./i2c_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "i2c_demo.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin i2c_demo.out i2c_demo.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
