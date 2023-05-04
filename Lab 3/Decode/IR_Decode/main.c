@@ -246,123 +246,162 @@ int main() {
         {
             // if last remembered word is the same
             // increment repetitions
-            if(prev_message == message)
-                repetitions++;
             // otherwise, message is done repeating and should print
+                // Space
+            if(message == 0b00000010111111010000000011111111)
+            {
+                character = ' ';
+            }
+            // 1 (Font Color Change)
+            else if(message == 0b00000010111111011000000001111111)
+            {
+                character = '1';
+            }
+            // 2
+            else if(message == 0b00000010111111010100000010111111)
+            {
+                if(prev_message == message)
+                {
+                    repetitions++;
+                }
+                else {
+                    repetitions = 0;
+                }
+                char letters = {'A', 'B', 'C'};
+                if (repetitions > (sizeof(letters) - 1))
+                    repetitions = repetitions - (sizeof(letters) - 1);
+                character = letters[repetitions];
+                prev_message = message;
+            }
+            // 3
+            else if(message == 0b00000010111111011100000000111111)
+            {
+                iif(prev_message == message)
+                {
+                    repetitions++;
+                }
+                else {
+                    repetitions = 0;
+                }
+                char letters = {'D', 'E', 'F'};
+                if (repetitions > (sizeof(letters) - 1))
+                    repetitions = repetitions - (sizeof(letters) - 1);
+                character = letters[repetitions];
+                prev_message = message;
+            }
+            // 4
+            else if(message == 0b00000010111111010010000011011111)
+            {
+                if(prev_message == message)
+                {
+                    repetitions++;
+                }
+                else {
+                    repetitions = 0;
+                }
+                char letters = {'G', 'H', 'I'};
+                if (repetitions > (sizeof(letters) - 1))
+                    repetitions = repetitions - (sizeof(letters) - 1);
+                character = letters[repetitions];
+                prev_message = message;
+            }
+            // 5
+            else if(message == 0b00000010111111011010000001011111)
+            {
+                if(prev_message == message)
+                {
+                    repetitions++;
+                }
+                else {
+                    repetitions = 0;
+                }
+                char letters = {'J', 'K', 'L'};
+                if (repetitions > (sizeof(letters) - 1))
+                    repetitions = repetitions - (sizeof(letters) - 1);
+                character = letters[repetitions];
+                prev_message = message;
+            }
+            // 6
+            else if(message == 0b00000010111111010110000010011111)
+            {
+                if(prev_message == message)
+                {
+                    repetitions++;
+                }
+                else {
+                    repetitions = 0;
+                }
+                char letters = {'M', 'N', 'O'};
+                if (repetitions > (sizeof(letters) - 1))
+                    repetitions = repetitions - (sizeof(letters) - 1);
+                character = letters[repetitions];
+                prev_message = message;
+            }
+            // 7
+            else if(message == 0b00000010111111011110000000011111)
+            {
+                if(prev_message == message)
+                {
+                    repetitions++;
+                }
+                else {
+                    repetitions = 0;
+                }
+                char letters = {'P', 'Q', 'R', 'S'};
+                if (repetitions > (sizeof(letters) - 1))
+                    repetitions = repetitions - (sizeof(letters) - 1);
+                character = letters[repetitions];
+                prev_message = message;
+            }
+            // 8
+            else if(message == 0b00000010111111010001000011101111)
+            {
+                if(prev_message == message)
+                {
+                    repetitions++;
+                }
+                else {
+                    repetitions = 0;
+                }
+                char letters = {'T', 'U', 'V'};
+                if (repetitions > (sizeof(letters) - 1))
+                    repetitions = repetitions - (sizeof(letters) - 1);
+                character = letters[repetitions];
+                prev_message = message;
+            }
+            // 9
+            else if(message == 0b00000010111111011001000001101111)
+            {
+                if(prev_message == message)
+                {
+                    repetitions++;
+                }
+                else {
+                    repetitions = 0;
+                }
+                char letters = {'W', 'X', 'Y', 'Z'};
+                if (repetitions > (sizeof(letters) - 1))
+                    repetitions = repetitions - (sizeof(letters) - 1);
+                character = letters[repetitions];
+                prev_message = message;
+            }
+            // Enter (MUTE)
+            else if(message == 0b00000010111111010000100011110111)
+            {
+                character = '\n';
+            }
+            // Delete (LAST)
+            else if(message == 0b00000010111111010000001011111101)
+            {
+                character = 127;
+            }
             else
             {
-                prev_message = message;
-                // Space
-                if(message == 0b00000010111111010000000011111111)
-                {
-                    character = ' ';
-                }
-                // 1 (Font Color Change)
-                else if(message == 0b00000010111111011000000001111111)
-                {
-                    character = '1';
-                }
-                // 2
-                else if(message == 0b00000010111111010100000010111111)
-                {
-                    if(repetitions == 2)
-                        character = 'C';
-                    if(repetitions == 1)
-                        character = 'B';
-                    else // repetitions == 0
-                        character = 'A';
-                }
-                // 3
-                else if(message == 0b00000010111111011100000000111111)
-                {
-                    if(repetitions == 2)
-                        character = 'F';
-                    if(repetitions == 1)
-                        character = 'E';
-                    else // repetitions == 0
-                        character = 'D';
-                }
-                // 4
-                else if(message == 0b00000010111111010010000011011111)
-                {
-                    if(repetitions == 2)
-                        character = 'I';
-                    if(repetitions == 1)
-                        character = 'H';
-                    else // repetitions == 0
-                        character = 'G';
-                }
-                // 5
-                else if(message == 0b00000010111111011010000001011111)
-                {
-                    if(repetitions == 2)
-                        character = 'L';
-                    if(repetitions == 1)
-                        character = 'K';
-                    else // repetitions == 0
-                        character = 'J';
-                }
-                // 6
-                else if(message == 0b00000010111111010110000010011111)
-                {
-                    if(repetitions == 2)
-                        character = 'O';
-                    if(repetitions == 1)
-                        character = 'N';
-                    else // repetitions == 0
-                        character = 'M';
-                }
-                // 7
-                else if(message == 0b00000010111111011110000000011111)
-                {
-                    if(repetitions == 3)
-                        character = 'S';
-                    if(repetitions == 2)
-                        character = 'R';
-                    if(repetitions == 1)
-                        character = 'Q';
-                    else // repetitions == 0
-                        character = 'P';
-                }
-                // 8
-                else if(message == 0b00000010111111010001000011101111)
-                {
-                    if(repetitions == 2)
-                        character = 'V';
-                    if(repetitions == 1)
-                        character = 'U';
-                    else // repetitions == 0
-                        character = 'T';
-                }
-                // 9
-                else if(message == 0b00000010111111011001000001101111)
-                {
-                    if(repetitions == 3)
-                        character = 'Z';
-                    if(repetitions == 2)
-                        character = 'Y';
-                    if(repetitions == 1)
-                        character = 'X';
-                    else // repetitions == 0
-                        character = 'W';
-                }
-                // Enter (MUTE)
-                else if(message == 0b00000010111111010000100011110111)
-                {
-                    character = '\n';
-                }
-                // Delete (LAST)
-                else if(message == 0b00000010111111010000001011111101)
-                {
-                    character = 127;
-                }
-                else
-                {
                     character = '!';
-                }
-                Report("to transmit: %c repetitions: %d \r\n",character, repetitions);
-                // Resets repetitions
             }
+            Report("to transmit: %c repetitions: %d \r\n",character, repetitions);
+            // Resets repetitions
+        }
             message = 0;
         }
         else if(delta_us < 2500 && delta_us > 1300)
