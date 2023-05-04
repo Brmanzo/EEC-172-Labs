@@ -1,0 +1,1961 @@
+
+**** Build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 184: error #20: identifier "ulStatus" is undefined
+"../main.c", line 214: error #29: expected an expression
+"../main.c", line 217: error #128: expected a statement
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="gpio_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+ 
+Building file: "../pin_mux_config.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pin_mux_config.d_raw"  "../pin_mux_config.c"
+Finished building: "../pin_mux_config.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 184: error #20: identifier "ulStatus" is undefined
+"../main.c", line 214: error #29: expected an expression
+"../main.c", line 217: error #128: expected a statement
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 162: error #20: identifier "bool" is undefined
+"../main.c", line 186: error #20: identifier "ulStatus" is undefined
+"../main.c", line 217: error #29: expected an expression
+"../main.c", line 220: error #128: expected a statement
+4 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../pin_mux_config.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pin_mux_config.d_raw"  "../pin_mux_config.c"
+Finished building: "../pin_mux_config.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 162: error #20: identifier "bool" is undefined
+"../main.c", line 186: error #20: identifier "ulStatus" is undefined
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 186: error #20: identifier "ulStatus" is undefined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "blinky.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"blinky.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="blinky_linkInfo.xml" --rom_model -o "blinky.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ ClearTerm ./main.obj      
+ InitTerm  ./main.obj      
+ Message   ./main.obj      
+ Report    ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "blinky.out" not built
+ 
+>> Compilation failure
+makefile:145: recipe for target 'blinky.out' failed
+gmake[1]: *** [blinky.out] Error 1
+makefile:141: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "blinky.bin"  "blinky.out" 
+DEL /F "gpio_if.obj" "main.obj" "pin_mux_config.obj" "startup_ccs.obj" 
+DEL /F "gpio_if.d" "main.d" "pin_mux_config.d" "startup_ccs.d" 
+Could Not Find C:\Users\bradl\OneDrive\Documents\2023 Spring Quarter\EEC 172\Lab3\Decode\IR_Decode\Debug\blinky.bin
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="gpio_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../pin_mux_config.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pin_mux_config.d_raw"  "../pin_mux_config.c"
+Finished building: "../pin_mux_config.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+ 
+Building file: "../uart_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart_if.d_raw"  "../uart_if.c"
+Finished building: "../uart_if.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'IR_Decode.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'IR_Decode.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../pin_mux_config.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pin_mux_config.d_raw"  "../pin_mux_config.c"
+Finished building: "../pin_mux_config.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../pin_mux_config.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pin_mux_config.d_raw"  "../pin_mux_config.c"
+Finished building: "../pin_mux_config.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 197: error #20: identifier "ulStatus" is undefined
+"../main.c", line 85: warning #179-D: function "SysTickReset" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 85: warning #179-D: function "SysTickReset" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 85: warning #179-D: function "SysTickReset" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 227: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 233: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 234: error #20: identifier "endHPS" is undefined
+"../main.c", line 234: error #20: identifier "startHPS" is undefined
+"../main.c", line 70: error #237: variable "startInt" was declared with a never-completed type
+"../main.c", line 70: error #237: variable "endInt" was declared with a never-completed type
+"../main.c", line 89: warning #179-D: function "SysTickReset" was declared but never referenced
+4 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 227: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 233: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 70: error #237: variable "startInt" was declared with a never-completed type
+"../main.c", line 70: error #237: variable "endInt" was declared with a never-completed type
+"../main.c", line 89: warning #179-D: function "SysTickReset" was declared but never referenced
+6 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 227: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 233: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 70: error #237: variable "startInt" was declared with a never-completed type
+"../main.c", line 70: error #237: variable "endInt" was declared with a never-completed type
+"../main.c", line 89: warning #179-D: function "SysTickReset" was declared but never referenced
+6 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 227: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 233: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #66: expected a ";"
+"../main.c", line 70: error #237: variable "startInt" was declared with a never-completed type
+"../main.c", line 70: error #237: variable "endInt" was declared with a never-completed type
+"../main.c", line 89: warning #179-D: function "SysTickReset" was declared but never referenced
+7 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 227: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 233: warning #225-D: function "gettimeofday" declared implicitly
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #71: incomplete type is not allowed
+"../main.c", line 234: error #66: expected a ";"
+"../main.c", line 70: error #237: variable "startInt" was declared with a never-completed type
+"../main.c", line 70: error #237: variable "endInt" was declared with a never-completed type
+"../main.c", line 89: warning #179-D: function "SysTickReset" was declared but never referenced
+7 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 235: warning #179-D: variable "delta_us" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'IR_Decode.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'IR_Decode.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 239: error #20: identifier "x" is undefined
+"../main.c", line 239: warning #176-D: expression has no effect
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 241: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 241: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 241: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 241: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+At end of source: error #68: expected a "}"
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'IR_Decode.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 236: warning #112-D: statement is unreachable
+"../main.c", line 237: error #66: expected a ";"
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 236: warning #112-D: statement is unreachable
+"../main.c", line 237: error #66: expected a ";"
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 226: warning #225-D: function "SystickReset" declared implicitly
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined    first referenced
+  symbol          in file     
+ ---------    ----------------
+ SystickReset ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "IR_Decode.out" not built
+ 
+>> Compilation failure
+makefile:146: recipe for target 'IR_Decode.out' failed
+gmake[1]: *** [IR_Decode.out] Error 1
+makefile:142: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 238: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 240: error #29: expected an expression
+"../main.c", line 240: error #20: identifier "i" is undefined
+"../main.c", line 245: warning #225-D: function "memset" declared implicitly
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 240: warning #188-D: pointless comparison of unsigned integer with zero
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 246: warning #176-D: expression has no effect
+"../main.c", line 247: warning #176-D: expression has no effect
+"../main.c", line 251: warning #176-D: expression has no effect
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 246: warning #176-D: expression has no effect
+"../main.c", line 247: warning #176-D: expression has no effect
+"../main.c", line 251: warning #176-D: expression has no effect
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 283: error #128: expected a statement
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 77: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 245: error #20: identifier "selected_repetitions" is undefined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'IR_Decode.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project IR_Decode ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/Decode/IR_Decode" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "IR_Decode.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"IR_Decode.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="IR_Decode_linkInfo.xml" --rom_model -o "IR_Decode.out" "./gpio_if.obj" "./main.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "IR_Decode.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin IR_Decode.out IR_Decode.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
