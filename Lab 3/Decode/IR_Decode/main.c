@@ -76,6 +76,15 @@ uint32_t message;
 uint32_t prev_message;
 int repetitions = 0;
 char character;
+char letters3[6][3] = {{'A', 'B', 'C'},
+                 {'D', 'E', 'F'},
+                 {'G', 'H', 'I'},
+                 {'J', 'K', 'L'},
+                 {'M', 'N', 'O'},
+                 {'T', 'U', 'V'}};
+
+char letters4[2][4] = {{'P', 'Q', 'R', 'S'},
+                 {'W', 'X', 'Y', 'Z'}};
 
 
 //*****************************************************************************
@@ -236,13 +245,13 @@ int main() {
         // clear flag
         P59_intstatus=0;
         // If longer than standard repeat, stop remembering past input
-        if(delta_us > 205000)
+        if(delta_us > 105000)
         {
             repetitions = 0;
             prev_message = 0;
         }
         // If larger than "1" and a 32bit word
-        if((delta_us > 2500) && (delta_us < 205000) && (message != 0))
+        if((delta_us > 2500) && (delta_us < 105000) && (message != 0))
         {
             // if last remembered word is the same
             // increment repetitions
@@ -260,6 +269,7 @@ int main() {
             // 2
             else if(message == 0b00000010111111010100000010111111)
             {
+
                 if(prev_message == message)
                 {
                     repetitions++;
@@ -267,26 +277,26 @@ int main() {
                 else {
                     repetitions = 0;
                 }
-                char letters = {'A', 'B', 'C'};
-                if (repetitions > (sizeof(letters) - 1))
-                    repetitions = repetitions - (sizeof(letters) - 1);
-                character = letters[repetitions];
+                //letters = {'A', 'B', 'C'};
+                if (repetitions > (sizeof(letters3[0]) - 1))
+                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                character = letters3[0][repetitions];
                 prev_message = message;
             }
             // 3
             else if(message == 0b00000010111111011100000000111111)
             {
-                iif(prev_message == message)
+                if(prev_message == message)
                 {
                     repetitions++;
                 }
                 else {
                     repetitions = 0;
                 }
-                char letters = {'D', 'E', 'F'};
-                if (repetitions > (sizeof(letters) - 1))
-                    repetitions = repetitions - (sizeof(letters) - 1);
-                character = letters[repetitions];
+                //letters = {'D', 'E', 'F'};
+                if (repetitions > (sizeof(letters3[0]) - 1))
+                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                character = letters3[1][repetitions];
                 prev_message = message;
             }
             // 4
@@ -299,10 +309,10 @@ int main() {
                 else {
                     repetitions = 0;
                 }
-                char letters = {'G', 'H', 'I'};
-                if (repetitions > (sizeof(letters) - 1))
-                    repetitions = repetitions - (sizeof(letters) - 1);
-                character = letters[repetitions];
+                //letters = {'G', 'H', 'I'};
+                if (repetitions > (sizeof(letters3[0]) - 1))
+                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                character = letters3[2][repetitions];
                 prev_message = message;
             }
             // 5
@@ -315,10 +325,10 @@ int main() {
                 else {
                     repetitions = 0;
                 }
-                char letters = {'J', 'K', 'L'};
-                if (repetitions > (sizeof(letters) - 1))
-                    repetitions = repetitions - (sizeof(letters) - 1);
-                character = letters[repetitions];
+                //letters = {'J', 'K', 'L'};
+                if (repetitions > (sizeof(letters3[0]) - 1))
+                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                character = letters3[3][repetitions];
                 prev_message = message;
             }
             // 6
@@ -331,10 +341,10 @@ int main() {
                 else {
                     repetitions = 0;
                 }
-                char letters = {'M', 'N', 'O'};
-                if (repetitions > (sizeof(letters) - 1))
-                    repetitions = repetitions - (sizeof(letters) - 1);
-                character = letters[repetitions];
+                //letters = {'M', 'N', 'O'};
+                if (repetitions > (sizeof(letters3[0]) - 1))
+                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                character = letters3[4][repetitions];
                 prev_message = message;
             }
             // 7
@@ -347,10 +357,10 @@ int main() {
                 else {
                     repetitions = 0;
                 }
-                char letters = {'P', 'Q', 'R', 'S'};
-                if (repetitions > (sizeof(letters) - 1))
-                    repetitions = repetitions - (sizeof(letters) - 1);
-                character = letters[repetitions];
+                //letters = {'P', 'Q', 'R', 'S'};
+                if (repetitions > (sizeof(letters4[0]) - 1))
+                    repetitions = repetitions - (sizeof(letters4[0]) - 1);
+                character = letters4[0][repetitions];
                 prev_message = message;
             }
             // 8
@@ -363,10 +373,10 @@ int main() {
                 else {
                     repetitions = 0;
                 }
-                char letters = {'T', 'U', 'V'};
-                if (repetitions > (sizeof(letters) - 1))
-                    repetitions = repetitions - (sizeof(letters) - 1);
-                character = letters[repetitions];
+                //letters = {'T', 'U', 'V'};
+                if (repetitions > (sizeof(letters3[0]) - 1))
+                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                character = letters3[5][repetitions];
                 prev_message = message;
             }
             // 9
@@ -379,10 +389,10 @@ int main() {
                 else {
                     repetitions = 0;
                 }
-                char letters = {'W', 'X', 'Y', 'Z'};
-                if (repetitions > (sizeof(letters) - 1))
-                    repetitions = repetitions - (sizeof(letters) - 1);
-                character = letters[repetitions];
+                //letters = {'W', 'X', 'Y', 'Z'};
+                if (repetitions > (sizeof(letters4[0]) - 1))
+                    repetitions = repetitions - (sizeof(letters4[0]) - 1);
+                character = letters4[1][repetitions];
                 prev_message = message;
             }
             // Enter (MUTE)
@@ -401,7 +411,6 @@ int main() {
             }
             Report("to transmit: %c repetitions: %d \r\n",character, repetitions);
             // Resets repetitions
-        }
             message = 0;
         }
         else if(delta_us < 2500 && delta_us > 1300)
