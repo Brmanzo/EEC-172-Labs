@@ -11,28 +11,33 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
+#include <stdbool.h>
 
 // Driverlib includes
 #include "hw_types.h"
-#include "hw_ints.h"
-#include "hw_nvic.h"
-#include "hw_memmap.h"
-#include "hw_common_reg.h"
-#include "interrupt.h"
+#include "gpio.h"
 #include "hw_apps_rcm.h"
+#include "hw_common_reg.h"
+#include "hw_ints.h"
+#include "hw_memmap.h"
+#include "hw_nvic.h"
+#include "interrupt.h"
 #include "prcm.h"
 #include "rom.h"
 #include "rom_map.h"
 #include "prcm.h"
-#include "gpio.h"
-#include "utils.h"
+#include "spi.h"
 #include "systick.h"
-#include "rom_map.h"
+#include "uart.h"
+#include "utils.h"
 
 // Common interface includes
 #include "uart_if.h"
 
 // Pin configurations
+#include "Adafruit_GFX.h"
+#include "Adafruit_SSD1351.h"
+#include "glcdfont.h"
 #include "pin_mux_config.h"
 
 
@@ -58,6 +63,26 @@
 // (PERIOD_SEC) * (SYSCLKFREQ) = PERIOD_TICKS
 #define SYSTICK_RELOAD_VAL 3200000UL
 
+#define MASTER_MODE      1
+
+#define SPI_IF_BIT_RATE  100000
+#define TR_BUFF_SIZE     100
+
+#define BLACK           0x0000
+#define BLUE            0x001F
+#define GREEN           0x07E0
+#define CYAN            0x07FF
+#define RED             0xF800
+#define MAGENTA         0xF81F
+#define YELLOW          0xFFE0
+#define WHITE           0xFFFF
+
+#define CONSOLE         UARTA1_BASE
+#define CONSOLE_PERIPH  PRCM_UARTA1
+#define UartGetChar()        MAP_UARTCharGet(CONSOLE)
+#define UartPutChar(c)       MAP_UARTCharPut(CONSOLE,c)
+#define MAX_STRING_LENGTH    80
+
 // track systick counter periods elapsed
 // if it is not 0, we know the transmission ended
 volatile int systick_cnt = 1;
@@ -65,17 +90,28 @@ volatile int systick_cnt = 1;
 extern void (* const g_pfnVectors[])(void);
 volatile unsigned char P59_intstatus;
 volatile unsigned long P59_intcount;
+volatile unsigned char P2_intstatus;
+volatile unsigned long P2_intcount;
 
 unsigned long start_int;
 unsigned long end_int;
+
+char TextRx[MAX_STRING_LENGTH+1];
+int TextRxLength = 0;
+char TextTx[MAX_STRING_LENGTH+1];
+int TextTxLength = 0;
+int i = 0;
 
 uint64_t delta = 0;
 uint64_t delta_us = 0;
 
 uint32_t message;
 uint32_t prev_message;
+char prev_char;
 int repetitions = 0;
 char character;
+int colors[7] = {BLUE, GREEN, CYAN, RED, MAGENTA, YELLOW, WHITE};
+int font_count = 0;
 char letters3[6][3] = {{'A', 'B', 'C'},
                  {'D', 'E', 'F'},
                  {'G', 'H', 'I'},
@@ -135,8 +171,18 @@ static void SysTickHandler(void) {
 //*****************************************************************************
 static void
 BoardInit(void) {
-    MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
-    
+    /* In case of TI-RTOS vector table is initialize by OS itself */
+    #ifndef USE_TIRTOS
+      //
+      // Set vector table base
+      //
+    #if defined(ccs)
+        MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
+    #endif
+    #if defined(ewarm)
+        MAP_IntVTableBaseSet((unsigned long)&__vector_table);
+    #endif
+    #endif
     // Enable Processor
     //
     MAP_IntMasterEnable();
@@ -150,7 +196,9 @@ BoardInit(void) {
  */
 
 // Register Interrupt Handler
-static void GPIOA0IntHandler(void) { // P59 handler
+// P59 handler
+static void GPIOA0IntHandler(void)
+{
     unsigned long ulStatus;
 
     ulStatus = MAP_GPIOIntStatus(GPIOA0_BASE, true);
@@ -160,7 +208,20 @@ static void GPIOA0IntHandler(void) { // P59 handler
     delta_us = TICKS_TO_US(delta);// clear interrupts on GPIOA0
     P59_intstatus = 1;
     P59_intcount++;
+}
+static void UARTA1IntHandler(void)
+{
+    unsigned long ulStatus;
 
+    ulStatus = MAP_UARTIntStatus(CONSOLE, true);
+    MAP_UARTIntClear(CONSOLE, ulStatus);
+    while(UARTCharsAvail(CONSOLE))
+    {
+        TextRx[TextRxLength] = UARTCharGetNonBlocking(CONSOLE);
+        TextRxLength++;
+    }
+    P2_intstatus = 1;
+    P2_intcount++;
 }
 
 static void SysTickInit(void) {
@@ -178,6 +239,7 @@ static void SysTickInit(void) {
     // enable the systick module itself
     MAP_SysTickEnable();
 }
+
 //****************************************************************************
 //
 //! Main function
@@ -198,8 +260,60 @@ int main() {
     
     PinMuxConfig();
 
+    //
+    // Enable the SPI module clock
+    //
+    MAP_PRCMPeripheralClkEnable(PRCM_GSPI,PRCM_RUN_MODE_CLK);
+
+    //
+    // Reset the peripheral
+    //
+    MAP_PRCMPeripheralReset(PRCM_GSPI);
+
+    //
+    // Reset SPI
+    //
+    MAP_SPIReset(GSPI_BASE);
+
+    //
+    // Configure SPI interface
+    //
+    MAP_SPIConfigSetExpClk(GSPI_BASE,MAP_PRCMPeripheralClockGet(PRCM_GSPI),
+                     SPI_IF_BIT_RATE,SPI_MODE_MASTER,SPI_SUB_MODE_0,
+                     (SPI_SW_CTRL_CS |
+                     SPI_4PIN_MODE |
+                     SPI_TURBO_OFF |
+                     SPI_CS_ACTIVELOW |
+                     SPI_WL_8));
+
+    //
+    // Enable SPI for communication
+    //
+    MAP_SPIEnable(GSPI_BASE);
+
+    Adafruit_Init();
+    //
+    // Begin Test Functions
+    //
+
     // Enable SysTick
     SysTickInit();
+
+    MAP_UARTConfigSetExpClk(CONSOLE,MAP_PRCMPeripheralClockGet(CONSOLE_PERIPH),
+                          UART_BAUD_RATE, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
+                           UART_CONFIG_PAR_NONE));
+
+    UARTFIFODisable(CONSOLE);
+
+    MAP_UARTIntRegister(CONSOLE, UARTA1IntHandler);
+
+    UARTFIFOLevelSet(CONSOLE, UART_FIFO_TX1_8, UART_FIFO_RX1_8);
+
+    ulStatus = MAP_UARTIntStatus(CONSOLE, false);
+
+    MAP_UARTIntClear(CONSOLE, ulStatus);
+
+    MAP_UARTIntEnable(CONSOLE,UART_INT_RX);
 
     // Initialize UART Terminal
     InitTerm();
@@ -229,202 +343,347 @@ int main() {
     P59_intstatus = 0;
     P59_intcount = 0;
 
-    Message("\t\t****************************************************\n\r");
-    Message("\t\t\t\tIR DECODING\n\r");
-    Message("\t\t****************************************************\n\r");
-    Message("\n\n\n\r");
-
-
     // Enable Interrupt
     // (Port, Flags)
     MAP_GPIOIntEnable(GPIOA0_BASE, 0x10);
 
     SysTickReset();
+
+    // Position in pixels
+    // Text to Transmit Position
+    int xTx = 0;
+    int yTx = 64;
+    // Text to Receive Position
+    int xRx = 0;
+    int yRx = 0;
+    setCursor(xTx, yTx);
+    setTextSize(1);
+    setTextColor(WHITE, BLACK);
+    fillScreen(BLACK);
+    memset(TextTx, 0, sizeof TextTx);
+    memset(TextRx, 0, sizeof TextRx);
+
     while (1) {
-        while ((P59_intstatus==0)) {;}
-        // clear flag
-        P59_intstatus=0;
-        // If longer than standard repeat, stop remembering past input
-        if(delta_us > 105000)
+        while ((P59_intstatus==0) && (P2_intstatus==0)) {;}
+        if(P59_intstatus)
         {
-            repetitions = 0;
-            prev_message = 0;
-        }
-        // If larger than "1" and a 32bit word
-        if((delta_us > 2500) && (delta_us < 105000) && (message != 0))
-        {
-            // if last remembered word is the same
-            // increment repetitions
-            // otherwise, message is done repeating and should print
+            setCursor(xTx, yTx);
+            // clear flag
+            P59_intstatus=0;
+            // If longer than standard repeat, stop remembering past input
+            if(delta_us > 150000)
+            {
+                repetitions = 0;
+                prev_message = 0;
+                prev_char = 0;
+            }
+            // If larger than "1" and a 32bit word
+            if((delta_us > 2500) && (delta_us < 150000) && (message != 0))
+            {
+                if(message != prev_message && prev_char != '!' && prev_char != '1' && prev_char != '2' && prev_char != '3')
+                {
+                    // Append to Transmitting Text
+                    if(prev_char != '!')
+                    {
+
+                        TextTx[TextTxLength] = character;
+                        TextTxLength++;
+                    }
+                    if(xTx >= 120)
+                    {
+                        xTx = 0;
+                        if(yTx < 120)
+                            yTx += 8;
+                        else
+                            yTx = 64;
+                    }
+                    else
+                    {
+                        xTx += 6;
+                    }
+                }
+                // if last remembered word is the same
+                // increment repetitions
+                // otherwise, message is done repeating and should print
                 // Space
-            if(message == 0b00000010111111010000000011111111)
-            {
-                character = ' ';
-            }
-            // 1 (Font Color Change)
-            else if(message == 0b00000010111111011000000001111111)
-            {
-                character = '1';
-            }
-            // 2
-            else if(message == 0b00000010111111010100000010111111)
-            {
+                if(message == 0b00000010111111010000000011111111)
+                {
+                    character = ' ';
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
 
-                if(prev_message == message)
+                }
+                // 1 (Font Color Change)
+                else if(message == 0b00000010111111011000000001111111)
                 {
-                    repetitions++;
+                    if(font_count < 6)
+                        font_count++;
+                    else
+                        font_count = 0;
+                    character = '1';
+                    prev_message = message;
+                    prev_char = character;
                 }
-                else {
-                    repetitions = 0;
-                }
-                //letters = {'A', 'B', 'C'};
-                if (repetitions > (sizeof(letters3[0]) - 1))
-                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
-                character = letters3[0][repetitions];
-                prev_message = message;
-            }
-            // 3
-            else if(message == 0b00000010111111011100000000111111)
-            {
-                if(prev_message == message)
+                // 2
+                else if(message == 0b00000010111111010100000010111111)
                 {
-                    repetitions++;
+
+                    if(prev_message == message)
+                    {
+                        repetitions++;
+                    }
+                    else {
+                        repetitions = 0;
+                    }
+                    //letters = {'A', 'B', 'C'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                    character = letters3[0][repetitions];
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
                 }
-                else {
-                    repetitions = 0;
-                }
-                //letters = {'D', 'E', 'F'};
-                if (repetitions > (sizeof(letters3[0]) - 1))
-                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
-                character = letters3[1][repetitions];
-                prev_message = message;
-            }
-            // 4
-            else if(message == 0b00000010111111010010000011011111)
-            {
-                if(prev_message == message)
+                // 3
+                else if(message == 0b00000010111111011100000000111111)
                 {
-                    repetitions++;
+                    if(prev_message == message)
+                    {
+                        repetitions++;
+                    }
+                    else {
+                        repetitions = 0;
+                    }
+                    //letters = {'D', 'E', 'F'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                    character = letters3[1][repetitions];
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
                 }
-                else {
-                    repetitions = 0;
-                }
-                //letters = {'G', 'H', 'I'};
-                if (repetitions > (sizeof(letters3[0]) - 1))
-                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
-                character = letters3[2][repetitions];
-                prev_message = message;
-            }
-            // 5
-            else if(message == 0b00000010111111011010000001011111)
-            {
-                if(prev_message == message)
+                // 4
+                else if(message == 0b00000010111111010010000011011111)
                 {
-                    repetitions++;
+                    if(prev_message == message)
+                    {
+                        repetitions++;
+                    }
+                    else {
+                        repetitions = 0;
+                    }
+                    //letters = {'G', 'H', 'I'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                    character = letters3[2][repetitions];
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+
                 }
-                else {
-                    repetitions = 0;
-                }
-                //letters = {'J', 'K', 'L'};
-                if (repetitions > (sizeof(letters3[0]) - 1))
-                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
-                character = letters3[3][repetitions];
-                prev_message = message;
-            }
-            // 6
-            else if(message == 0b00000010111111010110000010011111)
-            {
-                if(prev_message == message)
+                // 5
+                else if(message == 0b00000010111111011010000001011111)
                 {
-                    repetitions++;
+                    if(prev_message == message)
+                    {
+                        repetitions++;
+                    }
+                    else {
+                        repetitions = 0;
+                    }
+                    //letters = {'J', 'K', 'L'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                    character = letters3[3][repetitions];
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+
                 }
-                else {
-                    repetitions = 0;
-                }
-                //letters = {'M', 'N', 'O'};
-                if (repetitions > (sizeof(letters3[0]) - 1))
-                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
-                character = letters3[4][repetitions];
-                prev_message = message;
-            }
-            // 7
-            else if(message == 0b00000010111111011110000000011111)
-            {
-                if(prev_message == message)
+                // 6
+                else if(message == 0b00000010111111010110000010011111)
                 {
-                    repetitions++;
+                    if(prev_message == message)
+                    {
+                        repetitions++;
+                    }
+                    else {
+                        repetitions = 0;
+                    }
+                    //letters = {'M', 'N', 'O'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                    character = letters3[4][repetitions];
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+
                 }
-                else {
-                    repetitions = 0;
-                }
-                //letters = {'P', 'Q', 'R', 'S'};
-                if (repetitions > (sizeof(letters4[0]) - 1))
-                    repetitions = repetitions - (sizeof(letters4[0]) - 1);
-                character = letters4[0][repetitions];
-                prev_message = message;
-            }
-            // 8
-            else if(message == 0b00000010111111010001000011101111)
-            {
-                if(prev_message == message)
+                // 7
+                else if(message == 0b00000010111111011110000000011111)
                 {
-                    repetitions++;
+                    if(prev_message == message)
+                    {
+                        repetitions++;
+                    }
+                    else {
+                        repetitions = 0;
+                    }
+                    //letters = {'P', 'Q', 'R', 'S'};
+                    if (repetitions > (sizeof(letters4[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters4[0]) - 1);
+                    character = letters4[0][repetitions];
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+
                 }
-                else {
-                    repetitions = 0;
-                }
-                //letters = {'T', 'U', 'V'};
-                if (repetitions > (sizeof(letters3[0]) - 1))
-                    repetitions = repetitions - (sizeof(letters3[0]) - 1);
-                character = letters3[5][repetitions];
-                prev_message = message;
-            }
-            // 9
-            else if(message == 0b00000010111111011001000001101111)
-            {
-                if(prev_message == message)
+                // 8
+                else if(message == 0b00000010111111010001000011101111)
                 {
-                    repetitions++;
+                    if(prev_message == message)
+                    {
+                        repetitions++;
+                    }
+                    else {
+                        repetitions = 0;
+                    }
+                    //letters = {'T', 'U', 'V'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]) - 1);
+                    character = letters3[5][repetitions];
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+
                 }
-                else {
-                    repetitions = 0;
+                // 9
+                else if(message == 0b00000010111111011001000001101111)
+                {
+                    if(prev_message == message)
+                    {
+                        repetitions++;
+                    }
+                    else {
+                        repetitions = 0;
+                    }
+                    //letters = {'W', 'X', 'Y', 'Z'};
+                    if (repetitions > (sizeof(letters4[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters4[0]) - 1);
+                    character = letters4[1][repetitions];
+                    prev_message = message;
+                    prev_char = character;
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+
                 }
-                //letters = {'W', 'X', 'Y', 'Z'};
-                if (repetitions > (sizeof(letters4[0]) - 1))
-                    repetitions = repetitions - (sizeof(letters4[0]) - 1);
-                character = letters4[1][repetitions];
-                prev_message = message;
+                // Enter (MUTE)
+                else if(message == 0b00000010111111010000100011110111)
+                {
+                    character = '2';
+                    prev_char = character;
+                }
+                // Delete (LAST)
+                else if(message == 0b00000010111111010000001011111101)
+                {
+                    //if(xTx >= 6)
+                    xTx -= 6;
+                    fillRect(xTx,yTx,6,8,BLACK);
+//                    else
+//                    {
+//                        if(yTx >= 64)
+//                        {
+//                            yTx -= 8;
+//                            xTx = 120;
+//                        }
+//                        else
+//                            yTx = 120;
+//                    }
+                    // Deletes last character in text string
+                    TextTx[TextTxLength - 1] = '/0';
+                    // By removing from scope
+                    TextTxLength--;
+                    character = '3';
+                    prev_char = character;
+                }
+                else
+                {
+                        character = '!';
+                        prev_char = character;
+                        prev_message = message;
+                }
+                if(character != '!' && character != '1' && character != '2' && character != '3')
+                {
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+                }
+                if(character == '2' && TextTxLength !=0)
+                {
+                    for(i = 0; i < (TextTxLength + 1); i++)
+                    {
+                        UARTCharPut(CONSOLE,TextTx[i]);
+                    }
+                    TextTxLength = 0;
+                    memset(TextTx, 0, sizeof TextTx);
+                    setCursor(0, 64);
+                    xTx = 0;
+                    yTx = 64;
+                    fillRect(0,64,128,128,BLACK);
+                }
+                // Resets repetitions
+                message = 0;
             }
-            // Enter (MUTE)
-            else if(message == 0b00000010111111010000100011110111)
+            else if(delta_us < 2500 && delta_us > 1300)
             {
-                character = '\n';
+                message = message << 1;
+                message = message + 1;
             }
-            // Delete (LAST)
-            else if(message == 0b00000010111111010000001011111101)
+            else //if(delta_us > 0 && delta_us < 1300)
             {
-                character = 127;
+                message = message << 1;
             }
-            else
-            {
-                    character = '!';
-            }
-            Report("to transmit: %c repetitions: %d \r\n",character, repetitions);
-            // Resets repetitions
-            message = 0;
+            start_int = 0;
         }
-        else if(delta_us < 2500 && delta_us > 1300)
+        else // P2_intstatus == 1
         {
-            message = message << 1;
-            message = message + 1;
+            // clear flag
+            P2_intstatus=0;
+            fillRect(0,0,128,64,BLACK);
+            xRx = 0;
+            yRx = 0;
+            setCursor(xRx, yRx);
+            for(i = 0; i < TextRxLength + 1; i++)
+            {
+                // Alphabet
+                if(TextRx[i] >= 65 && TextRx[i] <= 90)
+                {
+                    drawChar(xRx, yRx, TextRx[i], colors[font_count], BLACK, 1);
+                    xRx += 6;
+                }
+                // 1 Button (Font Color Change)
+                if(TextRx[i] == '1')
+                {
+                    if(font_count < 6)
+                        font_count++;
+                    else
+                        font_count = 0;
+                }
+                // MUTE Button (New Line)
+                if(TextRx[i] == '2')
+                {
+                    if(yRx <= 56)
+                    {
+                        yRx += 8;
+                        xRx = 0;
+                    }
+                    else
+                    {
+                        yRx = 0;
+                    }
+                }
+            }
+            xRx = 0;
+            yRx = 0;
+            memset(TextTx, 0, sizeof TextTx);
         }
-        else //if(delta_us > 0 && delta_us < 1300)
-        {
-            message = message << 1;
-        }
-
-        start_int = 0;
-
     }
 }
 

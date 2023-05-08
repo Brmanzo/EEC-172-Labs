@@ -6,20 +6,38 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="delta"/>
+		<item key="selection" value="fillRect"/>
 		<list key="findhistory">
-			<item value="delta"/>
-			<item value="SYSTICK_RELOAD_VAL"/>
-			<item value="P59_intstatus"/>
-			<item value="0x20"/>
-			<item value="GPIOA0IntHandler"/>
+			<item value="fillRect"/>
+			<item value="mem"/>
+			<item value="J"/>
+			<item value="fill"/>
+			<item value="fillrec"/>
+			<item value="GPIOStatus"/>
+			<item value="UARTStatus"/>
+			<item value="P2_intstatus"/>
+			<item value="PinTypeGPIO"/>
+			<item value="boolean"/>
+			<item value="for"/>
+			<item value="UARTstatus"/>
+			<item value="x"/>
+			<item value="y"/>
+			<item value="iStringLength"/>
 		</list>
 		<list key="replacehistory">
+			<item value="ulStatus"/>
+			<item value="xRx"/>
+			<item value="yRx"/>
+			<item value="yTx"/>
+			<item value="xTx"/>
+			<item value="TextRxLength"/>
+			<item value="TextRx"/>
+			<item value="GPIOStatus"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1463"/>
-		<item key="DIALOG_Y_ORIGIN" value="369"/>
+		<item key="DIALOG_X_ORIGIN" value="967"/>
+		<item key="DIALOG_Y_ORIGIN" value="361"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
