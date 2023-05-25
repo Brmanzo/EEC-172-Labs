@@ -1,0 +1,1031 @@
+
+**** Clean-only build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "blinky.bin"  "blinky.out" 
+DEL /F "gpio_if.obj" "main.obj" "pinmux.obj" "startup_ccs.obj" "uart_if.obj" 
+DEL /F "gpio_if.d" "main.d" "pinmux.d" "startup_ccs.d" "uart_if.d" 
+Could Not Find C:\Users\bradl\OneDrive\Documents\2023 Spring Quarter\EEC 172\newLab5\blinky\Debug\blinky.bin
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project blinky ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 61: fatal error #1965: cannot open source file "simplelink.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="gpio_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+ 
+Building file: "../pinmux.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pinmux.d_raw"  "../pinmux.c"
+Finished building: "../pinmux.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+ 
+Building file: "../uart_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/blinky" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart_if.d_raw"  "../uart_if.c"
+Finished building: "../uart_if.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "SSL_REST_API_AWS.bin"  "SSL_REST_API_AWS.out" 
+DEL /F "gpio_if.obj" "main.obj" "pinmux.obj" "startup_ccs.obj" "uart_if.obj" 
+DEL /F "gpio_if.d" "main.d" "pinmux.d" "startup_ccs.d" "uart_if.d" 
+Could Not Find C:\Users\bradl\OneDrive\Documents\2023 Spring Quarter\EEC 172\newLab5\SSL_REST_API_AWS_V2\Debug\SSL_REST_API_AWS.bin
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 684: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 696: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 705: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 713: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 725: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 736: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 747: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 758: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 773: warning #161-D: declaration is incompatible with previous "printErrConvenience" (declared at line 684)
+"../main.c", line 910: warning #225-D: function "sprintf" declared implicitly
+"../main.c", line 947: error #130-D: a block-scope function may only have extern storage class
+"../main.c", line 947: error #66: expected a ";"
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+At end of source: warning #994-D: missing return statement at end of non-void function "http_post"
+At end of source: error #68: expected a "}"
+"../main.c", line 947: warning #179-D: function "http_get" was declared but never referenced
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="gpio_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+ 
+Building file: "../pinmux.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pinmux.d_raw"  "../pinmux.c"
+Finished building: "../pinmux.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+ 
+Building file: "../uart_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart_if.d_raw"  "../uart_if.c"
+Finished building: "../uart_if.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 684: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 696: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 705: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 713: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 725: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 736: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 747: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 758: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 773: warning #161-D: declaration is incompatible with previous "printErrConvenience" (declared at line 684)
+"../main.c", line 910: warning #225-D: function "sprintf" declared implicitly
+"../main.c", line 947: warning #994-D: missing return statement at end of non-void function "http_post"
+"../main.c", line 965: warning #225-D: function "sprintf" declared implicitly
+"../main.c", line 965: error #20: identifier "dataLength" is undefined
+"../main.c", line 948: warning #179-D: function "http_get" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 910: warning #225-D: function "sprintf" declared implicitly
+"../main.c", line 947: warning #994-D: missing return statement at end of non-void function "http_post"
+"../main.c", line 965: warning #225-D: function "sprintf" declared implicitly
+"../main.c", line 965: error #20: identifier "dataLength" is undefined
+"../main.c", line 948: warning #179-D: function "http_get" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 948: warning #994-D: missing return statement at end of non-void function "http_post"
+"../main.c", line 966: error #20: identifier "dataLength" is undefined
+"../main.c", line 949: warning #179-D: function "http_get" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 968: error #20: identifier "dataLength" is undefined
+"../main.c", line 951: warning #179-D: function "http_get" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'main.obj' failed
+"../main.c", line 951: error #249: function "http_post" has already been defined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 877: warning #225-D: function "http_get" declared implicitly
+"../main.c", line 952: warning #174-D: external/internal linkage conflict with previous declaration
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+ 
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+makefile:142: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+ 
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+makefile:142: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+ 
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+makefile:142: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+ 
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+gmake: *** [all] Error 2
+makefile:142: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+ 
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+makefile:142: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+ 
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+gmake: *** [all] Error 2
+makefile:142: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+ 
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+makefile:142: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k clean 
+ 
+DEL /F  "SSL_REST_API_AWS.bin"  "SSL_REST_API_AWS.out" 
+DEL /F "gpio_if.obj" "main.obj" "network_common.obj" "pinmux.obj" "startup_ccs.obj" "uart_if.obj" 
+DEL /F "gpio_if.d" "main.d" "network_common.d" "pinmux.d" "startup_ccs.d" "uart_if.d" 
+Could Not Find C:\Users\bradl\OneDrive\Documents\2023 Spring Quarter\EEC 172\newLab5\SSL_REST_API_AWS\Release\SSL_REST_API_AWS.bin
+Could Not Find C:\Users\bradl\OneDrive\Documents\2023 Spring Quarter\EEC 172\newLab5\SSL_REST_API_AWS\Release\gpio_if.obj
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="gpio_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 681: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 693: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 702: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 710: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 722: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 733: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 744: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 755: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 770: warning #161-D: declaration is incompatible with previous "printErrConvenience" (declared at line 681)
+"../main.c", line 907: warning #225-D: function "sprintf" declared implicitly
+Finished building: "../main.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/network_common.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="network_common.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/network_common.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/network_common.c"
+ 
+Building file: "../pinmux.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pinmux.d_raw"  "../pinmux.c"
+Finished building: "../pinmux.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+ 
+Building file: "../uart_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart_if.d_raw"  "../uart_if.c"
+Finished building: "../uart_if.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k clean 
+ 
+DEL /F  "SSL_REST_API_AWS.bin"  "SSL_REST_API_AWS.out" 
+DEL /F "gpio_if.obj" "main.obj" "network_common.obj" "pinmux.obj" "startup_ccs.obj" "uart_if.obj" 
+DEL /F "gpio_if.d" "main.d" "network_common.d" "pinmux.d" "startup_ccs.d" "uart_if.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="gpio_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 681: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 693: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 702: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 710: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 722: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 733: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 744: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 755: warning #225-D: function "printErrConvenience" declared implicitly
+"../main.c", line 770: warning #161-D: declaration is incompatible with previous "printErrConvenience" (declared at line 681)
+"../main.c", line 907: warning #225-D: function "sprintf" declared implicitly
+Finished building: "../main.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/network_common.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="network_common.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/network_common.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/network_common.c"
+ 
+Building file: "../pinmux.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pinmux.d_raw"  "../pinmux.c"
+Finished building: "../pinmux.c"
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+ 
+Building file: "../uart_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart_if.d_raw"  "../uart_if.c"
+Finished building: "../uart_if.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/newLab5/SSL_REST_API_AWS_V2" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 903: warning #179-D: function "http_get" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+ 
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+makefile:142: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SSL_REST_API_AWS_V2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building target: "SSL_REST_API_AWS_V2.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 --define=NON_NETWORK -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS_V2.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_V2_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS_V2.out" "./gpio_if.obj" "./main.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined                      first referenced
+  symbol                            in file     
+ ---------                      ----------------
+ _SlNonOsMainLoopTask           ./main.obj      
+ sl_Close                       ./main.obj      
+ sl_Connect                     ./main.obj      
+ sl_DevGet                      ./main.obj      
+ sl_DevSet                      ./main.obj      
+ sl_Htonl                       ./main.obj      
+ sl_Htons                       ./main.obj      
+ sl_NetAppDnsGetHostByName      ./main.obj      
+ sl_NetAppMDNSUnRegisterService ./main.obj      
+ sl_NetCfgSet                   ./main.obj      
+ sl_Recv                        ./main.obj      
+ sl_Send                        ./main.obj      
+ sl_SetSockOpt                  ./main.obj      
+ sl_Socket                      ./main.obj      
+ sl_Start                       ./main.obj      
+ sl_Stop                        ./main.obj      
+ sl_WlanConnect                 ./main.obj      
+ sl_WlanDisconnect              ./main.obj      
+ sl_WlanPolicySet               ./main.obj      
+ sl_WlanProfileDel              ./main.obj      
+ sl_WlanRxFilterSet             ./main.obj      
+ sl_WlanSet                     ./main.obj      
+ sl_WlanSetMode                 ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "SSL_REST_API_AWS_V2.out" not built
+ 
+>> Compilation failure
+makefile:146: recipe for target 'SSL_REST_API_AWS_V2.out' failed
+gmake[1]: *** [SSL_REST_API_AWS_V2.out] Error 1
+makefile:142: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../uart_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart_if.d_raw"  "../uart_if.c"
+Finished building: "../uart_if.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 903: warning #179-D: function "http_get" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 903: warning #179-D: function "http_get" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 903: warning #179-D: function "http_get" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 843: warning #179-D: variable "cCLLength" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project SSL_REST_API_AWS ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 906: warning #179-D: variable "cCLLength" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "SSL_REST_API_AWS.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --define=ccs --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"SSL_REST_API_AWS.map" --heap_size=0x00008000 --stack_size=0x00001000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="SSL_REST_API_AWS_linkInfo.xml" --rom_model -o "SSL_REST_API_AWS.out" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pinmux.obj" "./startup_ccs.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -llibc.a -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" 
+<Linking>
+Finished building target: "SSL_REST_API_AWS.out"
+ 
+Bin Generation
+"C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin" "SSL_REST_API_AWS.out" "SSL_REST_API_AWS.bin" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd" "C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex" "C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin"
+ 
+
+**** Build Finished ****
