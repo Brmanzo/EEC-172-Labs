@@ -69,7 +69,6 @@
 #include "prcm.h"
 #include "utils.h"
 #include "uart.h"
-#include "stdio.h"
 
 //Common interface includes
 #include "pinmux.h"
@@ -83,30 +82,27 @@
 
 #define APPLICATION_NAME        "SSL"
 #define APPLICATION_VERSION     "1.1.1.EEC.Winter2017"
-#define SERVER_NAME                "a2ttghdziztuu6-ats.iot.us-east-1.amazonaws.com"
+#define SERVER_NAME                "A39526W7VT5KHJ.iot.us-east-1.amazonaws.com"
 #define GOOGLE_DST_PORT             8443
 
-#define SL_SSL_CA_CERT "/cert/RootCA.der"
+#define SL_SSL_CA_CERT "/cert/client.der"
 #define SL_SSL_PRIVATE "/cert/private.der"
 #define SL_SSL_CLIENT  "/cert/client.der"
 
 //NEED TO UPDATE THIS FOR IT TO WORK!
-#define DATE                25    /* Current Date */
-#define MONTH               5     /* Month 1-12 */
-#define YEAR                2023  /* Current year */
-#define HOUR                17    /* Time - hours */
-#define MINUTE              3    /* Time - minutes */
+#define DATE                2    /* Current Date */
+#define MONTH               2     /* Month 1-12 */
+#define YEAR                2017  /* Current year */
+#define HOUR                23    /* Time - hours */
+#define MINUTE              39    /* Time - minutes */
 #define SECOND              0     /* Time - seconds */
 
-#define POSTHEADER "POST /things/thomas_launchpad/shadow HTTP/1.1\n\r"
-#define HOSTHEADER "Host: a2ttghdziztuu6-ats.iot.us-east-1.amazonaws.com\r\n"
+#define POSTHEADER "POST /things/MyEmbeddedSystem_Winter17/shadow HTTP/1.1\n\r"
+#define HOSTHEADER "Host: A39526W7VT5KHJ.iot.us-east-1.amazonaws.com\r\n"
 #define CHEADER "Connection: Keep-Alive\r\n"
 #define CTHEADER "Content-Type: application/json; charset=utf-8\r\n"
 #define CLHEADER1 "Content-Length: "
 #define CLHEADER2 "\r\n\r\n"
-
-
-#define GETHEADER "GET /things/thomas_launchpad/shadow HTTP/1.1\n\r"
 
 #define DATA1 "{\"state\": {\n\r\"desired\" : {\n\r\"messageagain\" : \"Ho brah, dis ting stay cool!!!\"\n\r}}}\n\r\n\r"
 
@@ -654,11 +650,6 @@ static int set_time() {
     return SUCCESS;
 }
 
-long printErrConvenience(char * msg, long retVal) {
-    UART_PRINT(msg);
-    GPIO_IF_LedOn(MCU_RED_LED_GPIO);
-    return retVal;
-}
 //*****************************************************************************
 //
 //! This function demonstrates how certificate can be used with SSL.
@@ -776,6 +767,11 @@ static int tls_connect() {
 
 
 
+long printErrConvenience(char * msg, long retVal) {
+    UART_PRINT(msg);
+    GPIO_IF_LedOn(MCU_RED_LED_GPIO);
+    return retVal;
+}
 
 
 
@@ -837,6 +833,54 @@ int connectToAccessPoint() {
     UART_PRINT("Connection established w/ AP and IP is aquired \n\r");
     return 0;
 }
+
+//*****************************************************************************
+//
+//! Main 
+//!
+//! \param  none
+//!
+//! \return None
+//!
+//*****************************************************************************
+void main() {
+    long lRetVal = -1;
+    //
+    // Initialize board configuration
+    //
+    BoardInit();
+
+    PinMuxConfig();
+
+    InitTerm();
+    ClearTerm();
+    UART_PRINT("Hello world!\n\r");
+
+    //Connect the CC3200 to the local access point
+    lRetVal = connectToAccessPoint();
+    //Set time so that encryption can be used
+    lRetVal = set_time();
+    if(lRetVal < 0) {
+        UART_PRINT("Unable to set time in the device");
+        LOOP_FOREVER();
+    }
+    //Connect to the website with TLS encryption
+    lRetVal = tls_connect();
+    if(lRetVal < 0) {
+        ERR_PRINT(lRetVal);
+    }
+    http_post(lRetVal);
+
+    sl_Stop(SL_STOP_TIMEOUT);
+    LOOP_FOREVER();
+}
+//*****************************************************************************
+//
+// Close the Doxygen group.
+//! @}
+//
+//*****************************************************************************
+
 static int http_post(int iTLSSockID){
     char acSendBuff[512];
     char acRecvbuff[1460];
@@ -900,97 +944,3 @@ static int http_post(int iTLSSockID){
 
     return 0;
 }
-static int http_get(int iTLSSockID){
-    char acSendBuff[512];
-    char acRecvbuff[1460];
-    char cCLLength[200];
-    char* pcBufHeaders;
-    int lRetVal = 0;
-
-    pcBufHeaders = acSendBuff;
-    strcpy(pcBufHeaders, GETHEADER);
-    pcBufHeaders += strlen(GETHEADER);
-    strcpy(pcBufHeaders, HOSTHEADER);
-    pcBufHeaders += strlen(HOSTHEADER);
-    strcpy(pcBufHeaders, CHEADER);
-    pcBufHeaders += strlen(CHEADER);
-    strcpy(pcBufHeaders, "\r\n\r\n");
-
-    int testDataLength = strlen(pcBufHeaders);
-
-    UART_PRINT(acSendBuff);
-
-
-    //
-    // Send the packet to the server */
-    //
-    lRetVal = sl_Send(iTLSSockID, acSendBuff, strlen(acSendBuff), 0);
-    if(lRetVal < 0) {
-        UART_PRINT("POST failed. Error Number: %i\n\r",lRetVal);
-        sl_Close(iTLSSockID);
-        GPIO_IF_LedOn(MCU_RED_LED_GPIO);
-        return lRetVal;
-    }
-    lRetVal = sl_Recv(iTLSSockID, &acRecvbuff[0], sizeof(acRecvbuff), 0);
-    if(lRetVal < 0) {
-        UART_PRINT("Received failed. Error Number: %i\n\r",lRetVal);
-        //sl_Close(iSSLSockID);
-        GPIO_IF_LedOn(MCU_RED_LED_GPIO);
-           return lRetVal;
-    }
-    else {
-        acRecvbuff[lRetVal+1] = '\0';
-        UART_PRINT(acRecvbuff);
-        UART_PRINT("\n\r\n\r");
-    }
-
-    return 0;
-}
-//*****************************************************************************
-//
-//! Main
-//!
-//! \param  none
-//!
-//! \return None
-//!
-//*****************************************************************************
-void main() {
-    long lRetVal = -1;
-    //
-    // Initialize board configuration
-    //
-    BoardInit();
-
-    PinMuxConfig();
-
-    InitTerm();
-    ClearTerm();
-    UART_PRINT("Hello world!\n\r");
-
-    //Connect the CC3200 to the local access point
-    lRetVal = connectToAccessPoint();
-    //Set time so that encryption can be used
-    lRetVal = set_time();
-    if(lRetVal < 0) {
-        UART_PRINT("Unable to set time in the device");
-        LOOP_FOREVER();
-    }
-    //Connect to the website with TLS encryption
-    lRetVal = tls_connect();
-    if(lRetVal < 0) {
-        ERR_PRINT(lRetVal);
-    }
-    http_post(lRetVal);
-    http_get(lRetVal);
-
-    sl_Stop(SL_STOP_TIMEOUT);
-    LOOP_FOREVER();
-}
-//*****************************************************************************
-//
-// Close the Doxygen group.
-//! @}
-//
-//*****************************************************************************
-

@@ -19,8 +19,8 @@ ORDERED_OBJS += \
 "../cc3200v1p32.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
--l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" \
--l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" \
+-l"C:/ti/CC3200SDK_1.2.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" \
+-l"C:/ti/CC3200SDK_1.2.0/cc3200-sdk/simplelink/ccs/NON_OS/simplelink.a" \
 
 -include ../makefile.init
 
