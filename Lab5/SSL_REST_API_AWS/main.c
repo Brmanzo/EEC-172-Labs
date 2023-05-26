@@ -1,80 +1,46 @@
 //*****************************************************************************
 //
-// Copyright (C) 2014 Texas Instruments Incorporated - http://www.ti.com/ 
-// 
-// 
-//  Redistribution and use in source and binary forms, with or without 
-//  modification, are permitted provided that the following conditions 
-//  are met:
-//
-//    Redistributions of source code must retain the above copyright 
-//    notice, this list of conditions and the following disclaimer.
-//
-//    Redistributions in binary form must reproduce the above copyright
-//    notice, this list of conditions and the following disclaimer in the 
-//    documentation and/or other materials provided with the   
-//    distribution.
-//
-//    Neither the name of Texas Instruments Incorporated nor the names of
-//    its contributors may be used to endorse or promote products derived
-//    from this software without specific prior written permission.
-//
-//  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
-//  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
-//  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-//  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
-//  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
-//  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
-//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-//  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-//  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
-//  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
-//  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// Bradley Manzo
+// Thomas Ke
+// EEC 172 SQ23
+// Lab 5 Code
 //
 //*****************************************************************************
-
-
-//*****************************************************************************
-//
-// Application Name     -   SSL Demo
-// Application Overview -   This is a sample application demonstrating the
-//                          use of secure sockets on a CC3200 device.The
-//                          application connects to an AP and
-//                          tries to establish a secure connection to the
-//                          Google server.
-// Application Details  -
-// docs\examples\CC32xx_SSL_Demo_Application.pdf
-// or
-// http://processors.wiki.ti.com/index.php/CC32xx_SSL_Demo_Application
-//
-//*****************************************************************************
-
-
-//*****************************************************************************
-//
-//! \addtogroup ssl
-//! @{
-//
-//*****************************************************************************
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <stdbool.h>
 
 // Simplelink includes
 #include "simplelink.h"
 
 //Driverlib includes
 #include "hw_types.h"
+#include "gpio.h"
+#include "hw_apps_rcm.h"
+#include "hw_common_reg.h"
+#include "hw_memmap.h"
+#include "hw_nvic.h"
+#include "interrupt.h"
+#include "prcm.h"
 #include "hw_ints.h"
 #include "rom.h"
 #include "rom_map.h"
-#include "interrupt.h"
-#include "prcm.h"
+#include "spi.h"
+#include "systick.h"
 #include "utils.h"
 #include "uart.h"
 
 //Common interface includes
-#include "pinmux.h"
 #include "gpio_if.h"
 #include "common.h"
 #include "uart_if.h"
+
+// Pin configurations
+#include "Adafruit_GFX.h"
+#include "Adafruit_SSD1351.h"
+#include "glcdfont.h"
+#include "pin_mux_config.h"
 
 #define MAX_URI_SIZE 128
 #define URI_SIZE MAX_URI_SIZE + 1
@@ -82,29 +48,126 @@
 
 #define APPLICATION_NAME        "SSL"
 #define APPLICATION_VERSION     "1.1.1.EEC.Winter2017"
-#define SERVER_NAME                "A39526W7VT5KHJ.iot.us-east-1.amazonaws.com"
+#define SERVER_NAME                "a2ttghdziztuu6-ats.iot.us-east-1.amazonaws.com"
 #define GOOGLE_DST_PORT             8443
 
-#define SL_SSL_CA_CERT "/cert/client.der"
+#define SL_SSL_CA_CERT "/cert/RootCA.der"
 #define SL_SSL_PRIVATE "/cert/private.der"
 #define SL_SSL_CLIENT  "/cert/client.der"
 
 //NEED TO UPDATE THIS FOR IT TO WORK!
-#define DATE                2    /* Current Date */
-#define MONTH               2     /* Month 1-12 */
-#define YEAR                2017  /* Current year */
-#define HOUR                23    /* Time - hours */
-#define MINUTE              39    /* Time - minutes */
+#define DATE                26    /* Current Date */
+#define MONTH               5     /* Month 1-12 */
+#define YEAR                2023  /* Current year */
+#define HOUR                12    /* Time - hours */
+#define MINUTE              0    /* Time - minutes */
 #define SECOND              0     /* Time - seconds */
 
-#define POSTHEADER "POST /things/MyEmbeddedSystem_Winter17/shadow HTTP/1.1\n\r"
-#define HOSTHEADER "Host: A39526W7VT5KHJ.iot.us-east-1.amazonaws.com\r\n"
+#define POSTHEADER "POST /things/thomas_launchpad/shadow HTTP/1.1\n\r"
+#define HOSTHEADER "Host: a2ttghdziztuu6-ats.iot.us-east-1.amazonaws.com\r\n"
 #define CHEADER "Connection: Keep-Alive\r\n"
 #define CTHEADER "Content-Type: application/json; charset=utf-8\r\n"
 #define CLHEADER1 "Content-Length: "
 #define CLHEADER2 "\r\n\r\n"
 
-#define DATA1 "{\"state\": {\n\r\"desired\" : {\n\r\"messageagain\" : \"Ho brah, dis ting stay cool!!!\"\n\r}}}\n\r\n\r"
+
+#define GETHEADER "GET /things/thomas_launchpad/shadow HTTP/1.1\n\r"
+
+
+char* DATASTART = "{\"state\": {\n\r\"desired\" : {\n\r\"messageagain\" : \"";
+char* DATAWORD;
+char* DATAEND = "\"\n\r}}}\n\r\n\r";
+//*****************************************************************************
+//                 GLOBAL VARIABLES -- Start
+//*****************************************************************************
+
+// some helpful macros for systick
+
+// the cc3200's fixed clock frequency of 80 MHz
+// note the use of ULL to indicate an unsigned long long constant
+#define SYSCLKFREQ 80000000ULL
+
+// macro to convert ticks to microseconds
+#define TICKS_TO_US(ticks) \
+    ((((ticks) / SYSCLKFREQ) * 1000000ULL) + \
+    ((((ticks) % SYSCLKFREQ) * 1000000ULL) / SYSCLKFREQ))\
+
+// macro to convert microseconds to ticks
+#define US_TO_TICKS(us) ((SYSCLKFREQ / 1000000ULL) * (us))
+
+// systick reload value set to 40ms period
+// (PERIOD_SEC) * (SYSCLKFREQ) = PERIOD_TICKS
+#define SYSTICK_RELOAD_VAL 3200000UL
+
+#define MASTER_MODE      1
+
+#define SPI_IF_BIT_RATE  100000
+#define TR_BUFF_SIZE     100
+
+#define BLACK           0x0000
+#define BLUE            0x001F
+#define GREEN           0x07E0
+#define CYAN            0x07FF
+#define RED             0xF800
+#define MAGENTA         0xF81F
+#define YELLOW          0xFFE0
+#define WHITE           0xFFFF
+
+//#define CONSOLE         UARTA1_BASE
+//#define CONSOLE_PERIPH  PRCM_UARTA1
+//#define UartGetChar()        MAP_UARTCharGet(CONSOLE)
+//#define UartPutChar(c)       MAP_UARTCharPut(CONSOLE,c)
+#define MAX_STRING_LENGTH    80
+
+
+// track systick counter periods elapsed
+// if it is not 0, we know the transmission ended
+volatile int systick_cnt = 1;
+
+extern void (* const g_pfnVectors[])(void);
+volatile unsigned char P59_intstatus;
+volatile unsigned long P59_intcount;
+volatile unsigned char P2_intstatus;
+volatile unsigned long P2_intcount;
+
+unsigned long start_int;
+unsigned long end_int;
+
+char TextRx[MAX_STRING_LENGTH+1];
+int TextRxLength = 0;
+char TextTx[MAX_STRING_LENGTH+1];
+int TextTxLength = 0;
+int i = 0;
+
+uint64_t delta = 0;
+uint64_t delta_us = 0;
+
+// Int to accumulate bits onto to form message
+uint32_t message;
+uint32_t prev_message;
+
+// Variables to maintain repetition logic
+char prev_char;
+int repetitions = 0;
+char character = 0;
+// Array to maintain font color
+int colors[7] = {BLUE, GREEN, CYAN, RED, MAGENTA, YELLOW, WHITE};
+int font_count = 0;
+// Array to store characters corresponding to repeated button presses
+char letters3[6][3] = {{'A', 'B', 'C'},
+                 {'D', 'E', 'F'},
+                 {'G', 'H', 'I'},
+                 {'J', 'K', 'L'},
+                 {'M', 'N', 'O'},
+                 {'T', 'U', 'V'}};
+
+char letters4[2][4] = {{'P', 'Q', 'R', 'S'},
+                 {'W', 'X', 'Y', 'Z'}};
+
+
+//*****************************************************************************
+//                 GLOBAL VARIABLES -- End
+//*****************************************************************************
 
 // Application specific status/error codes
 typedef enum{
@@ -573,7 +636,29 @@ static void BoardInit(void) {
     PRCMCC3200MCUInit();
 }
 
+/**
+ * Reset SysTick Counter
+ */
+static inline void SysTickReset(void) {
+    // any write to the ST_CURRENT register clears it
+    // after clearing it automatically gets reset without
+    // triggering exception logic
+    // see reference manual section 3.2.1
+    HWREG(NVIC_ST_CURRENT) = 1;
 
+    // clear the global count variable
+    systick_cnt = 1;
+}
+
+/**
+ * SysTick Interrupt Handler
+ *
+ * Keep track of whether the systick counter wrapped
+ */
+static void SysTickHandler(void) {
+    // increment every time the systick handler fires
+    systick_cnt++;
+}
 //****************************************************************************
 //
 //! \brief Connecting to a WLAN Accesspoint
@@ -589,6 +674,60 @@ static void BoardInit(void) {
 //!            address, It will be stuck in this function forever.
 //
 //****************************************************************************
+// Register Interrupt Handler
+// P59 handler wired to IR receiver
+static void GPIOA0IntHandler(void)
+{
+    unsigned long ulStatus;
+    // Records interrupt status of IR receiver from GPIO
+    ulStatus = MAP_GPIOIntStatus(GPIOA0_BASE, true);
+    // Clears interrupt status from GPIO
+    MAP_GPIOIntClear(GPIOA0_BASE, ulStatus);
+    // Records the current time and calculates duration since last
+    delta = systick_cnt*SYSTICK_RELOAD_VAL - SysTickValueGet();
+    // Resets SysTick count and repetitions
+    SysTickReset();
+    // Converts clock cycles to milliseconds
+    delta_us = TICKS_TO_US(delta);// clear interrupts on GPIOA0
+    // Sets IR Int received flag high
+    P59_intstatus = 1;
+    P59_intcount++;
+}
+//static void UARTA1IntHandler(void)
+//{
+//    unsigned long ulStatus;
+//
+//    // Records interrupt status of UART
+//    ulStatus = MAP_UARTIntStatus(CONSOLE, true);
+//    // Clears interrupt status from UART
+//    MAP_UARTIntClear(CONSOLE, ulStatus);
+//    // As long as there are chars to receive, build string
+//    while(UARTCharsAvail(CONSOLE))
+//    {
+//        TextRx[TextRxLength] = UARTCharGetNonBlocking(CONSOLE);
+//        TextRxLength++;
+//    }
+//    // Sets UART Int received flag high
+//    P2_intstatus = 1;
+//    P2_intcount++;
+//}
+
+static void SysTickInit(void) {
+
+    // configure the reset value for the systick countdown register
+    MAP_SysTickPeriodSet(SYSTICK_RELOAD_VAL);
+
+    // register interrupts on the systick module
+    MAP_SysTickIntRegister(SysTickHandler);
+
+    // enable interrupts on systick
+    // (trigger SysTickHandler when countdown reaches 0)
+    MAP_SysTickIntEnable();
+
+    // enable the systick module itself
+    MAP_SysTickEnable();
+}
+
 static long WlanConnect() {
     SlSecParams_t secParams = {0};
     long lRetVal = 0;
@@ -650,6 +789,11 @@ static int set_time() {
     return SUCCESS;
 }
 
+long printErrConvenience(char * msg, long retVal) {
+    UART_PRINT(msg);
+    GPIO_IF_LedOn(MCU_RED_LED_GPIO);
+    return retVal;
+}
 //*****************************************************************************
 //
 //! This function demonstrates how certificate can be used with SSL.
@@ -767,11 +911,6 @@ static int tls_connect() {
 
 
 
-long printErrConvenience(char * msg, long retVal) {
-    UART_PRINT(msg);
-    GPIO_IF_LedOn(MCU_RED_LED_GPIO);
-    return retVal;
-}
 
 
 
@@ -833,54 +972,6 @@ int connectToAccessPoint() {
     UART_PRINT("Connection established w/ AP and IP is aquired \n\r");
     return 0;
 }
-
-//*****************************************************************************
-//
-//! Main 
-//!
-//! \param  none
-//!
-//! \return None
-//!
-//*****************************************************************************
-void main() {
-    long lRetVal = -1;
-    //
-    // Initialize board configuration
-    //
-    BoardInit();
-
-    PinMuxConfig();
-
-    InitTerm();
-    ClearTerm();
-    UART_PRINT("Hello world!\n\r");
-
-    //Connect the CC3200 to the local access point
-    lRetVal = connectToAccessPoint();
-    //Set time so that encryption can be used
-    lRetVal = set_time();
-    if(lRetVal < 0) {
-        UART_PRINT("Unable to set time in the device");
-        LOOP_FOREVER();
-    }
-    //Connect to the website with TLS encryption
-    lRetVal = tls_connect();
-    if(lRetVal < 0) {
-        ERR_PRINT(lRetVal);
-    }
-    http_post(lRetVal);
-
-    sl_Stop(SL_STOP_TIMEOUT);
-    LOOP_FOREVER();
-}
-//*****************************************************************************
-//
-// Close the Doxygen group.
-//! @}
-//
-//*****************************************************************************
-
 static int http_post(int iTLSSockID){
     char acSendBuff[512];
     char acRecvbuff[1460];
@@ -897,7 +988,7 @@ static int http_post(int iTLSSockID){
     pcBufHeaders += strlen(CHEADER);
     strcpy(pcBufHeaders, "\r\n\r\n");
 
-    int dataLength = strlen(DATA1);
+    int dataLength = strlen(DATASTART) + strlen(DATAWORD) + strlen(DATAEND);
 
     strcpy(pcBufHeaders, CTHEADER);
     pcBufHeaders += strlen(CTHEADER);
@@ -911,8 +1002,70 @@ static int http_post(int iTLSSockID){
     strcpy(pcBufHeaders, CLHEADER2);
     pcBufHeaders += strlen(CLHEADER2);
 
-    strcpy(pcBufHeaders, DATA1);
-    pcBufHeaders += strlen(DATA1);
+    strcpy(pcBufHeaders, DATASTART);
+    pcBufHeaders += strlen(DATASTART);
+    strcpy(pcBufHeaders, DATAWORD);
+    pcBufHeaders += strlen(DATAWORD);
+    strcpy(pcBufHeaders, DATAEND);
+    pcBufHeaders += strlen(DATAEND);
+
+    int testDataLength = strlen(pcBufHeaders);
+
+//    for(i = 0; i < (int)(sizeof DATASTART); i++)
+//    {
+//        UART_PRINT("%c", DATASTART[i]);
+//    }
+//    for(i = 0; i < (int)(sizeof TextTx); i++)
+//    {
+//        UART_PRINT("%c", TextTx[i]);
+//    }
+//    for(i = 0; i < (int)(sizeof DATAEND); i++)
+//    {
+//        UART_PRINT("%c", DATAEND[i]);
+//    }
+
+    UART_PRINT(acSendBuff);
+
+
+    //
+    // Send the packet to the server */
+    //
+    lRetVal = sl_Send(iTLSSockID, acSendBuff, strlen(acSendBuff), 0);
+    if(lRetVal < 0) {
+        UART_PRINT("POST failed. Error Number: %i\n\r",lRetVal);
+        sl_Close(iTLSSockID);
+        GPIO_IF_LedOn(MCU_RED_LED_GPIO);
+        return lRetVal;
+    }
+    lRetVal = sl_Recv(iTLSSockID, &acRecvbuff[0], sizeof(acRecvbuff), 0);
+    if(lRetVal < 0) {
+        UART_PRINT("Received failed. Error Number: %i\n\r",lRetVal);
+        //sl_Close(iSSLSockID);
+        GPIO_IF_LedOn(MCU_RED_LED_GPIO);
+           return lRetVal;
+    }
+    else {
+        acRecvbuff[lRetVal+1] = '\0';
+        UART_PRINT(acRecvbuff);
+        UART_PRINT("\n\r\n\r");
+    }
+
+    return 0;
+}
+static int http_get(int iTLSSockID){
+    char acSendBuff[512];
+    char acRecvbuff[1460];
+    char* pcBufHeaders;
+    int lRetVal = 0;
+
+    pcBufHeaders = acSendBuff;
+    strcpy(pcBufHeaders, GETHEADER);
+    pcBufHeaders += strlen(GETHEADER);
+    strcpy(pcBufHeaders, HOSTHEADER);
+    pcBufHeaders += strlen(HOSTHEADER);
+    strcpy(pcBufHeaders, CHEADER);
+    pcBufHeaders += strlen(CHEADER);
+    strcpy(pcBufHeaders, "\r\n\r\n");
 
     int testDataLength = strlen(pcBufHeaders);
 
@@ -944,3 +1097,347 @@ static int http_post(int iTLSSockID){
 
     return 0;
 }
+//*****************************************************************************
+//
+//! Main
+//!
+//! \param  none
+//!
+//! \return None
+//!
+//*****************************************************************************
+void main() {
+    unsigned long ulStatus;
+    long lRetVal = -1;
+    //
+    // Initialize board configuration
+    //
+    BoardInit();
+
+    PinMuxConfig();
+
+    //
+    // Enable the SPI module clock
+    //
+    MAP_PRCMPeripheralClkEnable(PRCM_GSPI,PRCM_RUN_MODE_CLK);
+
+    //
+    // Reset the peripheral
+    //
+    MAP_PRCMPeripheralReset(PRCM_GSPI);
+
+    //
+    // Reset SPI
+    //
+    MAP_SPIReset(GSPI_BASE);
+
+    //
+    // Configure SPI interface to OLED
+    //
+    MAP_SPIConfigSetExpClk(GSPI_BASE,MAP_PRCMPeripheralClockGet(PRCM_GSPI),
+                     SPI_IF_BIT_RATE,SPI_MODE_MASTER,SPI_SUB_MODE_0,
+                     (SPI_SW_CTRL_CS |
+                     SPI_4PIN_MODE |
+                     SPI_TURBO_OFF |
+                     SPI_CS_ACTIVELOW |
+                     SPI_WL_8));
+
+    //
+    // Enable SPI for communication to OLED
+    //
+    MAP_SPIEnable(GSPI_BASE);
+
+    Adafruit_Init();
+
+    // Enable SysTick
+    SysTickInit();
+
+    InitTerm();
+    ClearTerm();
+
+    // Register Interrupt Handler
+    // (Port, pointer to handler function)
+    MAP_GPIOIntRegister(GPIOA0_BASE, GPIOA0IntHandler);
+
+    // Configure Falling Edge
+    // (Port, bit-packed pin select, interrupt trigger mechanism)
+    MAP_GPIOIntTypeSet(GPIOA0_BASE, 0x10, GPIO_FALLING_EDGE);
+
+    // Interrupt Status
+    // (Port, True: masked interupt status, false: raw interrupt status)
+    // Returns the current interupt status enumerated as a bit field
+    // of the values described in GPIOIntEnable()
+    ulStatus = MAP_GPIOIntStatus(GPIOA0_BASE, false);
+
+    // Clear Interrupt
+    // (Port, with field returned from status above)
+    MAP_GPIOIntClear(GPIOA0_BASE, ulStatus);
+
+    // clear global variables
+    P59_intstatus = 0;
+    P59_intcount = 0;
+
+    // Enable Interrupt
+    // (Port, Flags)
+    MAP_GPIOIntEnable(GPIOA0_BASE, 0x10);
+
+    SysTickReset();
+
+    //Connect the CC3200 to the local access point
+    lRetVal = connectToAccessPoint();
+    //Set time so that encryption can be used
+    lRetVal = set_time();
+    if(lRetVal < 0) {
+        UART_PRINT("Unable to set time in the device");
+        LOOP_FOREVER();
+    }
+    //Connect to the website with TLS encryption
+    lRetVal = tls_connect();
+    if(lRetVal < 0) {
+        ERR_PRINT(lRetVal);
+    }
+    // Position in pixels
+    // Text to Transmit Position
+    int xTx = 0;
+    int yTx = 64;
+    setCursor(xTx, yTx);
+    setTextSize(1);
+    setTextColor(WHITE, BLACK);
+    fillScreen(BLACK);
+    memset(TextTx, 0, sizeof TextTx);
+
+    UART_PRINT("Hello world!\n\r");
+
+    while (1) {
+        while (P59_intstatus == 0) {;}
+        // If GPIO Interrupt (IR) Recevied
+        if(P59_intstatus)
+        {
+            setCursor(xTx, yTx);
+            // clear flag
+            P59_intstatus=0;
+            // If longer than standard repeat, stop remembering past input
+            if(delta_us > 300000)
+            {
+                repetitions = 0;
+                prev_message = 0;
+                prev_char = 0;
+            }
+            // If larger than "1" and not garbage data, decode the message
+            if((delta_us > 2500) && (delta_us < 300000) && (message != 0))
+            {
+                // If message message is new, and previous char wasn't a debug character, increment the x position
+                if(message != prev_message && prev_char != '!' && prev_char != '1' && prev_char != '2' && prev_char != '3')
+                {
+                    // Append character to Transmitting Text
+                    TextTx[TextTxLength] = character;
+                    TextTxLength++;
+                    // If at edge of screen, go down to beginning of new line (\n\r)
+                    if(xTx >= 120)
+                    {
+                        xTx = 0;
+                        if(yTx < 120)
+                            yTx += 8;
+                        else
+                            yTx = 64;
+                    }
+                    // Otherwise increment by width of character
+                    else
+                    {
+                        xTx += 6;
+                    }
+                }
+                // If last remembered word is the same: increment repetitions
+                // otherwise, message is done repeating and should print
+
+                /*===================================================================*/
+                //       Infrared Decoding
+                /*===================================================================*/
+                // 0 Button (Space)
+                if(message == 0b00000010111111010000000011111111)
+                {
+                    character = ' ';
+
+                }
+                // 1 Button pressed (Font Color Change)
+                else if(message == 0b00000010111111011000000001111111)
+                {
+                    if(font_count < 6)
+                        font_count++;
+                    else
+                        font_count = 0;
+                    character = '1';
+                }
+                // 2 button pressed
+                else if(message == 0b00000010111111010100000010111111)
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'A', 'B', 'C'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[0][repetitions];
+                }
+                // 3 button pressed
+                else if(message == 0b00000010111111011100000000111111)
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'D', 'E', 'F'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[1][repetitions];
+                }
+                // 4 button pressed
+                else if(message == 0b00000010111111010010000011011111)
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'G', 'H', 'I'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[2][repetitions];
+                }
+                // 5 button pressed
+                else if(message == 0b00000010111111011010000001011111)
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'J', 'K', 'L'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[3][repetitions];
+                }
+                // 6 button pressed
+                else if(message == 0b00000010111111010110000010011111)
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'M', 'N', 'O'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[4][repetitions];
+                }
+                // 7 button pressed
+                else if(message == 0b00000010111111011110000000011111)
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'P', 'Q', 'R', 'S'};
+                    if (repetitions > (sizeof(letters4[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters4[0]));
+                    character = letters4[0][repetitions];
+                }
+                // 8 button pressed
+                else if(message == 0b00000010111111010001000011101111)
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'T', 'U', 'V'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[5][repetitions];
+                }
+                // 9 button pressed
+                else if(message == 0b00000010111111011001000001101111)
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'W', 'X', 'Y', 'Z'};
+                    if (repetitions > (sizeof(letters4[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters4[0]));
+                    character = letters4[1][repetitions];
+                }
+                // Enter button pressed (MUTE)
+                else if(message == 0b00000010111111010000100011110111)
+                {
+                    character = '2';
+                }
+                // Delete button pressed (LAST)
+                else if(message == 0b00000010111111010000001011111101)
+                {
+                    //if(xTx >= 6)
+                    TextTx[TextTxLength] = '/0';
+                    // By removing from scope
+                    TextTxLength--;
+                    character = '3';
+                    fillRect(xTx,yTx,6, 8,BLACK);
+                    xTx -= 6;
+                }
+                else
+                {
+                // Otherwise, debugging character
+                        character = '!';
+                }
+                prev_message = message;
+                prev_char = character;
+                // If not a debugging or a function character, print the character to the screen
+                if(character != '!' && character != '1' && character != '2' && character != '3')
+                {
+                    UART_PRINT("character: %c\n\r", character);
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+                }
+                // If Enter button is pressed, transmit the text
+                if(character == '2' && TextTxLength !=0)
+                {
+//                    TextTx[TextTxLength + 1] = '\0';
+//                    TextTxLength++;
+//                    UART_PRINT("string to send:");
+//                    for(i = 0; i < TextTxLength; i++)
+//                    {
+//                        UART_PRINT("%c", TextTx[i]);
+//                    }
+//                    UART_PRINT("\n\r");
+                    DATAWORD = TextTx;
+                    http_post(lRetVal);
+                    //http_get(lRetVal);
+                    //sl_Stop(SL_STOP_TIMEOUT);
+
+                    TextTxLength = 0;
+                    memset(TextTx, 0, sizeof TextTx);
+                    setCursor(0, 64);
+                    xTx = 0;
+                    yTx = 64;
+                    fillRect(0,64,128,128,BLACK);
+                }
+                // Resets repetitions
+                message = 0;
+            }
+            // If time is between 1300 and 2500 ms, accumulate a "1"
+            else if(delta_us < 2500 && delta_us > 1300)
+            {
+                message = message << 1;
+                message = message + 1;
+            }
+            // If time is less than 1300 ms, accumulate a "0"
+            else //if(delta_us > 0 && delta_us < 1300)
+            {
+                message = message << 1;
+            }
+            start_int = 0;
+        }
+    }
+}
+//*****************************************************************************
+//
+// Close the Doxygen group.
+//! @}
+//
+//*****************************************************************************
+
