@@ -1,0 +1,43 @@
+
+**** Build of configuration Debug for project systick-example ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/systick-example/systick-example" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/cc3200-sdk/inc" --include_path="C:/ti/cc3200-sdk/driverlib" --include_path="C:/ti/cc3200-sdk/example/common" --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 16: fatal error #1965: cannot open source file "hw_types.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+Building file: "../pin_mux_config.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/systick-example/systick-example" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/cc3200-sdk/inc" --include_path="C:/ti/cc3200-sdk/driverlib" --include_path="C:/ti/cc3200-sdk/example/common" --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pin_mux_config.d_raw"  "../pin_mux_config.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'pin_mux_config.obj' failed
+"../pin_mux_config.c", line 45: fatal error #1965: cannot open source file "hw_types.h"
+1 catastrophic error detected in the compilation of "../pin_mux_config.c".
+Compilation terminated.
+gmake: *** [pin_mux_config.obj] Error 1
+Building file: "../uart_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/systick-example/systick-example" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/cc3200-sdk/inc" --include_path="C:/ti/cc3200-sdk/driverlib" --include_path="C:/ti/cc3200-sdk/example/common" --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart_if.d_raw"  "../uart_if.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'uart_if.obj' failed
+"../uart_if.c", line 46: fatal error #1965: cannot open source file "hw_types.h"
+1 catastrophic error detected in the compilation of "../uart_if.c".
+Compilation terminated.
+gmake: *** [uart_if.obj] Error 1
+Building file: "../startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab3/systick-example/systick-example" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --include_path="C:/ti/cc3200-sdk/inc" --include_path="C:/ti/cc3200-sdk/driverlib" --include_path="C:/ti/cc3200-sdk/example/common" --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "../startup_ccs.c"
+Finished building: "../startup_ccs.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

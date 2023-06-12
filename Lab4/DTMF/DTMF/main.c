@@ -1,3 +1,9 @@
+/* ========================================*/
+// Bradley Manzo and Thomas Ke
+// EEC 172 SQ2023, Lab 4
+/* ========================================*/
+
+
 #include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -46,20 +52,12 @@ extern uVectorEntry __vector_table;
 // the cc3200's fixed clock frequency of 80 MHz
 // note the use of ULL to indicate an unsigned long long constant
 #define SYSCLKFREQ 80000000ULL
-
-// macro to convert ticks to microseconds
-#define TICKS_TO_US(ticks) \
-    ((((ticks) / SYSCLKFREQ) * 1000000ULL) + \
-    ((((ticks) % SYSCLKFREQ) * 1000000ULL) / SYSCLKFREQ))\
-
-// macro to convert microseconds to ticks
-#define US_TO_TICKS(us) ((SYSCLKFREQ / 1000000ULL) * (us))
-
-// systick reload value set to 40ms period
-// (PERIOD_SEC) * (SYSCLKFREQ) = PERIOD_TICKS
-#define SYSTICK_RELOAD_VAL 3200000UL
-
-#define MASTER_MODE      1
+// Periods defined for our delays in post processing
+#define DEBOUNCE_PERIOD 100
+#define REPEAT_PERIOD 1000
+// Resolution for both timer modules
+#define ADC_SAMPLING_PERIOD 5000
+#define DELAY_PERIOD 80000  //CLK_FREQ to one MS
 
 #define SPI_IF_BIT_RATE  400000
 #define TR_BUFF_SIZE     100
@@ -73,20 +71,52 @@ extern uVectorEntry __vector_table;
 #define YELLOW          0xFFE0
 #define WHITE           0xFFFF
 
+// ==================================================================//
+// Processing
+// ==================================================================//
+
 long int goertzel (int sample[], long int coeff, int N);
-void post_test (void);
-int N = 410;                 // block size
-int samples[410];   // buffer to store N samples
-volatile int count;         // samples count
-volatile int flag = 0;         // flag set when the samples buffer is full with N samples
-volatile bool new_dig;      // flag set when inter-digit interval (pause) is detected
-
-int power_all[8];       // array to store calculated power of 8 frequencies
-
-int coeff[8] = { 35248 ,31281, 30950, 30556, 29143, 28360, 27408, 26258 };  // array to store the calculated coefficients
+// Goertzel variables
+int N = 410;
+volatile int sampling_index = 0;
+int samples[410];
+// Delay variables
+int delay_count = 0;
+int prev_delay_count = 0;
+// ADC interrupt handler variables
+unsigned char ADCRxBuffer[2] = {0,0};
+volatile unsigned int ADC_flag = 0;
+// Goertzel Power Array for all 8 frequencies
+int power_all[8];
+// Coefficients calculated from DTMF frequencies
+int coeff[8] = { 35248, 31281, 30950, 30556, 29143, 28360, 27408, 26258 };  // array to store the calculated coefficients
 int f_tone[8] = { 697, 770, 852, 941, 1209, 1336, 1477, 1633 }; // frequencies of rows & columns
+// ==================================================================//
+// Post-Processing
+// ==================================================================//
 
-unsigned char ADCRxBuffer[2];
+void post_test (void);
+// Confidence interval variables
+char char_current = 0, char_prev = 0, char_prev2 = 0, char_prev3 = 0;
+// Multi-tap decoding variables
+char message = 0, prev_message = 0, character = 0, prev_char = 0;
+int repetitions = 0;
+// OLED position variables
+int xTx = 0;
+int yTx = 64;
+
+unsigned long ulStatus = 0;
+
+
+char letters3[6][3] = {{'A', 'B', 'C'},
+                 {'D', 'E', 'F'},
+                 {'G', 'H', 'I'},
+                 {'J', 'K', 'L'},
+                 {'M', 'N', 'O'},
+                 {'T', 'U', 'V'}};
+
+char letters4[2][4] = {{'P', 'Q', 'R', 'S'},
+                 {'W', 'X', 'Y', 'Z'}};
 
 
 //*****************************************************************************
@@ -129,7 +159,6 @@ BoardInit(void)
 }
 
 
-
 //-------Goertzel function---------------------------------------//
 long int
 goertzel (int sample[], long int coeff, int N)
@@ -164,14 +193,68 @@ goertzel (int sample[], long int coeff, int N)
 
     return power;
 }
+/* Generic function to disable a timer_IF.h timer*/
+void DisableTimer(int TIMER_BASE, int TIMER_LETTER, volatile unsigned int *function_flag)
+{
+    unsigned long ulStatus;
+    ulStatus = MAP_TimerIntStatus(TIMER_BASE, false);
+    MAP_TimerIntClear(TIMER_BASE, ulStatus);
+    MAP_TimerDisable(TIMER_BASE, TIMER_LETTER);
+    *function_flag = 0;
+}
 
+/* Generic function to enable a timer_IF.h timer*/
+void EnableTimer(int TIMER_BASE, int TIMER_LETTER, int TIMER_TIMEOUT, int delay)
+{
+    if(delay == 5000)
+        MAP_TimerLoadSet(TIMER_BASE, TIMER_LETTER, delay);
+    MAP_TimerIntEnable(TIMER_BASE, TIMER_TIMEOUT);
+    MAP_TimerEnable(TIMER_BASE, TIMER_LETTER);
+}
+/* Handler function to increment count every millisecond. Delay is calculated */
+/* from recording count the start and subtracting it from the current count.  */
+static void DelayHandler(void)
+{
+    unsigned long ulStatus;
+
+    ulStatus = MAP_TimerIntStatus(TIMERA1_BASE, false);
+    MAP_TimerIntClear(TIMERA1_BASE, ulStatus);
+    delay_count++;
+}
+/* Handler function to collect 410 samples, and converting into  */
+/* the proper format before passing into the Goertzel algorithm. */
+static void ADCIntHandler(void)
+{
+    unsigned long ulStatus;
+    // Clears interrupt
+    ulStatus = MAP_TimerIntStatus(TIMERA0_BASE, false);
+    MAP_TimerIntClear(TIMERA0_BASE, ulStatus);
+    // Set CS Pin Low
+    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x0);
+    // Receive 2 bytes of sample into Rx Buffer
+    MAP_SPITransfer(GSPI_BASE, 0, ADCRxBuffer, 2, SPI_CS_ENABLE|SPI_CS_DISABLE);
+    // Set CS Pin High
+    GPIOPinWrite(GPIOA2_BASE, 0x2, 0x2);
+    // Convert from big to little-endian
+    int Little_End = (((unsigned int)(ADCRxBuffer[0] & 0b00011111)) << 5) | ((ADCRxBuffer[1] & 0b11111000) >> 3);
+    // Store sample if less than 410
+    if(sampling_index < N)
+    {
+        samples[sampling_index] = Little_End;
+        sampling_index++;
+    }
+    // If 410th sample, set flag high to continue into Goertzel
+    else
+    {
+        ADC_flag = 1;
+    }
+}
 //-------Post-test function---------------------------------------//
-void
-post_test (void)
+void post_test (void)
 //---------------------------------------------------------------//
 {
     //initialize variables to be used in the function
-    int i, row, col, max_power;
+    int i, row, col, max_power_row, max_power_col;
 
     // array with the order of the digits in the DTMF system
     char row_col[4][4] =
@@ -183,98 +266,208 @@ post_test (void)
     };
 
     // find the maximum power in the row frequencies and the row number
+    max_power_row = 0;
 
-    max_power = 0;
-
-    //loop 4 times from 0>3 (the indecies of the rows)
+    //loop 4 times from 0>3 (the indices of the rows)
     for (i = 0; i < 4; i++)
     {
         //if power of the current row frequency > max_power
-        if (power_all[i] > max_power)
+        if (power_all[i] > max_power_row)
         {
             //set max_power as the current row frequency
-            max_power = power_all[i];
+            max_power_row = power_all[i];
             //update row number
             row = i;
         }
     }
-    // find the maximum power in the column frequencies and the column number
-    // initialize max_power=0
-    max_power = 0;
 
-    //loop 4 times from 4>7 (the indecies of the columns)
+    // find the maximum power in the column frequencies and the column number
+    max_power_col = 0;
+
+    //loop 4 times from 4>7 (the indices of the columns)
     for (i = 4; i < 8; i++)
     {
         //if power of the current column frequency > max_power
-        if (power_all[i] > max_power)
+        if (power_all[i] > max_power_col)
         {
             //set max_power as the current column frequency
-            max_power = power_all[i];
+            max_power_col = power_all[i];
             //update column number
             col = i;
         }
     }
-    //if the maximum powers equal zero > this means no signal or inter-digit pause
-    //set new_dig to 1 to display the next decoded digit
-    if (power_all[col] == 0 && power_all[row] == 0)
-        new_dig = 1;
-
-    // check if maximum powers of row & column exceed certain threshold AND new_dig flag is set to 1
-    if ((power_all[col] > 1000 && power_all[row] > 1000) && (new_dig == 1))
+    if((max_power_col > 10000) && (max_power_row > 10000))
     {
-        // display the digit on the LCD
-//        write_lcd (1, row_col[row][col - 4]);
-//        // display the digit on 7-seg
-//        dis_7seg (8, row_col[row][col - 4]);
-        // set new_dig to 0 to avoid displaying the same digit again.
-        new_dig = 0;
+        // Confidence interval of 4 similar repeated inputs
+        char_prev3 = char_prev2;
+        char_prev2 = char_prev;
+        char_prev = char_current;
+        char_current = row_col[row][col - 4];
+        // Enters logic if confidence interval detects four identical consecutive readings
+        if((char_current == char_prev) && (char_current == char_prev2) && (char_current == char_prev3))
+        {
+            message = row_col[row][col - 4];
+
+            // If longer than a second between inputs, discard possibility of repeat
+            if(delay_count - prev_delay_count > 1000)
+            {
+                repetitions = 0;
+                prev_message = 0;
+                prev_char = 0;
+            }
+            // If in between 0.1 and 1 second, decode message
+            if((delay_count - prev_delay_count < REPEAT_PERIOD) && (delay_count - prev_delay_count > DEBOUNCE_PERIOD))
+            {
+                // Increment position if position is new character and not a backspace
+                if(message != prev_message && prev_char != '!' && message != '*')
+                {
+                    // If at edge of screen, move to new line
+                    if(xTx >= 120)
+                    {
+                        xTx = 0;
+                        if(yTx < 120)
+                            yTx += 8;
+                        else
+                            yTx = 64;
+                    }
+                    // Otherwise increment by width of character
+                    else
+                    {
+                        xTx += 6;
+                    }
+                }
+                // 0 button pressed
+                if(message == '0')
+                {
+                    character = ' ';
+                }
+                // 2 button pressed
+                else if(message == '2')
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'A', 'B', 'C'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[0][repetitions];
+                }
+                // 3 button pressed
+                else if(message == '3')
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'D', 'E', 'F'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[1][repetitions];
+                }
+                // 4 button pressed
+                else if(message == '4')
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'G', 'H', 'I'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[2][repetitions];
+                }
+                // 5 button pressed
+                else if(message == '5')
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'J', 'K', 'L'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[3][repetitions];
+                }
+                // 6 button pressed
+                else if(message == '6')
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'M', 'N', 'O'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[4][repetitions];
+                }
+                // 7 button pressed
+                else if(message == '7')
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'P', 'Q', 'R', 'S'};
+                    if (repetitions > (sizeof(letters4[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters4[0]));
+                    character = letters4[0][repetitions];
+                }
+                // 8 button pressed
+                else if(message == '8')
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'T', 'U', 'V'};
+                    if (repetitions > (sizeof(letters3[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters3[0]));
+                    character = letters3[5][repetitions];
+                }
+                // 9 button pressed
+                else if(message == '9')
+                {
+                    if(prev_message == message)
+                        repetitions++;
+                    else
+                        repetitions = 0;
+                    //letters = {'W', 'X', 'Y', 'Z'};
+                    if (repetitions > (sizeof(letters4[0]) - 1))
+                        repetitions = repetitions - (sizeof(letters4[0]));
+                    character = letters4[1][repetitions];
+                }
+                else if(message == '*')
+                {
+                    character = '*';
+                    fillRect(xTx,yTx,6, 8,BLACK);
+                    xTx -= 6;
+                }
+                prev_message = message;
+                prev_char = character;
+                // Draw new character, (overlaps valid repeats before incrementing position)
+                if(character != '1' && character != '*')
+                {
+                    drawChar(xTx, yTx, character, colors[font_count], BLACK, 1);
+                }
+            }
+            // "Start Timer"
+            prev_delay_count = delay_count;
+        }
     }
 }
-
-static void ADCIntHandler(void){
-    // Set CS Pin Low
-    GPIOPinWrite(GPIOA3_BASE, 0x2, 0x0);
-    // Receive 2 bytes of sample into Rx Buffer
-    MAP_SPITransfer(GSPI_BASE, 0, ADCRxBuffer, 2, SPI_CS_ENABLE|SPI_CS_DISABLE);
-    GPIOPinWrite(GPIOA3_BASE, 0x2, 0x2);
-
-    int b0 = (unsigned char)((ADCRxBuffer[1] >> 3) << 7) << 2;
-    int b1 = (unsigned char)((ADCRxBuffer[1] >> 4) << 7) << 1;
-    int b2 = (unsigned char)((ADCRxBuffer[1] >> 5) << 7);
-    int b3 = (unsigned char)((ADCRxBuffer[1] >> 6) << 7) >> 1;
-    int b4 = (unsigned char)((ADCRxBuffer[1] >> 7) << 7) >> 2;
-    int b5 = (unsigned char)(ADCRxBuffer[0] << 7) >> 7 << 4;
-    int b6 = (unsigned char)(ADCRxBuffer[0] << 6) >> 7 << 3;
-    int b7 = (unsigned char)(ADCRxBuffer[0] << 5) >> 7 << 2;
-    int b8 = (unsigned char)(ADCRxBuffer[0] << 4) >> 7 << 1;
-    int b9 = (unsigned char)((ADCRxBuffer[0] << 3) >> 7);
-
-
-
-    if(count < N)
-    {
-        samples[count] = b0|b1|b2|b3|b4|b5|b6|b7|b8|b9;
-        count++;
-    }
-    else
-    {
-        fprintf(stdout,"410 received\n");
-        flag = 1;
-        count = 0;
-    }
+/* Generic function to initialize a timer_IF.h timer*/
+void TimerInit(int PRCM_TIMER, int TIMER_BASE, int TIMER_LETTER, int TIMER_MODE, int delay, void Handler(void))
+{
+    MAP_PRCMPeripheralClkEnable(PRCM_TIMER, PRCM_RUN_MODE_CLK);
+    MAP_PRCMPeripheralReset(PRCM_TIMER);
+    MAP_TimerConfigure(TIMER_BASE,TIMER_MODE);
+    MAP_TimerLoadSet(TIMER_BASE, TIMER_LETTER, delay);
+    MAP_TimerIntRegister(TIMER_BASE, TIMER_LETTER, Handler);
+    ulStatus = MAP_TimerIntStatus(TIMER_BASE, false);
+    MAP_TimerIntClear(TIMER_BASE, ulStatus);
 }
-//****************************************************************************
-//
-//! Main function
-//!
-//! \param none
-//! 
-//! This function  
-//!    1. Invokes the LEDBlinkyTask
-//!
-//! \return None.
-//
-//****************************************************************************
+
 int main()
 {
     //
@@ -319,37 +512,56 @@ int main()
     //
     MAP_SPIEnable(GSPI_BASE);
 
+    // Initialize the OLED
     Adafruit_Init();
 
-    Timer_IF_Init(PRCM_TIMERA0, TIMERA0_BASE, TIMER_CFG_PERIODIC, TIMER_A, 0);
-
-    Timer_IF_IntSetup(TIMERA0_BASE, TIMER_A, ADCIntHandler);
-
-    MAP_TimerLoadSet(TIMERA0_BASE, TIMER_A, 5000);
-
-    MAP_TimerEnable(TIMERA0_BASE, TIMER_A);
+    // Initialize the Delay and ADC timers
+    TimerInit(PRCM_TIMERA0, TIMERA0_BASE, TIMER_A, TIMER_CFG_PERIODIC, ADC_SAMPLING_PERIOD, ADCIntHandler);
+    TimerInit(PRCM_TIMERA1, TIMERA1_BASE, TIMER_A, TIMER_CFG_PERIODIC, DELAY_PERIOD, DelayHandler);
 
     int i;
+    int samples_avg = 0;
+    ADC_flag = 0;
+    // Initialize OLED Screen
+    setCursor(xTx, yTx);
+    setTextSize(1);
+    setTextColor(WHITE, BLACK);
+    fillScreen(BLACK);
 
+    // Enable the Delay and ADC timers
+    EnableTimer(TIMERA0_BASE, TIMER_A, TIMER_TIMA_TIMEOUT, ADC_SAMPLING_PERIOD);
+    EnableTimer(TIMERA1_BASE, TIMER_A, TIMER_TIMA_TIMEOUT, DELAY_PERIOD);
     while(1)
     {
-        fprintf(stdout,"Waiting\n");
-        while (flag == 0){;}
-        if(flag)
+        // Busy-Waits until ADC flag is high
+        while (ADC_flag == 0){;}
+        // Disables ADC interrupts before proessing
+        DisableTimer(TIMERA0_BASE, TIMER_A, &ADC_flag);
+        Timer_IF_Stop(TIMERA0_BASE, TIMER_A);
+        // Average Samples
+        for(i = 0; i < N; i++)
+            samples_avg += samples[i];
+        samples_avg = samples_avg / N;
+        // Subtract Average (DC Offset)
+        for(i = 0; i < N; i++)
+            samples[i] = samples[i] - samples_avg;
+        // Flush variable
+        samples_avg = 0;
+        // Calculate new average
+        for(i = 0; i < N; i++)
+            samples_avg += samples[i];
+        samples_avg = samples_avg / N;
+
+        // wait till N samples are read in the buffer and the ADC_flag set by the ADC ISR
+        for (i = 0; i < 8; i++)
         {
-            //reset count
-            count = 0;
-            //reset flag
-            flag = 0;
-            // wait till N samples are read in the buffer and the flag set by the ADC ISR
-            for (i = 0; i < 8; i++)
-            {
-                power_all[i] = goertzel(samples, coeff[i], N);   // call goertzel to calculate the power at each frequency and store it in the power_all array
-            }
-            post_test ();       // call post test function to validate the data and display the pressed digit if applicable
+            power_all[i] = goertzel(samples, coeff[i], N);   // call goertzel to calculate the power at each frequency and store it in the power_all array
         }
+
+        post_test();       // call post test function to validate the data and display the pressed digit if applicable
+        sampling_index = 0;
+        // Reenable the ADC Interupts
+        EnableTimer(TIMERA0_BASE, TIMER_A, TIMER_TIMA_TIMEOUT, 5000);
     }
-    // if done? enable interrupts again
 }
 
-//-------End of Main--------//

@@ -8,7 +8,6 @@
 	<isElfFormat value="true"/>
 	<rts value="libc.a"/>
 	<templateProperties value="id=com.ti.common.project.core.emptyProjectWithMainTemplate,"/>
-	<isTargetManual value="false"/>
-	<origin value="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/Lab5/SSL_REST_API_AWS"/>
-	<connection value="common/targetdb/connections/Stellaris_ICDI_Connection.xml"/>
+	<isTargetManual value="true"/>
+	<origin value="C:/Users/TEMP/Downloads/SSL_REST_API_AWS/SSL_REST_API_AWS"/>
 </projectOptions>

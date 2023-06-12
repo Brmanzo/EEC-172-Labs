@@ -1,0 +1,581 @@
+{
+    "name": "Integration Gmail, Google Maps",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-email:TriggerNewEmail",
+            "version": 2,
+            "parameters": {
+                "from": "",
+                "text": "",
+                "folder": "[Gmail]/All Mail",
+                "account": 1141737,
+                "subject": "New Location",
+                "criteria": "UNSEEN",
+                "markSeen": true,
+                "maxResults": 1,
+                "searchType": "simple"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -376,
+                    "y": -11
+                },
+                "restore": {
+                    "parameters": {
+                        "folder": {
+                            "path": [
+                                "[Gmail]",
+                                "All Mail"
+                            ]
+                        },
+                        "account": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": "My Google Restricted connection (brmanzo@ucdavis.edu)"
+                        },
+                        "criteria": {
+                            "label": "Only Unread emails"
+                        },
+                        "searchType": {
+                            "label": "Simple filter"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "searchType",
+                        "type": "select",
+                        "label": "Filter type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "simple",
+                                "gmail"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "markSeen",
+                        "type": "boolean",
+                        "label": "Mark email message(s) as read when fetched"
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "uinteger",
+                        "label": "Maximum number of results"
+                    },
+                    {
+                        "name": "folder",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "criteria",
+                        "type": "select",
+                        "label": "Criteria",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "ALL",
+                                "SEEN",
+                                "UNSEEN"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "email",
+                        "label": "Sender email address"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Search phrase"
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 22,
+            "module": "regexp:GetElementsFromText",
+            "version": 1,
+            "parameters": {
+                "continueWhenNoRes": false
+            },
+            "mapper": {
+                "text": "{{1.text}}",
+                "pattern": "##key_value_pairs",
+                "delimiter": ":",
+                "strictMatchPerLine": true,
+                "specialCharsPattern": ""
+            },
+            "metadata": {
+                "designer": {
+                    "x": -91,
+                    "y": -17
+                },
+                "restore": {
+                    "expect": {
+                        "pattern": {
+                            "label": "Pair of key:value"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "continueWhenNoRes",
+                        "type": "boolean",
+                        "label": "Continue the execution of the route even if the module finds no matches",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "pattern",
+                        "type": "select",
+                        "label": "Pattern",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "##emails",
+                                "##html_tags",
+                                "##http_urls",
+                                "##ftp_urls",
+                                "##telephone_numbers",
+                                "##ipv4",
+                                "##ipv6",
+                                "##emoji",
+                                "##key_value_pairs"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Text",
+                        "required": true
+                    },
+                    {
+                        "name": "delimiter",
+                        "type": "text",
+                        "label": "Delimiter",
+                        "required": true
+                    },
+                    {
+                        "name": "strictMatchPerLine",
+                        "type": "boolean",
+                        "label": "Only first pair per line",
+                        "required": true
+                    },
+                    {
+                        "name": "specialCharsPattern",
+                        "type": "text",
+                        "label": "Special characters in the pattern"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "match",
+                        "type": "any",
+                        "label": "Match"
+                    },
+                    {
+                        "name": "key",
+                        "type": "text",
+                        "label": "Key"
+                    },
+                    {
+                        "name": "value",
+                        "type": "text",
+                        "label": "Value"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "google-maps:getDirections",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 1141770
+            },
+            "mapper": {
+                "units": "metric",
+                "origin": "{{22.value}}",
+                "travelMode": "driving",
+                "destination": "{{22.key}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 211,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "avoid": {
+                            "mode": "chose"
+                        },
+                        "units": {
+                            "label": "Metric (km or m)"
+                        },
+                        "define": {
+                            "label": "Empty"
+                        },
+                        "waypoints": {
+                            "mode": "chose"
+                        },
+                        "travelMode": {
+                            "label": "Driving"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-maps"
+                            },
+                            "label": "My Google Maps connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google-maps",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "origin",
+                        "type": "text",
+                        "label": "Origin",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "type": "text",
+                        "label": "Destination",
+                        "required": true
+                    },
+                    {
+                        "name": "travelMode",
+                        "type": "select",
+                        "label": "Travel Mode",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "driving",
+                                "walking",
+                                "bicycling",
+                                "transit"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "waypoints",
+                        "spec": {
+                            "name": "value",
+                            "type": "text",
+                            "label": "waypoint"
+                        },
+                        "type": "array",
+                        "label": "Waypoints"
+                    },
+                    {
+                        "name": "avoid",
+                        "type": "select",
+                        "label": "Avoid",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "tolls",
+                                "highways",
+                                "ferries",
+                                "indoor"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "units",
+                        "type": "select",
+                        "label": "Units",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "metric",
+                                "imperial"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "define",
+                        "type": "select",
+                        "label": "Define Time",
+                        "validate": {
+                            "enum": [
+                                "departure",
+                                "arrival"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "{{2.steps}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 478,
+                    "y": 10
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "mode": "edit",
+                        "name": "array",
+                        "spec": [],
+                        "type": "array",
+                        "label": "Array"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "util:TextAggregator",
+            "version": 1,
+            "parameters": {
+                "feeder": 5,
+                "rowSeparator": ""
+            },
+            "mapper": {
+                "value": "{{5.`__IMTINDEX__`}}. {{5.html_instructions}} for {{5.distance.text}}\n\n"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 698,
+                    "y": 11
+                },
+                "restore": {
+                    "extra": {
+                        "feeder": {
+                            "label": "Iterator [5]"
+                        }
+                    },
+                    "parameters": {
+                        "rowSeparator": {
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "rowSeparator",
+                        "type": "select",
+                        "label": "Row separator",
+                        "validate": {
+                            "enum": [
+                                "\n",
+                                "\t",
+                                "other"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "value",
+                        "type": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "google-email:ActionSendEmail",
+            "version": 2,
+            "parameters": {
+                "account": 1145154
+            },
+            "mapper": {
+                "cc": [],
+                "to": [
+                    "brmanzo@ucdavis.edu"
+                ],
+                "bcc": [],
+                "from": "",
+                "html": "{{8.text}}",
+                "subject": "Directions to {{2.end_address}}",
+                "attachments": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 942,
+                    "y": -163
+                },
+                "restore": {
+                    "expect": {
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "account": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": "My Google Restricted connection (brmanzo@ucdavis.edu)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "from",
+                        "type": "text",
+                        "label": "From"
+                    },
+                    {
+                        "name": "to",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        },
+                        "type": "array",
+                        "label": "To",
+                        "required": true
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "html",
+                        "type": "text",
+                        "label": "Content"
+                    },
+                    {
+                        "name": "attachments",
+                        "spec": [
+                            {
+                                "name": "fileName",
+                                "type": "filename",
+                                "label": "File name",
+                                "required": true,
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "type": "buffer",
+                                "label": "Data",
+                                "required": true,
+                                "semantic": "file:data"
+                            },
+                            {
+                                "name": "cid",
+                                "type": "text",
+                                "label": "Content-ID"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Attachments"
+                    },
+                    {
+                        "name": "cc",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        "type": "array",
+                        "label": "Copy recipient"
+                    },
+                    {
+                        "name": "bcc",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        "type": "array",
+                        "label": "Blind copy recipient"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us1.make.com"
+    }
+}

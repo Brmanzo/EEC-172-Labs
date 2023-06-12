@@ -3,7 +3,7 @@
 // Bradley Manzo
 // Thomas Ke
 // EEC 172 SQ23
-// Lab 5 Code
+// Lab 6 Code
 //
 //*****************************************************************************
 #include <stdio.h>
@@ -65,6 +65,7 @@
 #define MINUTE              0    /* Time - minutes */
 #define SECOND              0     /* Time - seconds */
 
+// JSON headers
 #define POSTHEADER "POST /things/thomas_launchpad/shadow HTTP/1.1\n\r"
 #define HOSTHEADER "Host: a2ttghdziztuu6-ats.iot.us-east-1.amazonaws.com\r\n"
 #define CHEADER "Connection: Keep-Alive\r\n"
@@ -72,14 +73,13 @@
 #define CLHEADER1 "Content-Length: "
 #define CLHEADER2 "\r\n\r\n"
 
-
 #define GETHEADER "GET /things/thomas_launchpad/shadow HTTP/1.1\n\r"
 
 
-char ADDRESS_START[52] =  "{\"state\": {\n\r\"desired\" : {\n\r\"address\" : \"";
+#define ADDRESS_START   "{\"state\": {\n\r\"desired\" : {\n\r\"address\" : \""
 //char ADDRESS_START[23] = "\",\n\r\"address\" : \"";
-char LOCATION_START[25] = "\",\n\r\"location\" : \":";
-char LOCATION_END[100] = "\"\n\r}}}\n\r\n\r";
+#define LOCATION_START  "\",\n\r\"location\" : \":"
+#define LOCATION_END   "\"\n\r}}}\n\r\n\r"
 //*****************************************************************************
 //                 GLOBAL VARIABLES -- Start
 //*****************************************************************************
@@ -143,8 +143,17 @@ char TextTx[MAX_STRING_LENGTH+1];
 int TextTxLength = 0;
 int i = 0;
 int match = 0;
+int first = 0;
+int xTx = 0;
+int yTx = 0;
+unsigned long ulStatus;
+long lRetVal = -1;
+int incorrect = 0;
 
+// Global variables
 char* Restaurant;
+char* Rest_first_half;
+char* Rest_second_half;
 char* Address;
 char* GPGGA = "$GPGGA";
 char Coordinates[MAX_STRING_LENGTH + 1];
@@ -152,15 +161,18 @@ char Latitude_str[50];
 char Longitude_str[50];
 char New_Latitude_str[50];
 char New_Longitude_str[50];
-float Latitude_int = 0;
-float Longitude_int = 0;
-char Latitude_sign[2] = "  ";
-char Longitude_sign[2] = "  ";
-int Coordinate_check;
+float Latitude_float = 0;
+float Longitude_float = 0;
+char Latitude_sign;
+char Longitude_sign;
+int Coordinate_check = 0;
 int rand_restaurant = 0;
 char NMEA_Message[MAX_STRING_LENGTH + 1];
 int NMEA_Message_iterator = 0;
+int no_coord = 0;
 
+// Dictionaries for all restaurants in Davis
+// As well as defined lengths for proper random selection
 #define BURGER_NUM  9
 char* Burger_Restaurants[BURGER_NUM][2] =
     {{"Burgers and Brew", "255 2nd St, Davis, CA 95616"},
@@ -176,18 +188,18 @@ char* Burger_Restaurants[BURGER_NUM][2] =
 #define INDIAN_NUM  8
 char* Indian_Restaurants[INDIAN_NUM][2] =
     {{"Yeti Restaurant", "234 E St, Davis, CA 95616"},
-     {"Preethi Indian Cuisine", "J B ANDERSON BUILDING, 715 2nd St, Davis, CA 95616"},
+     {"Preethi India", "J B ANDERSON BUILDING, 715 2nd St, Davis, CA 95616"},
      {"Kathmandu Kitchen", "234 G St #4517, Davis, CA 95616"},
-     {"Shah's Halal Food","146, Hutchison Dr, Davis, CA 95616"},
+     {"Shah's Halal","146, Hutchison Dr, Davis, CA 95616"},
      {"The Halal Guys", "500 1st St C7, Davis, CA 95616"},
-     {"Akka Kadai Food", "504 L St, Davis, CA 95616"},
+     {"Akka Kadai", "504 L St, Davis, CA 95616"},
      {"Sam's Restaurant", "301 B St, Davis, CA 95616"},
      {"Ali Baba", "220 3rd St, Davis, CA 95616"}};
 
 #define THAI_NUM    5
 char* Thai_Restaurants[THAI_NUM][2] =
     {{"Thai Canteen Davis","117 E St, Davis, CA 95616"},
-     {"Sophia's | Thai Bar & Kitchen","129 E St, Davis, CA 95616"},
+     {"Sophia's Thai Bar","129 E St, Davis, CA 95616"},
      {"Red 88 Noodle Bar","223 G St, Davis, CA 95616"},
      {"Paste Thai","417 Mace Blvd i, Davis, CA 95618"},
      {"My Burma","500 1st St #11, Davis, CA 95616"}};
@@ -195,30 +207,30 @@ char* Thai_Restaurants[THAI_NUM][2] =
 #define JAPANESE_NUM    13
 char* Japanese_Restaurants[JAPANESE_NUM][2] =
     {{"Yuchan Shokudo","109 E St, Davis, CA 95616"},
-     {"Zen Toro Japanese Bistro","132 E St #100, Davis, CA 95616"},
+     {"Zen Toro Bistro","132 E St #100, Davis, CA 95616"},
      {"Mikuni","500 1st St #19, Davis, CA 95616"},
-     {"Hikari Sushi & Omakase","110 F St Ste A, Davis, CA 95616"},
+     {"Hikari Sushi","110 F St Ste A, Davis, CA 95616"},
      {"Jusco","228 G St, Davis, CA 95616"},
      {"Zumapoke & Lush Ice","730 3rd St, Davis, CA 95616"},
      {"I Love Sushi", "620 W Covell Blvd suit number b, Davis, CA 95616"},
      {"Sushirrito","500 1st St Ste 13a, Davis, CA 95616"},
      {"Davis Sushi","1260 Lake Blvd Suite 103, Davis, CA 95616"},
-     {"T-Kumi Ramen & Rice Bowl","Second Floor, 1260 Lake Blvd #267, Davis, CA 95616"},
-     {"Good Friends Hawaiian Poke","400 G St, Davis, CA 95616"},
+     {"T-Kumi Ramen","Second Floor, 1260 Lake Blvd #267, Davis, CA 95616"},
+     {"Good Friends","400 G St, Davis, CA 95616"},
      {"Nami Sushi","2880 5th St #105, Davis, CA 95618"},
-     {"Huku Japanese Bistro","417 Mace Blvd D, Davis, CA 95618"}};
+     {"Huku Bistro","417 Mace Blvd D, Davis, CA 95618"}};
 
 #define CHINESE_NUM 16
 char* Chinese_Restaurants[CHINESE_NUM][2] =
-    {{"Hunan Bar & Restaurant","207 D St, Davis, CA 95616"},
+    {{"Hunan Bar ","207 D St, Davis, CA 95616"},
     {"Tim's Kitchen","808 2nd St, Davis, CA 95616"},
     {"Tasty Kitchen","335 F St, Davis, CA 95616"},
     {"Davis Noodle City","129 E St #1d, Davis, CA 95616"},
     {"Dumpling House","129 E St, Davis, CA 95616"},
     {"Chengdu Style Restaurant","737 Russell Blvd, Davis, CA 95616"},
     {"Sesame INC","825 Russell Blvd #21, Davis, CA 95616"},
-    {"Hometown Taiwanese Kitchen & Bar","330 G St, Davis, CA 95616"},
-    {"Four Seasons Gourmet Chinese Restaurant","1601 Research Park Dr, Davis, CA 95618"},
+    {"Hometown Kitchen","330 G St, Davis, CA 95616"},
+    {"Four Seasons Gourmet","1601 Research Park Dr, Davis, CA 95618"},
     {"Open Rice Kitchen","Chen Building, 204 G St, Davis, CA 95616"},
     {"Davis Well Season","1753 Research Park Dr, Davis, CA 95618"},
     {"Hunan Style","630 G St, Davis, CA 95616"},
@@ -246,7 +258,7 @@ char* Italian_Restaurants[ITALIAN_NUM][2] =
     {"Paesanos","139 G St, Davis, CA 95616"},
     {"Cenario's Pizza of Davis","1300 E Covell Blvd B, Davis, CA 95616"},
     {"Papa Murphy's | Take 'N' Bake Pizza","640 W Covell Blvd Suite G, Davis, CA 95616"},
-    {"Mountain Mike's Pizza","1411 W Covell Blvd Suite 111, Davis, CA 95616"},
+    {"Mountain Mike's","1411 W Covell Blvd Suite 111, Davis, CA 95616"},
     {"Symposium","1620 E 8th St, Davis, CA 95616"},
     {"Little Caesars Pizza","1340 E Covell Blvd, Davis, CA 95616"},
     {"Lamppost Pizza","1260 Lake Blvd #113, Davis, CA 95616"},
@@ -255,7 +267,7 @@ char* Italian_Restaurants[ITALIAN_NUM][2] =
     {"Osteria Fasulo","2657 Portage Bay E #8, Davis, CA 95616"},
     {"Wingstop","408 G St, Davis, CA 95616"}};
 
-#define COFFEE_NUM  13
+#define COFFEE_NUM  19
 char* Coffee_Shops[COFFEE_NUM][2] =
     {{"Peet’s Coffee","Hutchison Dr, Davis, CA 95616"},
     {"The Coffee House","1 Shields Ave, Davis, CA 95616"},
@@ -269,38 +281,7 @@ char* Coffee_Shops[COFFEE_NUM][2] =
     {"Black Frogs Coffee","431 G St, Davis, CA 95616"},
     {"3rd & U Café","223 3rd St, Davis, CA 95616"},
     {"Starbucks","623 2nd St, Davis, CA 95616"},
-    {"Common Grounds Coffee","2171 Cowell Blvd, Davis, CA 95618"}};
-
-#define MEXICAN_NUM 11
-char* Mexican_Restaurants[MEXICAN_NUM][2] =
-    {{"El Patio Fresh Mexican Grill","200 E St, Davis, CA 95616"},
-    {"Taqueria El Burrito","223 F St, Davis, CA 95616"},
-    {"Taqueria Davis","505 L St, Davis, CA 95616"},
-    {"Tres Hermanas","805 2nd St, Davis, CA 95616"},
-    {"Guads Tacos & Beer","231 3rd St, Davis, CA 95616"},
-    {"Taqueria Guadalajara","640 W Covell Blvd, Davis, CA 95616"},
-    {"Dos Coyotes Border Cafe","1411 W Covell Blvd, Davis, CA 95616"},
-    {"Chipotle Mexican Grill","227 E St Ste 1, Davis, CA 95616"},
-    {"Taco Bell","425 G St, Davis, CA 95616"},
-    {"Dos Coyotes Border Cafe","2191 Cowell Blvd, Davis, CA 95618"},
-    {"Taqueria Guadalajara Grill","417 Mace Blvd A, Davis, CA 95618"}};
-
-#define SANDWICH_NUM    11
-char* Sandwich_Shops[SANDWICH_NUM][2] =
-     {{"Ike's Love & Sandwiches","212 F St B, Davis, CA 95616"},
-     {"Subway","757 Russell Blvd Space 29, Davis, CA 95616"},
-     {"Mr. Pickle's Sandwich Shop - Davis, CA","2191 Cowell Blvd F, Davis, CA 95618"},
-     {"TOGO'S Sandwiches","1411 W Covell Blvd #105, Davis, CA 95616"},
-     {"Panera Bread","609 3rd St, Davis, CA 95616"},
-     {"Zia's Delicatessen","616 3rd St, Davis, CA 95616"},
-     {"Subway","2014 Lyndell Terrace Suite B, Davis, CA 95616"},
-     {"The Posh Bagel","206 F St, Davis, CA 95616"},
-     {"Jack's Urban Eats","1321 W Covell Blvd, Davis, CA 95616"},
-     {"Noah's NY Bagels","1411 W Covell Blvd Suite 114 A, Davis, CA 95616"},
-     {"Nick The Greek","206 E St, Davis, CA 95616"}};
-
-#define BREAKFAST_NUM   6
-char* Breakfast_Restaurants[BREAKFAST_NUM][2] = {
+    {"Common Grounds Coffee","2171 Cowell Blvd, Davis, CA 95618"},
     {"Black Bear Diner Davis","255 2nd St, Davis, CA 95616"},
     {"Crepeville","330 3rd St, Davis, CA 95616"},
     {"Cafe Bernardo","234 D St, Davis, CA 95616"},
@@ -308,6 +289,33 @@ char* Breakfast_Restaurants[BREAKFAST_NUM][2] = {
     {"IHOP","1745 Cowell Blvd, Davis, CA 95618"},
     {"Three Ladies Cafe","130 G St suite a, Davis, CA 95616"}};
 
+#define MEXICAN_NUM 11
+char* Mexican_Restaurants[MEXICAN_NUM][2] =
+    {{"El Patio","200 E St, Davis, CA 95616"},
+    {"Taqueria El Burrito","223 F St, Davis, CA 95616"},
+    {"Taqueria Davis","505 L St, Davis, CA 95616"},
+    {"Tres Hermanas","805 2nd St, Davis, CA 95616"},
+    {"Guads Tacos & Beer","231 3rd St, Davis, CA 95616"},
+    {"Taqueria Guadalajara","640 W Covell Blvd, Davis, CA 95616"},
+    {"Dos Coyotes","1411 W Covell Blvd, Davis, CA 95616"},
+    {"Chipotle","227 E St Ste 1, Davis, CA 95616"},
+    {"Taco Bell","425 G St, Davis, CA 95616"},
+    {"Dos Coyotes","2191 Cowell Blvd, Davis, CA 95618"},
+    {"Taqueria Guadalajara","417 Mace Blvd A, Davis, CA 95618"}};
+
+#define SANDWICH_NUM    11
+char* Sandwich_Shops[SANDWICH_NUM][2] =
+     {{"Ike's Sandwiches","212 F St B, Davis, CA 95616"},
+     {"Subway","757 Russell Blvd Space 29, Davis, CA 95616"},
+     {"Mr. Pickle's - Davis, CA","2191 Cowell Blvd F, Davis, CA 95618"},
+     {"TOGO'S","1411 W Covell Blvd #105, Davis, CA 95616"},
+     {"Panera Bread","609 3rd St, Davis, CA 95616"},
+     {"Zia's Delicatessen","616 3rd St, Davis, CA 95616"},
+     {"Subway","2014 Lyndell Terrace Suite B, Davis, CA 95616"},
+     {"The Posh Bagel","206 F St, Davis, CA 95616"},
+     {"Jack's Urban Eats","1321 W Covell Blvd, Davis, CA 95616"},
+     {"Noah's NY Bagels","1411 W Covell Blvd Suite 114 A, Davis, CA 95616"},
+     {"Nick The Greek","206 E St, Davis, CA 95616"}};
 
 uint64_t delta = 0;
 uint64_t delta_us = 0;
@@ -877,6 +885,7 @@ static void UARTA1IntHandler(void)
         TextRx[TextRxLength] = UARTCharGetNonBlocking(UARTA1_BASE);
         TextRxLength++;
     }
+    // Iteratively builds potential match of $GPGGA and records in buffer when found
     if(TextRx[TextRxLength] == '$')
     {
         NMEA_Message_iterator = 0;
@@ -918,7 +927,13 @@ static void UARTA1IntHandler(void)
         NMEA_Message_iterator++;
         NMEA_Message[NMEA_Message_iterator] = TextRx[TextRxLength];
         if (TextRx[TextRxLength] == '\n')
-            Coordinate_check = 1;
+        {
+            // Confirms if valid $GPGGA sentence
+            if(NMEA_Message_iterator > 60)
+                Coordinate_check = 1;
+            else
+                match = 0;
+        }
     }
     else
         match = 0;
@@ -1213,7 +1228,8 @@ static int http_post(int iTLSSockID){
     char cCLLength[200];
     char* pcBufHeaders;
     int lRetVal = 0;
-    int i = 0;
+    char newJSON[200] = ADDRESS_START;
+    int dataLength = 0;
 
     pcBufHeaders = acSendBuff;
     strcpy(pcBufHeaders, POSTHEADER);
@@ -1224,22 +1240,14 @@ static int http_post(int iTLSSockID){
     pcBufHeaders += strlen(CHEADER);
     strcpy(pcBufHeaders, "\r\n\r\n");
 
-    UART_PRINT("text tx length: %d", TextTxLength);
-    UART_PRINT("\n");
-    // Append each letter of text to transmit to the end of the JSON Header
-//    for(i = 0; i < TextTxLength; i++)
-//    {
-//        strncat(RESTAURANT_START, &string_to_write[i], 1);
-//    }
-    char* newJSON = ADDRESS_START;
+    // Encapsulate the address and coordinates within JSON packet
     strcat(newJSON, Address);
     strcat(newJSON, LOCATION_START);
     strcat(newJSON, New_Latitude_str);
-    strcat(newJSON, ",");
+    strcat(newJSON, ", ");
     strcat(newJSON, New_Longitude_str);
     strcat(newJSON, LOCATION_END);
-    //int dataLength = strlen(RESTAURANT_START) - 1 + strlen(ADDRESS_END);
-    int dataLength = strlen(newJSON);
+    dataLength = strlen(newJSON);
     strcpy(pcBufHeaders, CTHEADER);
     pcBufHeaders += strlen(CTHEADER);
     strcpy(pcBufHeaders, CLHEADER1);
@@ -1255,12 +1263,7 @@ static int http_post(int iTLSSockID){
     // post JSON header + text
     strcpy(pcBufHeaders, newJSON);
     pcBufHeaders += strlen(newJSON);
-
     int testDataLength = strlen(pcBufHeaders);
-
-    UART_PRINT(acSendBuff);
-
-
     //
     // Send the packet to the server */
     //
@@ -1276,12 +1279,7 @@ static int http_post(int iTLSSockID){
         UART_PRINT("Received failed. Error Number: %i\n\r",lRetVal);
         //sl_Close(iSSLSockID);
         GPIO_IF_LedOn(MCU_RED_LED_GPIO);
-        fillRect(0,0,128,8,BLACK);
-        setTextSize(1);
-        setTextColor(RED, BLACK);
-        setCursor(0, 0);
-        Outstr("connection error!");
-           return lRetVal;
+        return lRetVal;
     }
     else {
         acRecvbuff[lRetVal+1] = '\0';
@@ -1289,6 +1287,7 @@ static int http_post(int iTLSSockID){
         UART_PRINT("\n\r\n\r");
     }
 
+    //sl_Stop(SL_STOP_TIMEOUT);
     return 0;
 }
 static int http_get(int iTLSSockID){
@@ -1346,12 +1345,7 @@ static int http_get(int iTLSSockID){
 //!
 //*****************************************************************************
 void main() {
-    unsigned long ulStatus;
-    long lRetVal = -1;
 
-    int xTx = 0;
-    int yTx = 0;
-    int incorrect = 0;
     // Seed RNG
     srand(time(NULL));
     //
@@ -1397,6 +1391,7 @@ void main() {
     // Enable SysTick
     SysTickInit();
 
+    // Update connection status on OLED
     fillRect(0,0,128,8,BLACK);
     setTextSize(1);
     setTextColor(WHITE, BLACK);
@@ -1436,21 +1431,7 @@ void main() {
     // Clear UART Terminal
     ClearTerm();
 
-    //Connect the CC3200 to the local access point
-    lRetVal = connectToAccessPoint();
-    //Set time so that encryption can be used
-    lRetVal = set_time();
-    if(lRetVal < 0) {
-        UART_PRINT("Unable to set time in the device");
-        LOOP_FOREVER();
-    }
-    //Connect to the website with TLS encryption
-    lRetVal = tls_connect();
-    if(lRetVal < 0) {
-        ERR_PRINT(lRetVal);
-    }
-
-    // Configure UART to A1BASE
+    // Configure UART to A1BASE for NEO-6M GPS Module
    MAP_UARTConfigSetExpClk(UARTA1_BASE,MAP_PRCMPeripheralClockGet(PRCM_UARTA1),
                          GPS_BAUD_RATE, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
                           UART_CONFIG_PAR_NONE));
@@ -1469,13 +1450,35 @@ void main() {
 
    UARTIntEnable(UARTA1_BASE,UART_INT_RX);
 
+   // Print GUI for restaurant options
     xTx = 0;
     yTx = 0;
     fillScreen(BLACK);
     setTextSize(1);
     setTextColor(GREEN, BLACK);
     setCursor(xTx, yTx);
-    Outstr("Connected!");
+    Outstr("Connected ");
+    xTx = 0;
+    yTx += 8;
+    setCursor(xTx, yTx);
+    setTextColor(WHITE, BLACK);
+    Outstr("I:Indian   B:Burger");
+    xTx = 0;
+    yTx += 8;
+    setCursor(xTx, yTx);
+    Outstr("T:Thai     P:Pizza");
+    xTx = 0;
+    yTx += 8;
+    setCursor(xTx, yTx);
+    Outstr("CH:Chinese S:Sandwich");
+    xTx = 0;
+    yTx += 8;
+    setCursor(xTx, yTx);
+    Outstr("M:Mexican  C:Cafe");
+    xTx = 0;
+    yTx += 8;
+    setCursor(xTx, yTx);
+    Outstr("J:Japanese");
     // Position in pixels
     // Text to Transmit Position
     xTx = 0;
@@ -1483,11 +1486,10 @@ void main() {
     setCursor(xTx, yTx);
     setTextSize(1);
     setTextColor(WHITE, BLACK);
-    memset(TextTx, 0, sizeof TextTx);
 
     while (1) {
         while (P59_intstatus == 0 && P2_intstatus == 0) {;}
-        // If GPIO Interrupt (IR) Recevied
+        // If GPIO Interrupt (IR) Receivied
         if(P59_intstatus)
         {
             setCursor(xTx, yTx);
@@ -1667,28 +1669,34 @@ void main() {
                 // If not a debugging or a function character, print the character to the screen
                 if(character != '!' && character != '1' && character != '2' && character != '3')
                 {
+                    yTx = 64;
+                    xTx = 0;
                     UART_PRINT("character: %c\n\r", character);
                     drawChar(xTx, yTx, character, WHITE, BLACK, 1);
 
                 }
                 // If Enter button is pressed, transmit the text
-                if(character == '2' && TextTxLength !=0)
+                if(character == '2')
                 {
-//                    //TextTx[TextTxLength + 1] = '\0';
-//                    UART_PRINT("string to send:");
-//                    for(i = 0; i < TextTxLength; i++)
-//                    {
-//                        UART_PRINT("%c", TextTx[i]);
-//                    }
-////                    UART_PRINT("\n\r");
-//                    for(i = 0; i < TextTxLength + 1; i++)
-//                    {
-//                        string_to_write[i] = TextTx[i];
-//                        UART_PRINT("%c", string_to_write[i]);
-//                    }
-//                    UART_PRINT("\r\n");
-                    // Post to AWS Server
-                    UART_PRINT("TextTx = %s\r\n", TextTx);
+                    // Iniatiate connection to AWS server if valid post
+                    if(TextTx[0] == 'B' || TextTx[0] == 'I' || TextTx[0] == 'T' || TextTx[0] == 'J' || (TextTx[0] == 'C' && TextTx[1] == 'H') || TextTx[0] == 'P' || TextTx[0] == 'C' || TextTx[0] == 'M' || TextTx[0] == 'S' || TextTx[0] == 'W')
+                    {
+
+                        //Connect the CC3200 to the local access point
+                        lRetVal = connectToAccessPoint();
+                        //Set time so that encryption can be used
+                        lRetVal = set_time();
+                        if(lRetVal < 0) {
+                            UART_PRINT("Unable to set time in the device");
+                            LOOP_FOREVER();
+                        }
+                        //Connect to the website with TLS encryption
+                        lRetVal = tls_connect();
+                        if(lRetVal < 0) {
+                            ERR_PRINT(lRetVal);
+                        }
+                    }
+                    // calculate random restaurant depending on message and post to server
                     if(TextTx[0] == 'B')
                     {
                         rand_restaurant = rand() % (BURGER_NUM - 1);
@@ -1715,7 +1723,6 @@ void main() {
                         rand_restaurant = rand() % (JAPANESE_NUM - 1);
                         Restaurant = Japanese_Restaurants[rand_restaurant][0];
                         Address = Japanese_Restaurants[rand_restaurant][1];
-                        UART_PRINT("%s, %s", Japanese_Restaurants[rand_restaurant][0], Japanese_Restaurants[rand_restaurant][1]);
                         http_post(lRetVal);
                     }
                     else if(TextTx[0] == 'C' && TextTx[1] == 'H')
@@ -1753,28 +1760,32 @@ void main() {
                         Address = Sandwich_Shops[rand_restaurant][1];
                         http_post(lRetVal);
                     }
-                    else if(TextTx[0] == 'B' && TextTx[1] == 'R')
-                    {
-                        rand_restaurant = rand() % (BREAKFAST_NUM - 1);
-                        Restaurant = Breakfast_Restaurants[rand_restaurant][0];
-                        Address = Breakfast_Restaurants[rand_restaurant][1];
-                        http_post(lRetVal);
-                    }
                     else if(TextTx[0] == 'W')
                     {
                         http_get(lRetVal);
                     }
                     else
                     {
-                        incorrect = 1;
-                        xTx = 0;
-                        yTx = 8;
-                        setTextSize(1);
-                        setTextColor(RED, BLACK);
-                        setCursor(xTx, yTx);
-                        Outstr("Incorrect Input");
+                        if(!first)
+                            first = 1;
+                        else
+                        {
+                            incorrect = 1;
+                            xTx = 0;
+                            yTx = 72;
+                            setTextSize(1);
+                            setTextColor(RED, BLACK);
+                            setCursor(xTx, yTx);
+                            Outstr("Incorrect Input");
+                        }
                     }
-                    if(incorrect == 0)
+                    // Ends connection to AWS for a valid post
+                    if(TextTx[0] == 'W' || TextTx[0] == 'S' || TextTx[0] == 'M' || TextTx[0] == 'C' || TextTx[0] == 'P' || (TextTx[0] == 'C' && TextTx[1] == 'H') || TextTx[0] == 'J' || TextTx[0] == 'B' || TextTx[0] == 'I' || TextTx[0] == 'T')
+                    {
+                        sl_Stop(SL_STOP_TIMEOUT);
+                    }
+                    rand_restaurant = 0;
+                    if(incorrect == 0 && first == 1)
                     {
                         fillRect(0,8,128,128,BLACK);
                         xTx = 0;
@@ -1783,9 +1794,33 @@ void main() {
                         setTextColor(WHITE, BLACK);
                         setCursor(xTx, yTx);
                         Outstr("Getting directions to:");
-                        yTx += 8;
+                        yTx = 16;
+                        xTx = 0;
                         setCursor(xTx, yTx);
                         Outstr(Restaurant);
+
+                        yTx += 8;
+                        xTx = 0;
+                        setCursor(xTx, yTx);
+                        setTextColor(WHITE, BLACK);
+                        Outstr("I:Indian   B:Burger");
+                        xTx = 0;
+                        yTx += 8;
+                        setCursor(xTx, yTx);
+                        Outstr("T:Thai     P:Pizza");
+                        xTx = 0;
+                        yTx += 8;
+                        setCursor(xTx, yTx);
+                        Outstr("CH:Chinese S:Sandwich");
+                        xTx = 0;
+                        yTx += 8;
+                        setCursor(xTx, yTx);
+                        Outstr("M:Mexican  C:Cafe");
+                        xTx = 0;
+                        yTx += 8;
+                        setCursor(xTx, yTx);
+                        Outstr("J:Japanese");
+//                        }
                     }
                     incorrect = 0;
                     //http_get(lRetVal);
@@ -1793,9 +1828,9 @@ void main() {
 
                     TextTxLength = 0;
                     memset(TextTx, 0, sizeof TextTx);
-                    memset(Restaurant, 0, sizeof Restaurant);
-                    memset(Address, 0, sizeof Address);
-                    //memset(string_to_write, 0, sizeof string_to_write);
+                    Restaurant = NULL;
+                    Address = NULL;
+
                     setCursor(0, 64);
                     xTx = 0;
                     yTx = 64;
@@ -1816,7 +1851,8 @@ void main() {
             }
             start_int = 0;
         }
-        if(P2_intstatus)
+        // Enters when valid NMEA $GPGGA sentence is recorded
+        if(P2_intstatus && !no_coord)
         {
             P2_intstatus=0;
             UARTIntDisable(UARTA1_BASE, UART_INT_RX);
@@ -1828,8 +1864,6 @@ void main() {
                 int comma_count = 0;
                 int Latitude_iterator = 0;
                 int Longitude_iterator = 0;
-                int Lat_dec = 0;
-                int Lon_dec = 0;
                 for(i = 0; i < (int)strlen(Coordinates); i++)
                 {
                     if(Coordinates[i] == ',')
@@ -1841,7 +1875,7 @@ void main() {
                     }
                     if(comma_count == 3 && Coordinates[i] != ',')
                     {
-                        Latitude_sign[1] = Coordinates[i];
+                        Latitude_sign = Coordinates[i];
                     }
                     if(comma_count == 4 && Coordinates[i] != ',')
                     {
@@ -1850,48 +1884,43 @@ void main() {
                     }
                     if(comma_count == 5 && Coordinates[i] != ',')
                     {
-                        Longitude_sign[1] = Coordinates[i];
+                        Longitude_sign = Coordinates[i];
                     }
                 }
-                for(i = 0; i < 49; i++)
-                {
-                    if(Latitude_str[i] == '.')
-                        Lat_dec = i;
-                }
-                Latitude_iterator = 0;
-                for(i = 0; i < 50; i++)
-                {
-                    if(i == Lat_dec - 2)
-                    {
-                        New_Latitude_str[Latitude_iterator] = ' ';
-                        Latitude_iterator++;
-                    }
-                        New_Latitude_str[Latitude_iterator] = Latitude_str[i];
-                        Latitude_iterator++;
-                }
-                strcat(New_Latitude_str, Latitude_sign);
-                Longitude_iterator = 0;
-                for(i = 0; i < 49; i++)
-                {
-                    if(Longitude_str[i] == '.')
-                        Lon_dec = i;
-                }
-                for(i = 0; i < 49; i++)
-                {
-                    if(i == Lon_dec - 2)
-                    {
-                        New_Longitude_str[Longitude_iterator] = ' ';
-                        Longitude_iterator++;
-                    }
-                        New_Longitude_str[Longitude_iterator] = Longitude_str[i];
-                        Longitude_iterator++;
-                }
-                strcat(New_Longitude_str, Longitude_sign);
+                // Convert Coordinates from strings to floats
+                Latitude_float = atof(Latitude_str);
+                Longitude_float = atof(Longitude_str);
+
+                // Record Degrees
+                int Latitude_int = Latitude_float/100;
+                int Longitude_int = Longitude_float/100;
+
+                // Calculate minutes
+                float Latitude_min = (Latitude_float - Latitude_int*100)/60;
+                float Longitude_min = (Longitude_float - Longitude_int*100)/60;
+
+                // Compose final coordinate format
+                Latitude_float = Latitude_int + Latitude_min;
+                Longitude_float = Longitude_int + Longitude_min;
+
+                // Assign proper sign depending on hemisphere
+                if(Latitude_sign == 'S')
+                    Latitude_float = -Latitude_float;
+                if(Longitude_sign == 'W')
+                    Longitude_float = -Longitude_float;
+
+                // convert back to string to be encapsulated in JSON
+                snprintf(New_Latitude_str, 50, "%f", Latitude_float);
+                snprintf(New_Longitude_str, 50, "%f", Longitude_float);
+
+                xTx = 60;
+                yTx = 0;
+                setCursor(xTx, yTx);
+                setTextSize(1);
+                setTextColor(GREEN, BLACK);
+                Outstr("located!");
+                no_coord = 1;
                 UART_PRINT("Latitude: %s, Longitude: %s\n", New_Latitude_str, New_Longitude_str);
-            }
-            else
-            {
-                UARTIntEnable(UARTA1_BASE,UART_INT_RX);
             }
         }
     }

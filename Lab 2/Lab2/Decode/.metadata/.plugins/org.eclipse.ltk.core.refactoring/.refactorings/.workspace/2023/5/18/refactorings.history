@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;blinky&apos; to &apos;IR_Decode&apos;" description="Rename resource &apos;blinky&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/blinky" name="IR_Decode" stamp="1682980014955" updateReferences="true"/>
+</session>

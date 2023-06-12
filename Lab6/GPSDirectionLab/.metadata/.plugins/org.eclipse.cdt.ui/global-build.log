@@ -3108,3 +3108,1330 @@ C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/to
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1215: warning #179-D: variable "i" was declared but never referenced
+"../main.c", line 1662: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1662: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1215: warning #179-D: variable "i" was declared but never referenced
+"../main.c", line 1662: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1662: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1215: warning #179-D: variable "i" was declared but never referenced
+"../main.c", line 1662: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1662: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1215: warning #179-D: variable "i" was declared but never referenced
+"../main.c", line 1662: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1662: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 866: warning #179-D: function "UARTA1IntHandler" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1215: warning #179-D: variable "i" was declared but never referenced
+"../main.c", line 1663: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1663: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1215: warning #179-D: variable "i" was declared but never referenced
+"../main.c", line 1662: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1662: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1236: error #169: argument of type "float" is incompatible with parameter of type "const char *__restrict__"
+"../main.c", line 1238: error #169: argument of type "float" is incompatible with parameter of type "const char *__restrict__"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1907: warning #43-D: operand types are incompatible ("char *" and "int")
+"../main.c", line 1907: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 1909: warning #43-D: operand types are incompatible ("char *" and "int")
+"../main.c", line 1909: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 1842: warning #179-D: variable "Lat_dec" was declared but never referenced
+"../main.c", line 1843: warning #179-D: variable "Lon_dec" was declared but never referenced
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1855: error #143: expression must have pointer-to-object type
+"../main.c", line 1864: error #143: expression must have pointer-to-object type
+"../main.c", line 1912: warning #225-D: function "gcvt" declared implicitly
+"../main.c", line 1842: warning #179-D: variable "Lat_dec" was declared but never referenced
+"../main.c", line 1843: warning #179-D: variable "Lon_dec" was declared but never referenced
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1912: warning #225-D: function "gcvt" declared implicitly
+"../main.c", line 1842: warning #179-D: variable "Lat_dec" was declared but never referenced
+"../main.c", line 1843: warning #179-D: variable "Lon_dec" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+ 
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ gcvt      ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "ssl.out" not built
+ 
+>> Compilation failure
+makefile:151: recipe for target 'ssl.out' failed
+gmake[1]: *** [ssl.out] Error 1
+makefile:147: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1914: error #20: identifier "Long_len" is undefined
+"../main.c", line 1842: warning #179-D: variable "Lat_dec" was declared but never referenced
+"../main.c", line 1843: warning #179-D: variable "Lon_dec" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1842: warning #179-D: variable "Lat_dec" was declared but never referenced
+"../main.c", line 1843: warning #179-D: variable "Lon_dec" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1921: error #138: expression must be a modifiable lvalue
+"../main.c", line 1922: error #138: expression must be a modifiable lvalue
+"../main.c", line 1842: warning #179-D: variable "Lat_dec" was declared but never referenced
+"../main.c", line 1843: warning #179-D: variable "Lon_dec" was declared but never referenced
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1916: error #20: identifier "temp_New_Latitude_str" is undefined
+"../main.c", line 1916: error #138: expression must be a modifiable lvalue
+"../main.c", line 1917: error #20: identifier "temp_New_Longitude_str" is undefined
+"../main.c", line 1917: error #138: expression must be a modifiable lvalue
+"../main.c", line 1842: warning #179-D: variable "Lat_dec" was declared but never referenced
+"../main.c", line 1843: warning #179-D: variable "Lon_dec" was declared but never referenced
+4 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1842: warning #179-D: variable "Lat_dec" was declared but never referenced
+"../main.c", line 1843: warning #179-D: variable "Lon_dec" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1674: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1674: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1697: error #20: identifier "If" is undefined
+"../main.c", line 1697: error #66: expected a ";"
+"../main.c", line 1720: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 1855: error #128: expected a statement
+"../main.c", line 1865: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 1867: error #171: expected a declaration
+"../main.c", line 1938: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 1939: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1939: error #148: declaration is incompatible with "float Longitude_int" (declared at line 159)
+"../main.c", line 1939: error #150: variable "Longitude_int" has already been initialized
+"../main.c", line 1939: error #60: function call is not allowed in a constant expression
+"../main.c", line 1941: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1941: error #148: declaration is incompatible with "float Latitude_int" (declared at line 158)
+"../main.c", line 1941: error #150: variable "Latitude_int" has already been initialized
+"../main.c", line 1941: error #28: expression must have a constant value
+"../main.c", line 1942: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1942: error #148: declaration is incompatible with "float Longitude_int" (declared at line 159)
+"../main.c", line 1942: error #150: variable "Longitude_int" has already been initialized
+"../main.c", line 1942: error #28: expression must have a constant value
+"../main.c", line 1944: error #171: expected a declaration
+"../main.c", line 1946: error #171: expected a declaration
+"../main.c", line 1947: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1947: error #148: declaration is incompatible with "float Longitude_int" (declared at line 159)
+"../main.c", line 1947: error #150: variable "Longitude_int" has already been initialized
+"../main.c", line 1947: error #28: expression must have a constant value
+"../main.c", line 1949: error #41: expected an identifier
+"../main.c", line 1949: error #41: expected an identifier
+"../main.c", line 1949: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1949: warning #93-D: identifier-list parameters may only be used in a function definition
+"../main.c", line 1951: error #41: expected an identifier
+"../main.c", line 1951: error #41: expected an identifier
+"../main.c", line 1951: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1951: warning #93-D: identifier-list parameters may only be used in a function definition
+"../main.c", line 1953: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1954: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1955: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1955: warning #93-D: identifier-list parameters may only be used in a function definition
+"../main.c", line 1955: error #148: declaration is incompatible with "void setCursor(int, int)" (declared at line 53 of "..\Adafruit_GFX.h")
+"../main.c", line 1956: error #80: expected a type specifier
+"../main.c", line 1956: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1956: error #148: declaration is incompatible with "void setTextSize(unsigned char)" (declared at line 56 of "..\Adafruit_GFX.h")
+"../main.c", line 1957: error #80: expected a type specifier
+"../main.c", line 1957: error #80: expected a type specifier
+"../main.c", line 1957: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1957: error #148: declaration is incompatible with "void setTextColor(unsigned int, unsigned int)" (declared at line 55 of "..\Adafruit_GFX.h")
+"../main.c", line 1958: error #80: expected a type specifier
+"../main.c", line 1958: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1958: error #148: declaration is incompatible with "void Outstr(char *)" (declared at line 96 of "..\Adafruit_SSD1351.h")
+"../main.c", line 1959: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1959: error #150: variable "no_coord" has already been initialized
+"../main.c", line 1960: error #80: expected a type specifier
+"../main.c", line 1960: error #760: variable "New_Latitude_str" is not a type name
+"../main.c", line 1960: error #760: variable "New_Longitude_str" is not a type name
+"../main.c", line 1960: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 1960: error #148: declaration is incompatible with "int Report(const char *, ...)" (declared at line 82 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 1961: error #171: expected a declaration
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+36 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1674: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1674: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1674: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1674: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1674: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1674: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1659: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1659: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="gpio_if.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/gpio_if.c"
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1659: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1659: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building file: "../pin_mux_config.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pin_mux_config.d_raw"  "../pin_mux_config.c"
+Finished building: "../pin_mux_config.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1659: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1659: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1664: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1664: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1664: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1664: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1664: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1664: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1664: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1664: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1663: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1663: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1663: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1663: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1663: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1663: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1663: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1663: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1663: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1663: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1663: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1663: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1664: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1664: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1664: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1664: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+Finished building: "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c"
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1670: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1670: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'ssl.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1245: error #138: expression must be a modifiable lvalue
+"../main.c", line 1670: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1670: warning #70-D: integer conversion resulted in truncation
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1225: warning #522-D: initialization with "{...}" expected for aggregate object
+"../main.c", line 1225: warning #145-D: a value of type "char *" cannot be used to initialize an entity of type "char"
+"../main.c", line 1669: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1669: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1245: error #138: expression must be a modifiable lvalue
+"../main.c", line 1670: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1670: warning #70-D: integer conversion resulted in truncation
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1245: error #138: expression must be a modifiable lvalue
+"../main.c", line 1670: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1670: warning #70-D: integer conversion resulted in truncation
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1669: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1669: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1472: error #66: expected a ";"
+"../main.c", line 1477: error #66: expected a ";"
+"../main.c", line 1481: error #66: expected a ";"
+"../main.c", line 1485: error #66: expected a ";"
+"../main.c", line 1489: error #66: expected a ";"
+"../main.c", line 1665: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1665: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 1835: error #66: expected a ";"
+"../main.c", line 1839: error #66: expected a ";"
+"../main.c", line 1843: error #66: expected a ";"
+"../main.c", line 1847: error #66: expected a ";"
+9 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1472: error #66: expected a ";"
+"../main.c", line 1477: error #66: expected a ";"
+"../main.c", line 1481: error #66: expected a ";"
+"../main.c", line 1485: error #66: expected a ";"
+"../main.c", line 1489: error #66: expected a ";"
+"../main.c", line 1665: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1665: warning #70-D: integer conversion resulted in truncation
+5 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1665: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1665: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ssl ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/bradl/OneDrive/Documents/2023 Spring Quarter/EEC 172/GPSDirectionLab/ssl" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/include" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/source" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink_extlib/provisioninglib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 1658: warning #1696-D: multicharacter character literal (potential portability problem)
+"../main.c", line 1658: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "ssl.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ssl.map" --heap_size=0x8000 --stack_size=0x1000 -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ssl_linkInfo.xml" --rom_model -o "ssl.out" "./Adafruit_GFX.obj" "./Adafruit_OLED.obj" "./gpio_if.obj" "./main.obj" "./network_common.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./test.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/simplelink/ccs/NON_OS_debug/simplelink.a" -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "ssl.out"
+ 
+C:/ti/ccs1000/ccs/utils/tiobj2bin/tiobj2bin ssl.out ssl.bin C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armofd C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armhex C:/ti/ccs1000/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****

@@ -64,12 +64,11 @@ void PinMuxConfig(void)
     //
     // Set unused pins to PIN_MODE_0 with the exception of JTAG pins 16,17,19,20
     //
-    PinModeSet(PIN_01, PIN_MODE_0);
     PinModeSet(PIN_02, PIN_MODE_0);
     PinModeSet(PIN_03, PIN_MODE_0);
     PinModeSet(PIN_04, PIN_MODE_0);
-    PinModeSet(PIN_08, PIN_MODE_0);
     PinModeSet(PIN_15, PIN_MODE_0);
+    PinModeSet(PIN_21, PIN_MODE_0);
     PinModeSet(PIN_45, PIN_MODE_0);
     PinModeSet(PIN_50, PIN_MODE_0);
     PinModeSet(PIN_52, PIN_MODE_0);
@@ -90,6 +89,11 @@ void PinMuxConfig(void)
     PRCMPeripheralClkEnable(PRCM_GSPI, PRCM_RUN_MODE_CLK);
 
     //
+    // Configure PIN_01 for GPIOOutput
+    //
+    PinTypeGPIO(PIN_01, PIN_MODE_0, false);
+    GPIODirModeSet(GPIOA1_BASE, 0x4, GPIO_DIR_MODE_OUT);
+    //
     // Configure PIN_64 for OLED DC
     //
     PinTypeGPIO(PIN_64, PIN_MODE_0, false);
@@ -102,10 +106,10 @@ void PinMuxConfig(void)
     GPIODirModeSet(GPIOA3_BASE, 0x10, GPIO_DIR_MODE_OUT);
 
     //
-    // Configure PIN_21 for GPIO Input (CS for ADC)
+    // Configure PIN_08 for GPIO Input (CS for ADC)
     //
-    PinTypeGPIO(PIN_21, PIN_MODE_0, false);
-    GPIODirModeSet(GPIOA3_BASE, 0x2, GPIO_DIR_MODE_OUT);
+    PinTypeGPIO(PIN_08, PIN_MODE_0, false);
+    GPIODirModeSet(GPIOA2_BASE, 0x2, GPIO_DIR_MODE_OUT);
 
     //
     // Configure PIN_53 for GPIO Input (CS for OLED)
